@@ -21,6 +21,13 @@ body {
 
 .logo-img {
     border-radius: 50%;
+    display: block;
+    margin-left: 0;
+    max-width: 100%;
+    float: left;
+
+
+
 }
 
 .logo-font {
