@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-8frgg4l285_%amgirkqt$73-85y6pa&1t&9ld2_hs*88qy36pb
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['8000-agyluczak-secondstorysh-f4su82g18my.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu108.gitpod.io']
+
 
 # Application definition
 
