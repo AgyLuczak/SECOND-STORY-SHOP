@@ -62,7 +62,6 @@
             "sku": "pp05",
             "name": "Pearl bracelet and earrings",
             "description": "Elevate your elegance with our Pearl Bracelet and Earrings set by Goldsmith, crafted from genuine pearls. Ideal for special events or as a refined gift.",
-            ,
             "brand": "Goldsmith",
             "price": 30.00,
             "size": "6",
@@ -79,7 +78,7 @@
             "description": "Statement elegance with our Red Hat from Valentino, fashioned from luxurious velvet. Its eye-catching design is sure to add a pop of sophistication to any outfit.",
             "brand": "Valentino",
             "price": 56.99,
-            "size": "10",
+            "size": "M",
             "category": 8,
             "image": "red_hat.jpg"
         }
@@ -135,7 +134,7 @@
             "description": "Make a vibrant statement with our Yellow Handbag from Prada, crafted from high-quality leather. This eye-catching accessory is the perfect complement to any fashion-forward ensemble.",
             "brand": "Prada",
             "price": 60.99,
-            "size": "0",
+            "size": "N/A",
             "category": 7,
             "image": "yellow_handbag.jpg"
         }
