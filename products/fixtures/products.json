@@ -1,0 +1,143 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp01",
+            "name": "Black Heels",
+            "description": "Dive into sophistication with our Black Heels by Office, masterfully crafted from the finest leather. These heels are the epitome of elegance and comfort, suited for any event.",
+            "brand": "Office",
+            "price": 24.50,
+            "size": "6",
+            "category": 5,
+            "image": "black_heels.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp02",
+            "name": "Blue Ball Dress",
+            "description": "Capture the spotlight in our Blue Ball Dress from Gucci, designed with luxurious silk. This mesmerizing piece promises an unforgettable presence at formal gatherings.",
+            "brand": "Gucci",
+            "price": 126.00,
+            "size": "12",
+            "category": 1,
+            "image": "blue_ball_dress.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp03",
+            "name": "Brown Coat",
+            "description": "Wrap yourself in elegance with our Brown Coat by Max-Mara. Made from premium wool, this coat offers unmatched warmth and a chic look for the winter season.",
+            "brand": "Max-Mara",
+            "price": 42.50,
+            "size": "8",
+            "category": 4,
+            "image": "brown_coat.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp04",
+            "name": "Flowery Top",
+            "description": "Enhance your summer look with our Flowery Top from Zara, featuring a breathable cotton blend. Its vivid design is perfect for sunny days and casual outings.",
+            "brand": "Zara",
+            "price": 20.00,
+            "size": "6",
+            "category": 2,
+            "image": "flowery_top.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp05",
+            "name": "Pearl bracelet and earrings",
+            "description": "Elevate your elegance with our Pearl Bracelet and Earrings set by Goldsmith, crafted from genuine pearls. Ideal for special events or as a refined gift.",
+            ,
+            "brand": "Goldsmith",
+            "price": 30.00,
+            "size": "6",
+            "category": 6,
+            "image": "pearl_bracelet_earrings.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp06",
+            "name": "Red Hat",
+            "description": "Statement elegance with our Red Hat from Valentino, fashioned from luxurious velvet. Its eye-catching design is sure to add a pop of sophistication to any outfit.",
+            "brand": "Valentino",
+            "price": 56.99,
+            "size": "10",
+            "category": 8,
+            "image": "red_hat.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp07",
+            "name": "Stripey Trousers",
+            "description": "Refresh your wardrobe with our Stripey Trousers from River Island, tailored from a comfortable polyester blend. Perfect for adding a touch of class to  casual look.",
+            "brand": "River Island",
+            "price": 20.50,
+            "size": "14",
+            "category": 3,
+            "image": "stripey_trousers.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp08",
+            "name": "Wedding Dress",
+            "description": "Say 'I do' in our enchanting Wedding Dress by Bold and Beautiful, created with delicate lace. This exquisite gown is designed to make your wedding day truly magical.",
+            "brand": "Bold and Beautiful",
+            "price": 24.50,
+            "size": "10",
+            "category": 9,
+            "image": "wedding_dress.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp09",
+            "name": "White Summer Dress",
+            "description": "Embody the summer spirit in our White Summer Dress from White Stuff, made with lightweight linen. Its elegant simplicity is perfect for staying chic and cool.",
+            "brand": "White Stuff",
+            "price": 22.50,
+            "size": "14",
+            "category": 1,
+            "image": "white_summer_dress.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp10",
+            "name": "Yellow Handbag",
+            "description": "Make a vibrant statement with our Yellow Handbag from Prada, crafted from high-quality leather. This eye-catching accessory is the perfect complement to any fashion-forward ensemble.",
+            "brand": "Prada",
+            "price": 60.99,
+            "size": "0",
+            "category": 7,
+            "image": "yellow_handbag.jpg"
+        }
+    }
+]
