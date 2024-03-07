@@ -37,13 +37,14 @@
                         {% endif %}
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name }}</p>
+                            <small class="text-muted">{{ product.brand }}</small>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
 
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.size }}</small>
+                                    <small class="text-muted">{{ product.size }}</small>
 
                                 </div>
                             </div>
