@@ -90,6 +90,11 @@ body {
     object-fit: cover;
 }
 
+.align-left-custom {
+    transform: translateX(-10%);
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -122,5 +127,12 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 768px) {
+    .align-left-custom {
+        transform: translateX(-5%);
+
     }
 }
