@@ -41,9 +41,10 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #2b1d0e;
     color: white;
     min-width: 260px;
+    margin-left: 40px;
 }
 
 .btn-black {
