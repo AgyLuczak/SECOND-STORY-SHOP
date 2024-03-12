@@ -84,6 +84,11 @@ body {
     z-index: -1;
 }
 
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 .card-img-top {
     width: 100%;
     height: 20vw;
