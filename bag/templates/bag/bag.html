@@ -42,17 +42,25 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0">Size: <strong>{{ item.product.size }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+
+                            <br>
+
+                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
+                                data-product_size="{{ item.size }}">REMOVE</a>
                         </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
-                        </td>
+                    </tr>
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0">£{{ item.product.price }}</p>
+                    </td>
+                    <td class="py-3 w-25">
+                        <p class="my-0">{{ item.quantity }}</p>
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0">£{{ item.product.price }}</p>
+                    </td>
                     </tr>
                     {% endfor %}
                     <tr>
@@ -98,4 +106,28 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+
+
+<script type="text/javascript">
+
+
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = { 'csrfmiddlewaretoken': csrfToken };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
 {% endblock %}
