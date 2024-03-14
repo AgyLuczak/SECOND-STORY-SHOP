@@ -4,28 +4,27 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 def bag_contents(request):
-
     bag_items = []
-    total = 0
+    total = Decimal('0')
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
+    for item_id in bag.keys():
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
+        total += product.price  # Since each item is only added once
+        product_count += 1  # Increment for each product present
         bag_items.append({
             'item_id': item_id,
-            'quantity': quantity,
+            'quantity': 1,  # Static quantity since it's always 1
             'product': product,
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE) / 100
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = 0
-        free_delivery_delta = 0
+        delivery = Decimal('0')
+        free_delivery_delta = Decimal('0')
     
     grand_total = delivery + total
     
