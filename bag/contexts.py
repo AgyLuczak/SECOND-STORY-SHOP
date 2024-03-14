@@ -11,11 +11,11 @@ def bag_contents(request):
 
     for item_id in bag.keys():
         product = get_object_or_404(Product, pk=item_id)
-        total += product.price  # Since each item is only added once
-        product_count += 1  # Increment for each product present
+        total += product.price  
+        product_count += 1  
         bag_items.append({
             'item_id': item_id,
-            'quantity': 1,  # Static quantity since it's always 1
+            'quantity': 1,  
             'product': product,
         })
 
