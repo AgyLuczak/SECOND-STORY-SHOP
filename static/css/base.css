@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
 html {
     height: 100%;
 }
@@ -6,8 +8,9 @@ body {
     background: url('/media/girl_hero_img.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    color: #2b1d0e;
+    font-family: "Afacad", sans-serif;
+    font-weight: 600;
 }
 
 /* from Bulma */
@@ -30,10 +33,16 @@ body {
 
 }
 
+.logo {
+    font-family: "Abril Fatface", serif;
+    font-size: 35px;
+}
+
 
 
 .logo-font {
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .main-logo-link {
