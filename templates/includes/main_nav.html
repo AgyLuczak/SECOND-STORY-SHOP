@@ -1,11 +1,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
                 <a href="{% url 'products' %}?sort=size&direction=asc" class="dropdown-item ">By Size</a>
@@ -16,11 +16,11 @@
 
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="clothing-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Clothing
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
                 <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
                 <a href="{% url 'products' %}?category=trousers" class="dropdown-item">Trousers</a>
@@ -31,11 +31,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="shoesandaccessories-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="shoesandaccessories-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Shoes & Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="shoesandaccessories-link">
+            <div class="dropdown-menu" aria-labelledby="shoesandaccessories-link">
                 <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
                 <a href="{% url 'products' %}?category=jewellery" class="dropdown-item">Jewellery</a>
                 <a href="{% url 'products' %}?category=bags" class="dropdown-item">Bags</a>
@@ -44,11 +44,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="occasions-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="occasions-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Occasions
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="occassions-link">
+            <div class="dropdown-menu" aria-labelledby="occassions-link">
                 <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Wedding</a>
                 <a href="{% url 'products' %}?category=ball_gowns" class="dropdown-item">Ball Gowns</a>
 
