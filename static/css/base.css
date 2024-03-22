@@ -281,7 +281,7 @@ input[name='q']::placeholder {
 
 .card-img-top {
     width: 100%;
-    height: 20vw;
+    height: 50vh;
     object-fit: cover;
 }
 
@@ -384,6 +384,13 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 768px) {
+    .align-left-custom {
+        transform: translateX(-5%);
+
     }
 }
 
