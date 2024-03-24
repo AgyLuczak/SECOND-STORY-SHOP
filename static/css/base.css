@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: url('/media/girl_hero_img.png') no-repeat center center fixed;
+    background: url('/static/images/girl_hero_img.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #2b1d0e;
@@ -95,6 +95,7 @@ icon:hover {
 .logo-font {
     text-transform: uppercase;
     font-weight: 400;
+
 }
 
 .main-logo-link {
@@ -237,6 +238,7 @@ icon:hover {
     left: 0;
     position: fixed;
     background: bisque;
+    background-size: cover;
     z-index: -1;
 }
 
