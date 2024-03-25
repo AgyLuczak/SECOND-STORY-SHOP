@@ -30,7 +30,8 @@ load_dotenv(dotenv_path=dotenv_path)
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ALLOWED_HOSTS = ['second-story-style-f8b69cba54dc.herokuapp.com', 'localhost', '127.0.0.1', '8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu110.gitpod.io']
 
