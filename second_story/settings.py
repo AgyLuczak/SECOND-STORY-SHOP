@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-8frgg4l285_%amgirkqt$73-85y6pa&1t&9ld2_hs*88qy36pb
 DEBUG = True
 
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = ['second-story-style.herokuapp.com', 'localhost', '127.0.0.1', '8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ALLOWED_HOSTS = ['second-story-style-f8b69cba54dc.herokuapp.com', 'localhost', '127.0.0.1', '8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu110.gitpod.io']
 
 
 
