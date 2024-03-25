@@ -1,1 +1,1 @@
-web: gunicorn SECOND-STORY-SHOP.wsgi:application
+web: gunicorn second_story.wsgi:application
