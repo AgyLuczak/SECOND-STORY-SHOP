@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/static/images/girl_hero_img.png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #2b1d0e;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#topnav {
+    max-height: 10vh;
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+}
+
+.nav-link,
+.nav-item {
+    color: #f4e4bc;
+}
+
+.nav-link:hover {
+
+    /* background-color: #f4e4bc;
+    color: #2b1d0e; */
+    color: gold;
+    text-decoration: none;
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+
+}
+
+.navbar {
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #edd290;
+}
+
+icon:hover {
+    color: gold;
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+}
+
+.logo-img {
+    border-radius: 50%;
+    display: block;
+    margin-left: 0;
+    max-width: 100%;
+    float: left;
+
+
+
+}
+
+.logo {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    /* font-size: 42px; */
+    /* color: #2b1d0e; */
+    color: gold;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+    color: #edd290;
+}
+
+.logo-sub {
+    color: #edd290;
+}
+
+
+.logo-font {
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+.main-logo-link {
+    width: fit-content;
+    color: #f4e4bc;
+}
+
+
+.main-logo-link:hover {
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+    color: gold;
+}
+
+.dropdown-menu {
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    border-color: gold;
+}
+
+.dropdown-item {
+    color: #f4e4bc;
+}
+
+.dropdown-item:hover {
+    color: #2b1d0e;
+    background-color: gold;
+}
+
+/* .shop-now-button {
+    background: #2b1d0e;
+    color: white;
+    min-width: 260px;
+    margin-left: 40px;
+} */
+
+.banner-heading {
+    /* background-color: #f4e4bc; */
+    background-color: rgb(234, 198, 131);
+    color: #2b1d0e;
+}
+
+
+.search-btn {
+    /* color: #f4e4bc;
+    background-color: #2b1d0e; */
+    color: #2b1d0e;
+    background-color: #f4e4bc;
+}
+
+.search-btn:hover {
+
+    transform: scale(1.05);
+    background-color: gold;
+    color: #2b1d0e;
+    transition: .5s ease-in-out;
+
+
+}
+
+.search-btn:active {
+    background-color: gold;
+    color: #2b1d0e;
+}
+
+#search-icon {
+    color: #2b1d0e;
+}
+
+#search-icon:hover {
+    background-color: #2b1d0e;
+    color: gold;
+}
+
+
+.shop-now-button {
+    background: #2b1d0e;
+    color: #f4e4bc;
+    min-width: 260px;
+    margin-left: 40px;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0.3rem 0.3rem gold;
+    border-radius: 10px;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    transition: .5s ease-in-out;
+    background-color: gold;
+    color: #2b1d0e;
+    box-shadow: 0 0 0.3rem 0.3rem #2b1d0e;
+    transform: scale(1.1);
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: bisque;
+    background-size: cover;
+    z-index: -1;
+}
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.remove-link {
+    cursor: pointer;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.align-left-custom {
+    transform: translateX(-10%);
+}
+
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .align-left-custom {
+        transform: translateX(-5%);
+
+    }
+}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 768px) {
+    .align-left-custom {
+        transform: translateX(-5%);
+
+    }
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #17a2b8;
+    /* text-info */
+}
+
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
