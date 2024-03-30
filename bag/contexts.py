@@ -39,3 +39,9 @@ def bag_contents(request):
     }
 
     return context
+
+# Social links
+def social_links(request):
+    return {
+        'social_links': settings.SOCIAL_LINKS
+    }
