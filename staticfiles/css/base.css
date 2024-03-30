@@ -362,6 +362,34 @@ input[name='q']::placeholder {
     }
 }
 
+.social-icon-light {
+    color: #edd290;
+
+}
+
+.social-icon-light:hover {
+    color: gold;
+
+
+}
+
+.social-icon-dark {
+    color: #2b1d0e;
+
+}
+
+.social-icon-dark:hover {
+    color: #c6831b;
+
+
+
+}
+
+.social-links:hover {
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+}
 
 /* -------------------------------- Media Queries */
 

@@ -1,19 +1,27 @@
-<footer class="bg-dark text-white mt-4">
+<footer class="mt-4">
     <div class="container-fluid py-3">
         <!-- Social Links Row -->
         <div class="row">
             <div class="col-md-12 text-center">
                 <!-- Links -->
-                <a href="{{ social_links.facebook }}" class="social-links mx-2" target="_blank">
+                <a href="{{ social_links.facebook }}"
+                    class="social-links mx-2 {% if request.path == '/' %}social-icon-light{% else %}social-icon-dark{% endif %}"
+                    target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="{{ social_links.instagram }}" class="social-links mx-2" target="_blank">
+                <a href="{{ social_links.instagram }}"
+                    class="social-links mx-2 {% if request.path == '/' %}social-icon-light{% else %}social-icon-dark{% endif %}"
+                    target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="{{ social_links.pinterest }}" class="social-links mx-2" target="_blank">
+                <a href="{{ social_links.pinterest }}"
+                    class="social-links mx-2 {% if request.path == '/' %}social-icon-light{% else %}social-icon-dark{% endif %}"
+                    target="_blank">
                     <i class="fab fa-pinterest"></i>
                 </a>
-                <a href="{{ social_links.twitter }}" class="social-links mx-2" target="_blank">
+                <a href="{{ social_links.twitter }}"
+                    class="social-links mx-2 {% if request.path == '/' %}social-icon-light{% else %}social-icon-dark{% endif %}"
+                    target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
