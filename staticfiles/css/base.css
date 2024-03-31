@@ -12,8 +12,14 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
 
 
+}
+
+.flex-grow {
+    flex: 1;
 }
 
 
@@ -147,8 +153,7 @@ icon:hover {
 
 
 .search-btn {
-    /* color: #f4e4bc;
-    background-color: #2b1d0e; */
+
     color: #2b1d0e;
     background-color: #f4e4bc;
 }
