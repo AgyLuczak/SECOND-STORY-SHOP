@@ -12,6 +12,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+
 }
 
 
@@ -33,7 +35,7 @@ body {
     color: gold;
     text-decoration: none;
     border-radius: 10px;
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: .5s ease-in-out;
 
 
@@ -353,42 +355,48 @@ input[name='q']::placeholder {
 }
 
 
+/* Footer */
 
+footer {
 
-@media (max-width: 768px) {
-    .align-left-custom {
-        transform: translateX(-5%);
-
-    }
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
+
 
 .social-icon-light {
     color: #edd290;
-
-}
-
-.social-icon-light:hover {
-    color: gold;
-
-
 }
 
 .social-icon-dark {
     color: #2b1d0e;
+}
+
+.social-icon-light,
+.social-icon-dark {
+    transition: transform .5s ease-in-out;
+}
+
+.social-icon-light:hover {
+    color: gold;
 
 }
 
 .social-icon-dark:hover {
     color: #c6831b;
 
-
-
 }
 
 .social-links:hover {
-    transform: scale(1.05);
-    transition: .5s ease-in-out;
+    text-decoration: none;
 
+}
+
+.social-links:hover i {
+    transform: scale(1.5);
+    transition: transform .5s ease-in-out;
+    text-decoration: none;
 }
 
 /* -------------------------------- Media Queries */
@@ -471,6 +479,7 @@ input[name='q']::placeholder {
 
     }
 }
+
 
 /* Allauth form formatting */
 
