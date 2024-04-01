@@ -30,7 +30,7 @@
                         <tr>
                             <th scope="col">Product Info</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
+                            <!-- <th scope="col">Qty</th> -->
                             <th scope="col">Subtotal</th>
                             <th scope="col">Action</th> <!-- Added for Remove button -->
                         </tr>
@@ -40,7 +40,7 @@
                         <tr>
                             <td class="w-25">
                                 {% if item.product.image %}
-                                <img class="img-fluid rounded" src="{{ item.product.image.url }}" S
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
                                     alt="{{ item.product.name }}">
                                 {% else %}
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}"
@@ -51,8 +51,9 @@
                                 <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </td>
                             <td>£{{ item.product.price }}</td>
-                            <td>{{ item.quantity }}</td>
-                            <td>£{{ item.product.price | calc_subtotal:item.quantity }}</td>
+                            <!-- <td>{{ item.quantity }}</td> -->
+                            <!-- <td>£{{ item.product.price|calc_subtotal:item.quantity }}</td> -->
+                            <td>£{{ item.subtotal }}</td>
 
                             <td>
                                 <!-- Removal link -->
@@ -112,7 +113,6 @@
 
 
 <script type="text/javascript">
-
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
