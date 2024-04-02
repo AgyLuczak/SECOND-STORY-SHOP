@@ -366,6 +366,10 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+.card {
+    border-radius: 10px;
+}
+
 
 /* Footer */
 
