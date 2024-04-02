@@ -8,6 +8,8 @@ body {
     background: url('/static/images/girl_hero_img.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
+    /* min-height: calc(100vh - 164px); */
+    /* min-height: 100vh; */
     color: #2b1d0e;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -413,6 +415,14 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    body {
+        background: url('/static/images/background_img.png') no-repeat center center fixed;
+        background-size: cover;
+        height: calc(100vh - 164px);
+    }
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -484,6 +494,7 @@ footer {
 
     }
 }
+
 
 
 /* Allauth form formatting */

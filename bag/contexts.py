@@ -7,7 +7,7 @@ from products.models import Product
 def bag_contents(request):
     bag_items = []
     total = Decimal('0')
-    running_total = Decimal('0')  # Initialize running total
+    running_total = Decimal('0')  
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
@@ -32,7 +32,7 @@ def bag_contents(request):
 
     context = {
         'bag_items': bag_items,
-        'total': running_total,  # The total here represents the final running total
+        'total': running_total,  
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
