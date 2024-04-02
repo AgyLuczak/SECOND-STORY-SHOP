@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html {
+/* html {
     height: 100%;
+} */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+
 }
 
 body {
     background: url('/static/images/girl_hero_img.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    /* min-height: calc(100vh - 164px); */
-    /* min-height: 100vh; */
     color: #2b1d0e;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -22,6 +27,10 @@ body {
 
 .flex-grow {
     flex: 1;
+}
+
+.content-wrap {
+    flex: 1 0 auto;
 }
 
 
@@ -140,12 +149,7 @@ icon:hover {
     background-color: gold;
 }
 
-/* .shop-now-button {
-    background: #2b1d0e;
-    color: white;
-    min-width: 260px;
-    margin-left: 40px;
-} */
+
 
 .banner-heading {
     /* background-color: #f4e4bc; */
@@ -187,6 +191,7 @@ icon:hover {
     background-color: #2b1d0e;
     color: gold;
 }
+
 
 
 .shop-now-button {
@@ -369,7 +374,11 @@ footer {
     height: 100px;
     bottom: 0;
     width: 100%;
+    flex-shrink: 0;
+
 }
+
+
 
 
 .social-icon-light {
@@ -424,6 +433,8 @@ footer {
 }
 
 /* fixed top navbar only on medium and up */
+
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -448,6 +459,13 @@ footer {
         height: calc(100vh - 116px);
     }
 
+    .container-content {
+        margin-top: -100px;
+    }
+
+    .shop-now-button {
+        margin-top: 40px;
+    }
 
     .display-4.logo-font.text-black {
         font-size: 2rem;
@@ -493,8 +511,13 @@ footer {
         transform: translateX(-5%);
 
     }
-}
 
+    .shop-now-button-smaller {
+        padding: .25rem .5rem;
+        font-size: .875rem;
+
+    }
+}
 
 
 /* Allauth form formatting */
