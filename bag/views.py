@@ -13,23 +13,6 @@ def view_bag(request):
 
     return render(request, 'bag/bag.html')
 
-# def add_to_bag(request, item_id):
-#     """Add a specified product to the shopping bag."""
-#     try:
-#         product = Product.objects.get(pk=item_id)
-#         bag = request.session.get('bag', {})
-
-#         if item_id in bag:
-#             messages.error(request, f'{product.name} is already in your bag.')
-#         else:
-#             bag[item_id] = 1  # Indicate the product is present in the bag
-#             messages.success(request, f'Added {product.name} to your bag.')
-
-#         request.session['bag'] = bag
-#         return redirect(request.POST.get('redirect_url'))
-#     except Product.DoesNotExist:
-#         messages.error(request, "Product not found.")
-#         return redirect('view_bag')
 
 def add_to_bag(request, item_id):
     """Add a specified product to the shopping bag."""
@@ -49,6 +32,7 @@ def add_to_bag(request, item_id):
     except Product.DoesNotExist:
         messages.error(request, "Product not found.")
         return redirect('view_bag')
+        
 
 def remove_from_bag(request, item_id):
     """Remove the specified product from the shopping bag."""

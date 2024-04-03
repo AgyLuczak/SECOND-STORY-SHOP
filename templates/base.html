@@ -154,12 +154,14 @@
         {% endfor %}
     </div>
     {% endif %}
-    <div class="flex-grow container mt-5 pt-3">
-        {% block page_header %}
-        {% endblock %}
+    <div class="content-wrap">
+        <div class="flex-grow container mt-5 pt-3">
+            {% block page_header %}
+            {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 
     {% include 'includes/footer.html' %}
