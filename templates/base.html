@@ -92,6 +92,15 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Wishlist link -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="{% url 'view_wishlist' %}" aria-label="View Wishlist">
+                            <div class="text-center">
+                                <div><i class="fas fa-heart fa-lg"></i></div>
+                                <p class="my-0">Wish List</p>
+                            </div>
+                        </a>
+                    </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
