@@ -52,15 +52,20 @@
                     </div>
                 </div>
                 <!-- Card Footer for Other Actions -->
-                <div class="card-footer bg-white d-flex justify-content-end border-0">
+                <div class="card-footer bg-white d-flex justify-content-between border-0">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black text-uppercase">
+                        Keep Shopping
+                    </a>
                     <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button type="submit" class="btn btn-black rounded-0 text-uppercase mr-2">Add to Bag</button>
+                        <button type="submit" class="btn btn-black text-uppercase">Add to Bag</button>
                     </form>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 text-uppercase">
-                        Keep Shopping
-                    </a>
+                    <form class="d-inline" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button type="submit" class="btn btn-black text-uppercase">Add to Wish List</button>
+                    </form>
                 </div>
             </div>
         </div>

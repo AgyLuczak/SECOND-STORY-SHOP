@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wishlist_tools %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Your Wishlist</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if wishlist_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in wishlist_items %}
+                        <tr>
+                            <td class="w-25">
+                                {% if item.product.image %}
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                    alt="{{ item.product.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
+                                    alt="No image available">
+                                {% endif %}
+                                <p><strong>{{ item.product.name }}</strong></p>
+                                <p>Size: {{ item.product.size }}</p>
+                                <!-- Optional: Check if size is relevant for your wishlist -->
+                                <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <td>£{{ item.product.price }}</td>
+                            <td>
+                                <!-- Action Links -->
+                                <a class="add-to-bag text-success" href="{% url 'add_to_bag' item.product.id %}">Add to
+                                    Bag</a> |
+                                <a class="remove-from-wishlist text-danger"
+                                    href="{% url 'remove_from_wishlist' item.id %}">Remove</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your wishlist is empty!</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Continue Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
