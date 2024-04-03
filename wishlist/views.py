@@ -1,10 +1,10 @@
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import WishlistItem
 from products.models import Product
 
-@login_required
+# @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     WishlistItem.objects.get_or_create(user=request.user, product=product)
