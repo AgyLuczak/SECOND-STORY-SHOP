@@ -61,11 +61,16 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         <button type="submit" class="btn btn-black text-uppercase">Add to Bag</button>
                     </form>
+                    {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'add_to_wishlist' product.id %}" method="POST">
                         {% csrf_token %}
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button type="submit" class="btn btn-black text-uppercase">Add to Wish List</button>
+                        <button type="submit" class="btn btn-danger text-uppercase">Add to Wish List</button>
                     </form>
+                    {% else %}
+                    <a href="{% url 'account_login' %}?next={{ request.path }}"
+                        class="btn btn-danger text-uppercase">Log in to Add to Wish
+                        List</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
