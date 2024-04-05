@@ -16,8 +16,9 @@
 {% block content %}
 <div class="container h-100 container-content">
     <div class="row h-100 align-items-center">
+        <!--On large screens logo and the button are placed nect to each other-->
         <div
-            class="col-12 col-md-8 col-lg-7 d-flex flex-column flex-lg-row justify-content-center align-items-center text-center text-lg-left">
+            class="col-12 col-md-8 col-lg-7 d-none d-lg-flex flex-column flex-lg-row justify-content-center align-items-center text-center text-lg-left">
             <div class="col-lg-12 mb-lg-0">
                 <div class="flip-container" onclick="this.classList.toggle('hover');">
                     <div class="flipper">
@@ -40,5 +41,22 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- On smaller screens the logo and button stack vertically in the center -->
+<div class="col-12 d-lg-none d-flex flex-column align-items-center">
+    <div class="flip-container mb-4" onclick="this.classList.toggle('hover');">
+        <div class="flipper">
+            <div class="front">
+                <img src="{% static 'images/second_story_logo.png' %}" alt="Shop Logo" class="img-fluid">
+            </div>
+            <div class="back text-center">
+                <div>Welcome to Second Story Style...</div>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
+</div>
+</div>
 </div>
 {% endblock %}
