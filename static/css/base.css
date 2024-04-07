@@ -534,6 +534,7 @@ footer {
 
     .shop-now-button {
         margin-top: 40px;
+        margin-left: 0px;
     }
 
     .display-4.logo-font.text-black {
@@ -588,6 +589,40 @@ footer {
     }
 }
 
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        font-size: 13px;
+    }
+
+    .flip-container {
+        width: 400px;
+        height: 400px;
+
+    }
+
+    .shop-now-button-smaller {
+        padding: .20rem .3rem;
+        font-size: .700rem;
+        max-width: 200px;
+
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+
+    .flip-container {
+        width: 280px;
+        height: 280px;
+
+    }
+
+    .navbar {
+        font-size: 10px;
+    }
+
+}
 
 /* Allauth form formatting */
 
