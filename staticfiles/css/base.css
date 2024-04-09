@@ -336,9 +336,19 @@ icon:hover {
     z-index: -1;
 }
 
+/*Bagdes*/
+
+a.category-badge>span.badge {
+    background-color: #2b1d0e;
+    color: gold;
+
+}
+
 a.category-badge>span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background-color: gold;
+    color: #2b1d0e;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
 }
 
 .btt-button {

@@ -14,10 +14,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <h2 class="logo-font">Our Collection</h2>
             {% for category in current_categories %}
             <a href="{% url 'products' %}?category={{ category.name }}" class="category-badge text-decoration-none">
-                <span class="badge badge-white text-black rounded-0 border border-dark p-2 mt-2">
+                <span class="badge border p-2 mt-2">
                     {{ category.friendly_name|default:category.name }}
                 </span>
             </a>
