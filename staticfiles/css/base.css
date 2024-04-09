@@ -67,6 +67,8 @@ body {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f4e4bc' stroke-width='2' linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -407,6 +409,13 @@ input[name='q']::placeholder {
     color: gold;
     transform: scale(1.1);
     transition: .5s ease-in-out;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 120px);
+
 }
 
 .align-left-custom {
