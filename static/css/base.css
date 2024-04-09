@@ -380,6 +380,35 @@ input[name='q']::placeholder {
 }
 
 
+/* Image modal*/
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    border-bottom: 1px solid gold;
+}
+
+.modal-body {
+    background-color: #2b1d0e;
+
+}
+
+.close {
+    color: #f4e4bc;
+
+
+}
+
+.close:hover {
+    color: gold;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+}
+
 .align-left-custom {
     transform: translateX(-10%);
 }
@@ -439,6 +468,8 @@ input[name='q']::placeholder {
 .card {
     border-radius: 10px;
 }
+
+
 
 
 /* Footer */
