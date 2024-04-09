@@ -20,9 +20,9 @@
                         <!-- Column for Product Image -->
                         <div class="col-12 col-md-6">
                             {% if product.image %}
-                            <a href="{{ product.image.url }}" target="_blank">
-                                <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
-                            </a>
+                            <!-- Updated part to trigger the modal instead of opening in a new tab -->
+                            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}"
+                                style="cursor:pointer" data-toggle="modal" data-target="#productImageModal">
                             {% else %}
                             <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid" alt="{{ product.name }}">
                             {% endif %}
@@ -76,4 +76,8 @@
         </div>
     </div>
 </div>
+
+<!-- Included the Modal Here -->
+{% include 'includes/product_image_modal.html' %}
+
 {% endblock %}
