@@ -167,7 +167,16 @@
     {% include 'includes/footer.html' %}
     {% block postloadjs %}
     <script type="text/javascript">
-        $('.toast').toast('show');
+        $(document).ready(function () {
+            // Show any toast with a message
+            $('.toast').toast('show');
+
+            // Additional logic specifically for wishlist toasts, if needed
+            if ($('.wishlist-toast').length && $('.wishlist-message').length) {
+                // Specific actions for wishlist toasts
+                $('.wishlist-toast').toast('show');
+            }
+        });
     </script>
     {% endblock %}
 
