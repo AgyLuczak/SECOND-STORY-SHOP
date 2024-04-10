@@ -9,7 +9,7 @@ from django.db.models import Value, BooleanField
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     WishlistItem.objects.get_or_create(user=request.user, product=product)
-    messages.success(request, 'Product added to your wishlist!', extra_tags='wishlist')
+    messages.success(request, 'Product added to your wishlist!',)
     return redirect('product_detail', product_id=product.id) 
 
 #The toggle action checks if an item is already in the wishlist, adding it if not, or removing it if present
@@ -18,13 +18,14 @@ def toggle_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist_item, created = WishlistItem.objects.get_or_create(user=request.user, product=product)
 
-    if not created:
-        wishlist_item.delete()
-        messages.success(request, f'{product.name} removed from your wishlist.', extra_tags='wishlist')
+    if created:
+        message = f'{product.name} added to your wishlist.'
     else:
-        messages.success(request, f'{product.name} added to your wishlist.', extra_tags='wishlist' )
+        wishlist_item.delete()
+        message = f'{product.name} removed from your wishlist.'
 
-    return redirect(request.META.get('HTTP_REFERER', 'product_detail'), product_id=product.id)
+    messages.success(request, message)
+    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
 
 
 @login_required
@@ -40,5 +41,5 @@ def view_wishlist(request):
 def remove_from_wishlist(request, item_id):
     wishlist_item = get_object_or_404(WishlistItem, id=item_id, user=request.user)
     wishlist_item.delete()
-    messages.success(request, 'Item removed from your wishlist.', extra_tags='wishlist')
+    messages.success(request, 'Item removed from your wishlist.',)
     return redirect('view_wishlist')

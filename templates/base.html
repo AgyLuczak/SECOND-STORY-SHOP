@@ -139,11 +139,13 @@
 
     {% if messages %}
     <div class="message-container">
+        {% if wishlist_action %}
+        {% include 'includes/toasts/toast_wishlist.html' %}
+        {% endif %}
+
         {% for message in messages %}
         {% with message.level as level %}
-        {% if 'wishlist' in message.tags %}
-        {% include 'includes/toasts/toast_wishlist.html' %}
-        {% elif level == 40 %}
+        {% if level == 40 %}
         {% include 'includes/toasts/toast_error.html' %}
         {% elif level == 30 %}
         {% include 'includes/toasts/toast_warning.html' %}
