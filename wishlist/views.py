@@ -4,12 +4,26 @@ from django.contrib import messages
 from .models import WishlistItem
 from products.models import Product
 
-# @login_required
+@login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     WishlistItem.objects.get_or_create(user=request.user, product=product)
     messages.success(request, 'Product added to your wishlist!')
     return redirect('product_detail', product_id=product.id) 
+
+#The toggle action checks if an item is already in the wishlist, adding it if not, or removing it if present
+@login_required
+def toggle_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist_item, created = WishlistItem.objects.get_or_create(user=request.user, product=product)
+
+    if not created:
+        wishlist_item.delete()
+        messages.success(request, f'{product.name} removed from your wishlist.')
+    else:
+        messages.success(request, f'{product.name} added to your wishlist.')
+
+    return redirect(request.META.get('HTTP_REFERER', 'product_detail'), product_id=product.id)
 
 
 @login_required
@@ -19,6 +33,7 @@ def view_wishlist(request):
         'wishlist_items': wishlist_items,
     }
     return render(request, 'wishlist/wishlist.html', context)
+
 
 @login_required
 def remove_from_wishlist(request, item_id):

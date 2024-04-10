@@ -82,9 +82,9 @@
                             <!-- Wishlist and Add to Bag Buttons -->
                             <div>
                                 {% if user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-wish btn-sm"
-                                    title="Add to Wishlist">
-                                    <i class="fas fa-heart"></i>
+                                <a href="{% url 'toggle_wishlist' product.id %}"
+                                    title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}">
+                                    <i class="fas fa-heart {% if product.in_wishlist %}text-danger{% endif %}"></i>
                                 </a>
                                 {% else %}
                                 <a href="{% url 'account_login' %}?next={% url 'product_detail' product.id %}"
