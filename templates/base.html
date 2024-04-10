@@ -141,7 +141,9 @@
     <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
-        {% if level == 40 %}
+        {% if 'wishlist' in message.tags %}
+        {% include 'includes/toasts/toast_wishlist.html' %}
+        {% elif level == 40 %}
         {% include 'includes/toasts/toast_error.html' %}
         {% elif level == 30 %}
         {% include 'includes/toasts/toast_warning.html' %}
