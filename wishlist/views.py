@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import WishlistItem
 from products.models import Product
+from django.db.models import Value, BooleanField
 
 @login_required
 def add_to_wishlist(request, product_id):

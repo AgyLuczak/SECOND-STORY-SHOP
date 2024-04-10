@@ -3,9 +3,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Exists, OuterRef
+from django.db.models import Value, BooleanField
 
 
 from .models import Product, Category  # Correct import for your models
+from wishlist.models import WishlistItem 
 from .forms import ProductForm
 
 def all_products(request):
@@ -15,6 +18,14 @@ def all_products(request):
     categories = None
     sortkey = request.GET.get('sort', None)
     direction = request.GET.get('direction', 'asc')
+
+    if request.user.is_authenticated:
+        # Annotate products with 'in_wishlist' boolean for authenticated users
+        wishlist_products = WishlistItem.objects.filter(user=request.user, product=OuterRef('pk'))
+        products = products.annotate(in_wishlist=Exists(wishlist_products))
+    else:
+        # For unauthenticated users, 'in_wishlist' can default to False
+        products = products.annotate(in_wishlist=Value(False, output_field=BooleanField()))
 
     # Initialize flags
     is_sorting_default = True
@@ -73,10 +84,12 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 def product_detail(request, product_id):
-    """
-    A view to show individual product details
-    """
     product = get_object_or_404(Product, pk=product_id)
+
+    if request.user.is_authenticated:
+        product.in_wishlist = WishlistItem.objects.filter(user=request.user, product=product).exists()
+    else:
+        product.in_wishlist = False
 
     context = {
         'product': product,
@@ -151,3 +164,5 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
