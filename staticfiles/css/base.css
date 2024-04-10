@@ -484,8 +484,15 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* Cards displaying products*/
+
 .card {
-    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 2px #2b1d0e;
+
 }
 
 /*Card action buttons*/
