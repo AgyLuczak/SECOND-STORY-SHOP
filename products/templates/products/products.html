@@ -83,7 +83,8 @@
                             <div>
                                 {% if user.is_authenticated %}
                                 <a href="{% url 'toggle_wishlist' product.id %}"
-                                    title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}">
+                                    title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}"
+                                    class="btn btn-wish btn-sm">
                                     <i class="fas fa-heart {% if product.in_wishlist %}text-danger{% endif %}"></i>
                                 </a>
                                 {% else %}
