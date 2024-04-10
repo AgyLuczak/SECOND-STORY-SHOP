@@ -29,3 +29,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        // If there's a message related to the wishlist action, show the wishlist toast
+        if ($('.wishlist-toast').length && $('.wishlist-message').length) {
+            $('.wishlist-toast').toast('show');
+        }
+    });
+</script>
