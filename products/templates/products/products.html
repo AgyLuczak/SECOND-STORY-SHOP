@@ -82,17 +82,17 @@
                             <!-- Wishlist and Add to Bag Buttons -->
                             <div>
                                 {% if user.is_authenticated %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-danger btn-sm"
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-wish btn-sm"
                                     title="Add to Wishlist">
                                     <i class="fas fa-heart"></i>
                                 </a>
                                 {% else %}
                                 <a href="{% url 'account_login' %}?next={% url 'product_detail' product.id %}"
-                                    class="btn btn-outline-danger btn-sm" title="Log in to Add to Wishlist">
+                                    class="btn btn-wish btn-sm" title="Log in to Add to Wishlist">
                                     <i class="fas fa-heart"></i>
                                 </a>
                                 {% endif %}
-                                <a href="{% url 'add_to_bag' product.id %}" class="btn btn-outline-primary btn-sm"
+                                <a href="{% url 'add_to_bag' product.id %}" class="btn btn-bag btn-sm"
                                     title="Add to Bag">
                                     <i class="fas fa-shopping-bag"></i>
                                 </a>

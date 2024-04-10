@@ -53,31 +53,33 @@
                 </div>
                 <!-- Card Footer for Other Actions -->
                 <div class="card-footer bg-white d-flex justify-content-between border-0">
+                    <!-- Keep Shopping stays on the left -->
                     <a href="{% url 'products' %}" class="btn btn-outline-black text-uppercase">
                         Keep Shopping
                     </a>
-                    <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button type="submit" class="btn btn-black text-uppercase">Add to Bag</button>
-                    </form>
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'add_to_wishlist' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger text-uppercase">Add to Wish List</button>
-                    </form>
-                    {% else %}
-                    <a href="{% url 'account_login' %}?next={{ request.path }}"
-                        class="btn btn-danger text-uppercase">Log in to Add to Wish
-                        List</a>
-                    {% endif %}
+
+                    <!-- Grouped actions to the right -->
+                    <div>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-wish text-uppercase">Add to Wish List</button>
+                        </form>
+                        {% else %}
+                        <a href="{% url 'account_login' %}?next={{ request.path }}"
+                            class="btn btn-wish text-uppercase">Log in to Add to
+                            Wish List</a>
+                        {% endif %}
+                        <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <button type="submit" class="btn btn-bag text-uppercase">Add to Bag</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Included the Modal Here -->
-{% include 'includes/product_image_modal.html' %}
 
-{% endblock %}
+                <!-- Included the Modal Here -->
+                {% include 'includes/product_image_modal.html' %}
+
+                {% endblock %}
