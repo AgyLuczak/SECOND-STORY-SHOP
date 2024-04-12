@@ -6,12 +6,14 @@ from products.models import Product
 
 def bag_contents(request):
     bag_items = []
+    product_count = 0  # Initialize product count to zero
     total = Decimal('0')
     running_total = Decimal('0')  
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
+        product_count += quantity  # Increment product count directly based on quantity
         price = product.price * quantity
         running_total += price  # Update running total with each item
         bag_items.append({
@@ -32,6 +34,7 @@ def bag_contents(request):
 
     context = {
         'bag_items': bag_items,
+        'product_count': product_count,  
         'total': running_total,  
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
@@ -40,6 +43,7 @@ def bag_contents(request):
     }
 
     return context
+
 
 # Social links
 def social_links(request):
