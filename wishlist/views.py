@@ -27,7 +27,7 @@ def toggle_wishlist(request, product_id):
         request.session['wishlist_action'] = 'removed'
         message = f'{product.name} removed from your wishlist.'
 
-    request.session['wishlist_items'] = list(WishlistItem.objects.filter(user=request.user).values('product__name', 'product__image_url'))  # Assuming each item has 'name' and 'image_url'
+    request.session['wishlist_items'] = list(WishlistItem.objects.filter(user=request.user).values('product__name', 'product__image'))'
     messages.success(request, message)
     return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
 
