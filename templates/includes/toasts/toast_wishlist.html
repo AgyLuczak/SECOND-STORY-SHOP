@@ -15,17 +15,23 @@
             </div>
         </div>
         <!-- Wishlist Item Summary -->
+        {% if wishlist_items %}
+        <p class="logo-font bg-white text-info py-1">Your Wishlist ({{ wishlist_items|length }})</p>
         <div class="wishlist-notification-wrapper">
-        </div>
-        <div class="row">
-            <div class="col">
-                <a href="{% url 'view_wishlist' %}" class="btn btn-info btn-block rounded-0">
-                    <span class="text-uppercase">View Your Wishlist</span>
-                    <span class="icon">
-                        <i class="fas fa-heart"></i>
-                    </span>
-                </a>
+            {% for item in wishlist_items %}
+            <div class="row">
+                <div class="col-3 my-1">
+                    {% if item.product.image %}
+                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                    {% endif %}
+                </div>
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    {% if item.product.size %}
+                    <small class="text-muted">size {{ item.product.size }}</small>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+            {% endfor %}
