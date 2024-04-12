@@ -25,9 +25,10 @@ def toggle_wishlist(request, product_id):
         wishlist_item.delete()
         message = f'{product.name} removed from your wishlist.'
 
+     # Fetch the current wishlist items to display in the toast
+    wishlist_items = WishlistItem.objects.filter(user=request.user).order_by('-added_on')
     messages.success(request, message)
-    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
-
+    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])), {'wishlist_items': wishlist_items})
 
 @login_required
 def view_wishlist(request):
