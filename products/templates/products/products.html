@@ -22,42 +22,12 @@
                 </span>
             </a>
             {% endfor %}
-
-
-
-
             <hr class="w-50 mb-1">
         </div>
     </div>
     <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector"
-                            class="custom-select custom-select-sm rounded-0 border border-{{ border_class }}">
-                            <option value="reset" {% if is_sorting_default %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if is_price_asc %}selected{% endif %}>Price (low to high)
-                            </option>
-                            <option value="price_desc" {% if is_price_desc %}selected{% endif %}>Price (high to low)
-                            </option>
-                            <option value="name_asc" {% if is_name_asc %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if is_name_desc %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if is_category_asc %}selected{% endif %}>Category (A-Z)
-                            </option>
-                            <option value="category_desc" {% if is_category_desc %}selected{% endif %}>Category (Z-A)
-                            </option>
-                        </select>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
         {% for product in products %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100 border-0">
                 <!-- Product image -->
                 {% if product.image %}
@@ -82,9 +52,8 @@
                             <!-- Wishlist and Add to Bag Buttons -->
                             <div>
                                 {% if user.is_authenticated %}
-                                <a href="{% url 'toggle_wishlist' product.id %}"
-                                    title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}"
-                                    class="btn btn-wish btn-sm">
+                                <a href="{% url 'toggle_wishlist' product.id %}" class="btn btn-wish btn-sm"
+                                    title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}">
                                     <i class="fas fa-heart {% if product.in_wishlist %}text-danger{% endif %}"></i>
                                 </a>
                                 {% else %}
@@ -104,10 +73,7 @@
             </div>
         </div>
         {% endfor %}
-
-
     </div>
-</div>
 </div>
 </div>
 <div class="btt-button shadow-sm rounded-0 border border-black">
@@ -116,6 +82,7 @@
     </a>
 </div>
 {% endblock %}
+
 
 
 {% block postloadjs %}
