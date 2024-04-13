@@ -368,6 +368,27 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+
+/* Sort selector */
+
+#sort-selector {
+    border-color: #2b1d0e;
+    outline: 1px solid #2b1d0e
+}
+
+
+#sort-selector:focus {
+    border-color: gold;
+    outline: 2px solid gold;
+    box-shadow: 0 0 3px gold;
+
+}
+
+#sort-selector:hover {
+    border-color: gold;
+
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -728,7 +749,24 @@ footer {
 
 .allauth-form-inner-content input {
     border-color: #2b1d0e;
+    /* Dark brown */
+    transition: border-color 0.3s ease-in-out;
+    /* Smooth transition for the border color */
+}
 
+.allauth-form-inner-content input:hover {
+    border-color: gold;
+
+    /* Change border color to gold on hover */
+}
+
+.allauth-form-inner-content input:focus {
+    border-color: gold;
+    /* Change border color to gold on focus */
+    outline: 2px solid gold;
+    /* Remove default outline */
+    box-shadow: 0 0 5px gold;
+    /* Add a gold glow to emphasize focus */
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
