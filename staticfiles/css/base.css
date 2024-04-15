@@ -354,7 +354,8 @@ icon:hover {
 .update-profile-btn,
 .add-btn,
 .select-btn,
-.signout-btn {
+.signout-btn,
+.reset-btn {
     background-color: #2b1d0e;
     color: #f4e4bc;
     outline: 2px solid #f4e4bc;
@@ -366,10 +367,15 @@ icon:hover {
 .update-profile-btn:hover,
 .add-btn:hover,
 .select-btn:hover,
-.signout-btn:hover {
+.signout-btn:hover,
+.reset-btn:hover {
     outline: 2px solid gold;
     color: gold;
     transform: scale(1.1);
+}
+
+.reset-btn {
+    width: 200px;
 }
 
 /* .text-black {
@@ -834,6 +840,14 @@ footer {
         margin-bottom: 10px;
 
     }
+
+    .back-login-btn {
+        width: 200px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+
 
     .submit-button {
         flex-direction: column;
