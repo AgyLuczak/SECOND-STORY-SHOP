@@ -368,10 +368,11 @@ icon:hover {
 .select-btn:hover,
 .signout-btn:hover {
     outline: 2px solid gold;
+    color: gold;
     transform: scale(1.1);
 }
 
-.text-black {
+/* .text-black {
     color: #000 !important;
 }
 
@@ -381,7 +382,7 @@ icon:hover {
 
 .bg-black {
     background: #000 !important;
-}
+} */
 
 .overlay {
     height: 100%;
@@ -460,8 +461,18 @@ input[name='q']::placeholder {
     overflow: visible;
 }
 
+.toast-header {
+    background-color: gold;
+}
+
+.toast-body {
+    background-color: #f4e4bc;
+}
+
 .toast-capper {
     height: 2px;
+
+
 }
 
 
