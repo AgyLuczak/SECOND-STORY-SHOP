@@ -301,9 +301,11 @@ icon:hover {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    transition: transform .5s ease-in-out;
+    /* background: black;
+    color: white !important; */
 }
+
 
 
 .btn-black:hover,
@@ -311,6 +313,25 @@ icon:hover {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.keep-shopping-btn {
+    background-color: whitesmoke;
+    color: #2b1d0e;
+    outline: 2px solid #2b1d0e;
+    /* Ensures the outline is ready for transition */
+    transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
+    /* Transition for outline color */
+}
+
+.keep-shopping-btn:hover {
+    outline-color: gold;
+    transform: scale(1.1);
+    /* Ensures the color changes on hover */
+}
+
+.fa-chevron-left {
+    color: gold;
 }
 
 .text-black {
@@ -407,7 +428,8 @@ input[name='q']::placeholder {
 }
 
 
-/* Card image*/
+/* Card*/
+
 
 .card-img-top {
     width: 100%;
@@ -524,7 +546,7 @@ input[name='q']::placeholder {
 .btn-bag {
     background-color: #2b1d0e;
     color: gold;
-    transition: transform .5s ease-in-out, background-color .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 
@@ -537,7 +559,7 @@ input[name='q']::placeholder {
 .btn-wish {
     background-color: gold;
     color: #2b1d0e;
-    transition: transform .5s ease-in-out, background-color .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 
 }
 
@@ -697,7 +719,33 @@ footer {
         font-size: .875rem;
 
     }
+
+
+
+    .card-footer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .card-footer .action-buttons,
+    .card-footer .keep-shopping-btn,
+    .card-footer form,
+    .card-footer a {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+
+    }
+
+    .card-footer .btn {
+        margin-bottom: 5px;
+        width: 100%;
+
+    }
 }
+
 
 @media only screen and (max-width: 600px) {
 
