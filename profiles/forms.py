@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+
 from django.utils.translation import gettext as _
 
 
@@ -10,11 +11,12 @@ class UserProfileForm(forms.ModelForm):
         model = UserProfile
         exclude = ('user',)
 
+    # Add the __init__ methods to set custom classes to form fields
     def __init__(self, *args, **kwargs):
-        """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
-        """
+        super(UserProfileForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-field form-field-focus'
+
         super().__init__(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',

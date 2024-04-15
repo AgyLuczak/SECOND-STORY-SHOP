@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from .models import UserProfile
+from .forms import UserProfileForm
 
 from django_countries.fields import CountryField
 
@@ -24,11 +25,6 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-# Add the __init__ methods to set custom classes to form fields
-    def __init__(self, *args, **kwargs):
-        super(UserProfileForm, self).__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-field form-field-focus'
 
 
 @receiver(post_save, sender=User)
