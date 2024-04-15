@@ -163,16 +163,22 @@ icon:hover {
 .back-text {
     font-family: "Oleo Script", system-ui;
     padding: 20px;
-    font-size: 1.2em;
+    font-size: 30px;
     max-width: 90%;
+}
+
+.shop-name {
+    font-size: 35px;
+    color: gold;
+    -webkit-text-stroke: 1px #2b1d0e;
+    font-weight: bold;
+
 }
 
 .logo {
     font-family: "Oleo Script", system-ui;
     font-weight: 700;
     font-style: normal;
-    /* font-size: 42px; */
-    /* color: #2b1d0e; */
     color: gold;
 }
 
@@ -780,10 +786,25 @@ footer {
         font-size: 17px;
     }
 
+    .shop-name {
+        font-size: 27px;
+    }
+
     .navbar {
         font-size: 10px;
     }
 
+}
+
+@media only screen and (max-width:280px) {
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .nav-link {
+        padding: 0rem;
+    }
 }
 
 /* Allauth form formatting */
