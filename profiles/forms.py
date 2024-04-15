@@ -1,6 +1,6 @@
 from django import forms
 from .models import UserProfile
-
+from .forms import UserProfileForm
 from django.utils.translation import gettext as _
 
 
