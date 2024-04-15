@@ -321,6 +321,7 @@ icon:hover {
     color: white;
 } */
 
+/* Base styles for light-themed buttons */
 .keep-shopping-btn,
 .adjust-btn,
 .home-btn,
@@ -328,26 +329,27 @@ icon:hover {
 .cancel-btn {
     background-color: whitesmoke;
     color: #2b1d0e !important;
-    /* Ensuring text color is important if needed */
+    /* Force color if needed */
     outline: 2px solid #2b1d0e;
     transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
 }
 
-.keep-shopping-btn,
-.adjust-btn,
-.home-btn,
-.back-login-btn,
-.cancel-btn {
+/* Hover styles for light-themed buttons */
+.keep-shopping-btn:hover,
+.adjust-btn:hover,
+.home-btn:hover,
+.back-login-btn:hover,
+.cancel-btn:hover {
     outline-color: gold;
     transform: scale(1.1);
-    /* Scales the button on hover */
 }
 
+/* Styles for icons, ensuring consistency in icon color */
 .fa-chevron-left {
     color: gold;
 }
 
-
+/* Base styles for dark-themed buttons */
 .checkout-btn,
 .update-profile-btn,
 .add-btn,
@@ -356,18 +358,17 @@ icon:hover {
     background-color: #2b1d0e;
     color: #f4e4bc;
     outline: 2px solid #f4e4bc;
-    transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
-
+    transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
 }
 
-.checkout-btn,
-.update-profile-btn,
-.add-btn,
-.select-btn .signout-btn:hover {
+/* Hover styles for dark-themed buttons */
+.checkout-btn:hover,
+.update-profile-btn:hover,
+.add-btn:hover,
+.select-btn:hover,
+.signout-btn:hover {
     outline: 2px solid gold;
-    color: #f4e4bc;
     transform: scale(1.1);
-
 }
 
 .text-black {
