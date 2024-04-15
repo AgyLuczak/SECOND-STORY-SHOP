@@ -340,6 +340,23 @@ icon:hover {
     color: gold;
 }
 
+
+.checkout-btn {
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    outline: 2px solid #f4e4bc;
+    /* Ensures the outline is ready for transition */
+    transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
+    /* Transition for outline color */
+}
+
+.checkout-btn:hover {
+    outline: 2px solid gold;
+    color: #f4e4bc;
+    transform: scale(1.1);
+
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -748,6 +765,21 @@ footer {
     .card-footer .btn {
         margin-bottom: 5px;
         width: 100%;
+
+    }
+
+    /*Stack checkout and keep shopping buttons vertically*/
+
+    td.text-right {
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
 
     }
 }
