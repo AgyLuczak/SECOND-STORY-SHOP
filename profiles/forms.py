@@ -23,5 +23,5 @@ class UserProfileForm(forms.ModelForm):
             if field != 'default_country':
                 placeholder = placeholders.get(field, '')
                 self.fields[field].widget.attrs['placeholder'] = f"{placeholder} {'*' if self.fields[field].required else ''}"
-                self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input focus-highlight'  # Added focus-highlight class
+                self.fields[field].widget.attrs['class'] = 'profile-form-input focus-highlight'
                 self.fields[field].label = False
