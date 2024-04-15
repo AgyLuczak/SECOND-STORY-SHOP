@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
-
+from .models import UserProfile  # Import UserProfile from models
+from .forms import UserProfileForm  # Import UserProfileForm from forms
 from checkout.models import Order
 
 @login_required
@@ -29,9 +29,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
-    return render(request, template, context)
-
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
