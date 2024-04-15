@@ -314,26 +314,31 @@ icon:hover {
 
 
 
-.btn-black:hover,
+/* .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: #222;
     color: white;
-}
+} */
 
-.keep-shopping-btn {
+.keep-shopping-btn,
+.adjust-btn,
+.home-btn,
+.back-login-btn {
     background-color: whitesmoke;
-    color: #2b1d0e;
+    color: #2b1d0e !important;
+    /* Ensuring text color is important if needed */
     outline: 2px solid #2b1d0e;
-    /* Ensures the outline is ready for transition */
-    transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
-    /* Transition for outline color */
+    transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
 }
 
-.keep-shopping-btn:hover {
+.keep-shopping-btn:hover,
+.adjust-btn:hover,
+.home-btn:hover,
+.back-login-btn:hover {
     outline-color: gold;
     transform: scale(1.1);
-    /* Ensures the color changes on hover */
+    /* Scales the button on hover */
 }
 
 .fa-chevron-left {
@@ -345,9 +350,8 @@ icon:hover {
     background-color: #2b1d0e;
     color: #f4e4bc;
     outline: 2px solid #f4e4bc;
-    /* Ensures the outline is ready for transition */
     transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
-    /* Transition for outline color */
+
 }
 
 .checkout-btn:hover {
@@ -710,7 +714,7 @@ footer {
     }
 
     #delivery-banner h4 {
-        font-size: .9rem;
+        font-size: .7rem;
     }
 
     .btn.btn-outline-black.rounded-0,
@@ -782,6 +786,20 @@ footer {
         margin-bottom: 10px;
 
     }
+
+    .submit-button {
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .submit-button .btn,
+    .submit-button .small {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+
+    }
 }
 
 
@@ -843,10 +861,9 @@ footer {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: #6c757d;
-    /* text-secondary */
 }
+
 
 .allauth-form-inner-content input {
     border-color: #2b1d0e;
@@ -878,34 +895,32 @@ footer {
     color: #aab7c4;
 }
 
+
+
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-    /* btn */
     display: inline-block;
     font-weight: 400;
-    color: #fff;
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    outline: 2px solid #f4e4bc;
+    transition: transform .5s ease-in-out, color .5s ease-in-out, outline-color .5s ease-in-out;
+    /* Ensure all transitions are listed */
     text-align: center;
     vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
-    color: #fff;
-    background-color: #222;
-    border-color: #222;
+    outline-color: gold !important;
+    /* Test with important */
+    color: gold !important;
+    transform: scale(1.1);
 }
 
 .allauth-form-inner-content a {
@@ -932,7 +947,7 @@ footer {
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
+
     border-color: #dc3545;
 }
 
