@@ -3,6 +3,8 @@ from .models import UserProfile
 from django.utils.translation import gettext as _
 
 
+
+
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
