@@ -598,6 +598,13 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+.wishlist-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
 /* Cards displaying products*/
 
 .card {

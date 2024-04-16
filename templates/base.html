@@ -139,7 +139,8 @@
 
     {% if messages %}
     <div class="message-container">
-        {% if wishlist_action %}
+        {% if request.user.is_authenticated %}
+        {% if request.session.wishlist_action %}
         {% include 'includes/toasts/toast_wishlist.html' %}
         {% endif %}
 
@@ -156,8 +157,10 @@
         {% endif %}
         {% endwith %}
         {% endfor %}
+        {% endif %}
     </div>
     {% endif %}
+
     <div class="content-wrap">
         <div class="flex-grow container mt-5 pt-3">
             {% block page_header %}

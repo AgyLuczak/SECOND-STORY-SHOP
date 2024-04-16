@@ -1,8 +1,8 @@
 <div class="toast custom-toast border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-info"></div>
-    <div class="w-100 toast-capper bg-info"></div>
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header text-dark">
-        <strong class="mr-auto">Wishlist Updated</strong>
+        <strong class="mr-auto">Wishlist Updated!</strong>
         <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -10,19 +10,35 @@
     <div class="toast-body">
         <div class="row">
             <div class="col">
-                {% if request.session.wishlist_action == 'added' %}
-                <p>Added to your wishlist:</p>
-                {% elif request.session.wishlist_action == 'removed' %}
-                <p>Removed from your wishlist:</p>
-                {% endif %}
-                <ul>
-                    {% for item in request.session.wishlist_items %}
-                    <li>{{ item.product__name }} <img src="{{ item.product__image }}" alt="{{ item.product__name }}">
-                    </li>
-                    {% endfor %}
-                </ul>
+                {{ message }}
                 <hr class="mt-1 mb-3">
             </div>
+        </div>
+        <p class="logo-font text-black py-1">Your Wishlist ({{ product_count }})</p>
+        <div class="wishlist-notification-wrapper">
+            {% for item in wishlist_items %}
+            <div class="row">
+                <div class="col-3 my-1">
+                    {% if item.product.image %}
+                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="No image available">
+                    {% endif %}
+                </div>
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    {% if item.product.size %}
+                    <small class="text-muted">Size: {{ item.product.size }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <a href="{% url 'products' %}" class="btn keep-shopping-btn">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a> -->
         </div>
     </div>
 </div>
