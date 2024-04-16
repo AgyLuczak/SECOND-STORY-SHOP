@@ -534,7 +534,7 @@ input[name='q']::placeholder {
     height: auto;
     max-height: calc(100vh - 120px); */
 
-}
+
 
 .align-left-custom {
     transform: translateX(-10%);

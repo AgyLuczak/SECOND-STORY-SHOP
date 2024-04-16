@@ -41,7 +41,16 @@
             var img = modal.find('.modal-body img');
             var windowHeight = $(window).height();
 
-            img.css('max-height', windowHeight * 0.8); // Adjust max-height to 80% of the viewport height
+            img.css({
+                'max-height': windowHeight * 0.8,
+                'background-color': '#2b1d0e',
+                'padding': '20px',
+                'display': 'block',
+                'margin': 'auto',
+                'border': '2px solid gold',
+                'box-sizing': 'border-box'
+            });
+
         });
     });
 </script>
