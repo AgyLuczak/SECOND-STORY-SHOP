@@ -35,15 +35,10 @@ def toggle_wishlist(request, product_id):
         request.session['wishlist_action'] = 'removed'
         message = f'{product.name} removed from your wishlist.'
 
-    context = {
-        'wishlist_action': request.session.get('wishlist_action', 'No action'),
-        'wishlist_items': WishlistItem.objects.filter(user=request.user)
-    }
-
-    request.session['wishlist_items'] = list(WishlistItem.objects.filter(user=request.user).values('product__name', 'product__image'))
     messages.success(request, message)
+    request.session.modified = True  # Ensure the session is saved
     return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
-    
+
 @login_required
 def view_wishlist(request):
     # Assume you have a function to get wishlist items
@@ -62,3 +57,9 @@ def remove_from_wishlist(request, item_id):
     wishlist_item.delete()
     messages.success(request, 'Item removed from your wishlist.',)
     return redirect('view_wishlist')
+
+@login_required
+def clear_wishlist_action(request):
+    if 'wishlist_action' in request.session:
+        del request.session['wishlist_action']
+    return HttpResponse('OK')
