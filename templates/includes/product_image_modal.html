@@ -18,13 +18,30 @@
 </div>
 
 
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('#productImageModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var recipient = button.attr('src'); // Extract info from data attributes
             var modal = $(this);
             modal.find('.modal-body img').attr('src', recipient);
+        });
+    });
+</script> -->
+
+<script>
+    $(document).ready(function () {
+        $('#productImageModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Element that triggered the modal
+            var imageUrl = button.attr('src'); // Extract image URL from the src attribute
+            var modal = $(this);
+
+            modal.find('.modal-body img').attr('src', imageUrl);
+
+            var img = modal.find('.modal-body img');
+            var windowHeight = $(window).height();
+
+            img.css('max-height', windowHeight * 0.8); // Adjust max-height to 80% of the viewport height
         });
     });
 </script>

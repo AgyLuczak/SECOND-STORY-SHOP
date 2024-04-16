@@ -503,6 +503,20 @@ input[name='q']::placeholder {
 
 }
 
+.modal-body img {
+    width: 100%;
+    max-height: 80vh;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.modal-dialog {
+    max-width: 95%;
+    width: auto;
+
+}
+
 .close {
     color: #f4e4bc;
 
@@ -515,10 +529,10 @@ input[name='q']::placeholder {
     transition: .5s ease-in-out;
 }
 
-.modal-body img {
+/* .modal-body img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px); */
 
 }
 
