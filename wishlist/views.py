@@ -39,17 +39,22 @@ def toggle_wishlist(request, product_id):
     request.session.modified = True  
     return redirect(reverse('view_wishlist')) 
 
-@login_required
 def view_wishlist(request):
     wishlist_items = WishlistItem.objects.filter(user=request.user).order_by('-added_on')
     product_count = len(wishlist_items)
+    message = None
+    if 'wishlist_action' in request.session:
+        action = request.session.pop('wishlist_action', None)
+        message = f'Item {action} your wishlist.'  
+        request.session.modified = True
+
     context = {
         'wishlist_items': wishlist_items,
         'product_count': product_count,
-        'message': 'Your wishlist has been updated!',
+        'message': message,
     }
     return render(request, 'wishlist/wishlist.html', context)
-
+    
 @login_required
 def remove_from_wishlist(request, item_id):
     wishlist_item = get_object_or_404(WishlistItem, id=item_id, user=request.user)
