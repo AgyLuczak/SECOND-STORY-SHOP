@@ -137,12 +137,13 @@
         </div>
     </header>
 
-    {% if messages %}
+    {% if messages or request.session.wishlist_action %}
     <div class="message-container">
-        {% if request.user.is_authenticated %}
         {% if request.session.wishlist_action %}
         {% include 'includes/toasts/toast_wishlist.html' %}
-        {% else %}
+        {# The session should be modified in the view after rendering this page #}
+        {% endif %}
+
         {% for message in messages %}
         {% with message.level as level %}
         {% if level == 40 %}
@@ -156,9 +157,6 @@
         {% endif %}
         {% endwith %}
         {% endfor %}
-        {% endif %}
-        {% else %}
-        {% endif %}
     </div>
     {% endif %}
 
