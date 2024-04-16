@@ -194,6 +194,7 @@ icon:hover {
     text-transform: uppercase;
     font-weight: 400;
 
+
 }
 
 .main-logo-link {
@@ -267,6 +268,9 @@ icon:hover {
     color: gold;
 }
 
+.page-heading {
+    font-weight: 600;
+}
 
 
 .shop-now-button {
@@ -440,11 +444,13 @@ input[name='q']::placeholder {
     border-color: gold;
     outline: 2px solid gold;
     box-shadow: 0 0 3px gold;
+    outline: 1px solid gold;
 
 }
 
 #sort-selector:hover {
     border-color: gold;
+    outline: 1px solid gold;
 
 }
 
