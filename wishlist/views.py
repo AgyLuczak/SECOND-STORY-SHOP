@@ -9,18 +9,17 @@ from django.db.models import Value, BooleanField
 @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    # Check if the product is already in the wishlist
     wishlist_item, created = WishlistItem.objects.get_or_create(user=request.user, product=product)
 
     if created:
-        # If created is True, the product was not in the wishlist and has been added
         messages.success(request, f'{product.name} added to your wishlist!')
     else:
-        # If created is False, the product was already in the wishlist
         messages.error(request, f'{product.name} is already in your wishlist.')
 
+    # Clear specific bag-related session variable if necessary
+    request.session.pop('bag_action', None)
+
     return redirect('product_detail', product_id=product.id)
-    
     
 #The toggle action checks if an item is already in the wishlist, adding it if not, or removing it if present
 @login_required
@@ -47,12 +46,15 @@ def toggle_wishlist(request, product_id):
     
 @login_required
 def view_wishlist(request):
+    # Assume you have a function to get wishlist items
     wishlist_items = WishlistItem.objects.filter(user=request.user).order_by('-added_on')
+    product_count = len(wishlist_items)
     context = {
         'wishlist_items': wishlist_items,
+        'product_count': product_count,
+        'message': 'Your wishlist has been updated!',
     }
     return render(request, 'wishlist/wishlist.html', context)
-
 
 @login_required
 def remove_from_wishlist(request, item_id):

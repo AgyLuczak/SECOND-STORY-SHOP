@@ -142,8 +142,7 @@
         {% if request.user.is_authenticated %}
         {% if request.session.wishlist_action %}
         {% include 'includes/toasts/toast_wishlist.html' %}
-        {% endif %}
-
+        {% else %}
         {% for message in messages %}
         {% with message.level as level %}
         {% if level == 40 %}
@@ -158,8 +157,11 @@
         {% endwith %}
         {% endfor %}
         {% endif %}
+        {% else %}
+        {% endif %}
     </div>
     {% endif %}
+
 
     <div class="content-wrap">
         <div class="flex-grow container mt-5 pt-3">
@@ -185,6 +187,8 @@
             }
         });
     </script>
+
+
     {% endblock %}
 
 
