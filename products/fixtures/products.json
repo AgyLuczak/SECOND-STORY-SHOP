@@ -138,5 +138,103 @@
             "category": 7,
             "image": "yellow_handbag.jpg"
         }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp11",
+            "name": "Cream Coat",
+            "description": "This elegant vintage cream coat is crafted from luxurious wool, featuring a tailored silhouette for timeless sophistication.",
+            "brand": "Vintage",
+            "price": 120.00,
+            "size": "M",
+            "category": 4,
+            "image": "cream_coat.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp12",
+            "name": "Faux Fur Coat",
+            "description": "Indulge in retro glamour with this exquisite faux fur coat, offering the warmth and style of real fur without ethical concerns.",
+            "brand": "Retro Luxe",
+            "price": 150.00,
+            "size": "16",
+            "category": 4,
+            "image": "faux_fur_coat.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp13",
+            "name": "Gingham Dress",
+            "description": "Channel mid-century summer fashion with this lightweight cotton gingham dress, perfect for warm days.",
+            "brand": "Vintage Summer",
+            "price": 45.00,
+            "size": "8",
+            "category": 1,
+            "image": "gingham_dress.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp14",
+            "name": "Green Bag",
+            "description": "This striking green leather bag features vibrant color and compact design, ideal for adding a pop of color to any outfit.",
+            "brand": "Color Pop",
+            "price": 48.00,
+            "size": "N/A",
+            "category": 7,
+            "image": "green_bag.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp15",
+            "name": "Orange Small Bag",
+            "description": "A perfect companion for day and night outings, this small orange suede bag is bold and stylish.",
+            "brand": "Suede Luxe",
+            "price": 42.00,
+            "size": "N/A",
+            "category": 7,
+            "image": "orange_small_bag.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp16",
+            "name": "Red Polka Dress",
+            "description": "This red polka dot rayon dress features a playful 1950s pin-up silhouette, perfect for garden parties or afternoon teas.",
+            "brand": "Retro Chic",
+            "price": 25.00,
+            "size": "M",
+            "category": 10,
+            "image": "red_polka_dress.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp17",
+            "name": "Taupe Hat",
+            "description": "Elegant taupe felt hat with a wide brim, offering style and sun protection, an essential accessory for any season.",
+            "brand": "Classic Elegance",
+            "price": 34.00,
+            "size": "One Size",
+            "category": 8,
+            "image": "taupe_hat.jpg"
+        }
     }
 ]
