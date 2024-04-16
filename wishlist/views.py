@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.urls import reverse 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -36,12 +36,11 @@ def toggle_wishlist(request, product_id):
         message = f'{product.name} removed from your wishlist.'
 
     messages.success(request, message)
-    request.session.modified = True  # Ensure the session is saved
-    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
+    request.session.modified = True  
+    return redirect(reverse('view_wishlist')) 
 
 @login_required
 def view_wishlist(request):
-    # Assume you have a function to get wishlist items
     wishlist_items = WishlistItem.objects.filter(user=request.user).order_by('-added_on')
     product_count = len(wishlist_items)
     context = {
