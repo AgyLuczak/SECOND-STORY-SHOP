@@ -23,6 +23,7 @@
                             <!-- Updated part to trigger the modal instead of opening in a new tab -->
                             <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}"
                                 style="cursor:pointer" data-toggle="modal" data-target="#productImageModal">
+                            {% include 'includes/product_image_modal.html' %}
                             {% else %}
                             <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid" alt="{{ product.name }}">
                             {% endif %}
