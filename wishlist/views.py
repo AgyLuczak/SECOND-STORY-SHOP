@@ -39,6 +39,7 @@ def toggle_wishlist(request, product_id):
     request.session.modified = True  
     return redirect(reverse('view_wishlist')) 
 
+@login_required
 def view_wishlist(request):
     wishlist_items = WishlistItem.objects.filter(user=request.user).order_by('-added_on')
     product_count = len(wishlist_items)
