@@ -55,7 +55,7 @@
                 <!-- Card Footer for Other Actions -->
                 <div class="card-footer card-footer-details bg-white d-flex flex-wrap justify-content-between border-0">
                     <!-- Keep Shopping stays on the left -->
-                    <a href="{% url 'products' %}" class="btn keep-shopping-btn text-uppercase mb-2">
+                    <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn mb-2">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -78,7 +78,7 @@
                         <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            <button type="submit" class="btn btn-bag text-uppercase mb-2">Add to Bag</button>
+                            <button type="submit" class="btn btn-bag dark-btn text-uppercase mb-2">Add to Bag</button>
                         </form>
                     </div>
                 </div>

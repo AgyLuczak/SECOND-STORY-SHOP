@@ -293,7 +293,7 @@ icon:hover {
     transform: scale(1.1);
 }
 
-.btn-black {
+/* .btn-black {
     background: black;
     color: white;
 }
@@ -302,48 +302,44 @@ icon:hover {
     background: white;
     color: black !important;
     /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    transition: transform .5s ease-in-out;
-    /* background: black;
-    color: white !important; */
-}
-
-
-
-/* .btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+/* border: 1px solid black;
 } */
 
+/* .btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus { */
+/* transition: transform .5s ease-in-out;
+    /* background: black;
+    color: white !important; */
+
+
+
+
+
+
 /* Base styles for light-themed buttons */
-.keep-shopping-btn,
+/* .keep-shopping-btn,
 .adjust-btn,
 .home-btn,
 .back-login-btn,
 .cancel-btn {
     background-color: whitesmoke;
     color: #2b1d0e !important;
-    /* Force color if needed */
     outline: 2px solid #2b1d0e;
     transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
-}
+} */
+
+
 
 /* Hover styles for light-themed buttons */
-.keep-shopping-btn:hover,
+/* .keep-shopping-btn:hover,
 .adjust-btn:hover,
 .home-btn:hover,
 .back-login-btn:hover,
 .cancel-btn:hover {
     outline-color: gold;
     transform: scale(1.1);
-}
+} */
 
 /* Styles for icons, ensuring consistency in icon color */
 .fa-chevron-left {
@@ -351,7 +347,8 @@ icon:hover {
 }
 
 /* Base styles for dark-themed buttons */
-.checkout-btn,
+/* .checkout-btn,
+.update-btn,
 .update-profile-btn,
 .add-btn,
 .select-btn,
@@ -361,10 +358,11 @@ icon:hover {
     color: #f4e4bc;
     outline: 2px solid #f4e4bc;
     transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
-}
+} */
 
 /* Hover styles for dark-themed buttons */
-.checkout-btn:hover,
+/* .checkout-btn:hover,
+.update-btn:hover,
 .update-profile-btn:hover,
 .add-btn:hover,
 .select-btn:hover,
@@ -374,7 +372,35 @@ icon:hover {
     color: gold;
     transform: scale(1.1);
 }
+ */
 
+/*Specific styles for light-themed buttons */
+.light-btn {
+    background-color: whitesmoke;
+    color: #2b1d0e;
+    outline: 2px solid #2b1d0e;
+}
+
+/* Specific styles for dark-themed buttons */
+.dark-btn {
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    outline: 2px solid #f4e4bc;
+}
+
+
+.light-btn:hover {
+    outline-color: gold;
+    color: #2b1d0e;
+    transform: scale(1.1);
+}
+
+/* Hover styles for dark-themed buttons */
+.dark-btn:hover {
+    outline: 2px solid gold;
+    color: gold;
+    transform: scale(1.1);
+}
 
 /* .text-black {
     color: #000 !important;
@@ -785,7 +811,7 @@ footer {
         font-size: .7rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
+    /* .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
     }
@@ -794,7 +820,7 @@ footer {
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
-    }
+    } */
 
     .increment-qty,
     .decrement-qty {
