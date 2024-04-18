@@ -404,6 +404,10 @@ icon:hover {
     transform: scale(1.1);
 }
 
+.light-btn:active {
+    outline-color: gold;
+}
+
 /* Hover styles for dark-themed buttons */
 .dark-btn:hover {
     outline: 2px solid gold;
@@ -693,7 +697,7 @@ input[name='q']::placeholder {
 }
 
 .profile-form-input,
-.checkout-form-input {
+.stripe-form-input {
     border: 2px solid #2b1d0e;
     border-radius: 5px;
     padding: 10px;
