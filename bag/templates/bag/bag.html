@@ -39,7 +39,7 @@
                         {% for item in bag_items %}
                         <tr>
                             <td class="w-25">
-                                <a href="{% url 'product_detail' item.product.id %}">
+                                <!-- <a href="{% url 'product_detail' item.product.id %}">
                                     {% if item.product.image %}
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}"
                                         alt="{{ item.product.name }}">
@@ -47,65 +47,75 @@
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}"
                                         alt="{{ item.product.name }}">
                                     {% endif %}
-                                </a>
-                                <p><strong>{{ item.product.name }}</strong></p>
-                                <p>Size: {{ item.product.size }}</p>
-                                <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                            </td>
-                            <td>£{{ item.product.price }}</td>
-                            <!-- <td>{{ item.quantity }}</td> -->
-                            <!-- <td>£{{ item.product.price|calc_subtotal:item.quantity }}</td> -->
-                            <td>£{{ item.subtotal }}</td>
-
-                            <td>
-                                <!-- Removal link -->
-                                <a class="remove-item remove-link text-danger" id="remove_{{ item.item_id }}">REMOVE</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
-                                more!
-                            </p>
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg mr-3">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <a href="{% url 'checkout' %}" class="btn checkout-btn dark-btn btn-lg mr-3">
-                                <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+                                </a> -->
+                                {% if item.product.image %}
+                                <!-- Updated part to trigger the modal instead of opening in a new tab -->
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                    alt="{{ item.product.name }}" style="cursor:pointer" data-toggle="modal"
+                                    data-target="#productImageModal">
+                                {% include 'includes/product_image_modal.html' %}
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded"
+                                    alt="{{ item.product.name }}">
+                                {% endif %}
             </div>
-            {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            {% endif %}
+
+            <p><strong>{{ item.product.name }}</strong></p>
+            <p>Size: {{ item.product.size }}</p>
+            <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
+            </td>
+            <td>£{{ item.product.price }}</td>
+            <td>£{{ item.subtotal }}</td>
+
+            <td>
+                <!-- Removal link -->
+                <a class="remove-item remove-link text-danger" id="remove_{{ item.item_id }}">REMOVE</a>
+            </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            <tr>
+                <td colspan="5" class="pt-5 text-right">
+                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-danger">
+                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
+                        more!
+                    </p>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="text-right">
+                    <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg mr-3">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <a href="{% url 'checkout' %}" class="btn checkout-btn dark-btn btn-lg mr-3">
+                        <span class="text-uppercase">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            </table>
         </div>
+        {% else %}
+        <p class="lead mb-5">Your bag is empty.</p>
+        <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        {% endif %}
     </div>
+</div>
 </div>
 {% endblock %}
 

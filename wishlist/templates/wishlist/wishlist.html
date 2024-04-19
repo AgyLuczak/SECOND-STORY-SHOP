@@ -38,11 +38,14 @@
                         <tr>
                             <td class="w-25">
                                 {% if item.product.image %}
+                                <!-- Updated part to trigger the modal instead of opening in a new tab -->
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}"
-                                    alt="{{ item.product.name }}">
+                                    alt="{{ item.product.name }}" style="cursor:pointer" data-toggle="modal"
+                                    data-target="#productImageModal">
+                                {% include 'includes/product_image_modal.html' %}
                                 {% else %}
-                                <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
-                                    alt="No image available">
+                                <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded"
+                                    alt="{{ item.product.name }}">
                                 {% endif %}
                                 <p><strong>{{ item.product.name }}</strong></p>
                                 <p>Size: {{ item.product.size }}</p>
