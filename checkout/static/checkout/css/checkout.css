@@ -3,19 +3,25 @@
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
-    border: 1px solid transparent;
-    border-radius: 0px;
+    /* border: 1px solid transparent; */
+    /* border-radius: 0px; */
     background-color: white;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
+    /* box-shadow: 0 1px 3px 0 #e6ebf1; */
+    /* -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease; */
+    border: 2px solid #2b1d0e;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
 }
 
-/* .StripeElement--focus,
+.StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-} */
+    border-color: gold;
+    outline: none;
+    box-shadow: 0 0 5px gold;
+}
 
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
@@ -33,7 +39,9 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 2px solid #2b1d0e;
+    border-radius: 5px;
+
 }
 
 select,

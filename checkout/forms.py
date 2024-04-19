@@ -35,5 +35,5 @@ class OrderForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-form-input focus-highlight'
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input focus-highlight'
             self.fields[field].label = False

@@ -680,11 +680,9 @@ input[name='q']::placeholder {
 
 .focus-highlight:focus {
     border-color: gold;
-    /* Change border color to gold on focus */
     outline: none;
-    /* Remove default outline */
     box-shadow: 0 0 5px gold;
-    /* Add a gold glow to emphasize focus */
+
 }
 
 
@@ -697,7 +695,7 @@ input[name='q']::placeholder {
 }
 
 .profile-form-input,
-.stripe-form-input {
+.stripe-style-input {
     border: 2px solid #2b1d0e;
     border-radius: 5px;
     padding: 10px;
