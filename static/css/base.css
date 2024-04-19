@@ -698,6 +698,7 @@ input[name='q']::placeholder {
 
 .profile-form-input,
 .product-form-input {
+    padding-bottom: 0.1px;
     border: 2px solid #2b1d0e;
     border-radius: 5px;
     padding: 10px;
