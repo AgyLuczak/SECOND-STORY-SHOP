@@ -30,4 +30,4 @@ class UserProfileForm(forms.ModelForm):
 
         # Handle specific field if needed (e.g., a dropdown for country)
         if 'default_country' in self.fields:
-            self.fields['default_country'].widget.attrs['class'] = 'profile-form-input select-focus-highlight'
+            self.fields['default_country'].widget.attrs['class'] = 'profile-form-input focus-highlight'

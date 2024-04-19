@@ -15,13 +15,17 @@
     width: 100%;
 }
 
-.StripeElement--focus,
+/*StripeElement--focus */
+
 .stripe-style-input:focus,
 .stripe-style-input:active {
-    border-color: gold;
+
+    border: 2px solid gold;
     outline: none;
     box-shadow: 0 0 5px gold;
+
 }
+
 
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
