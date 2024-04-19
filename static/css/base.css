@@ -709,6 +709,11 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
+.form-control {
+    padding: .375rem .75rem !important;
+}
+
+
 /* Footer */
 
 footer {

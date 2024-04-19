@@ -142,7 +142,6 @@
     <div class="message-container">
         {% if request.session.wishlist_action %}
         {% include 'includes/toasts/toast_wishlist.html' %}
-        {# The session should be modified in the view after rendering this page #}
         {% endif %}
 
         {% for message in messages %}
