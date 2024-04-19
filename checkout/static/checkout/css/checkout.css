@@ -40,12 +40,21 @@
     right: .5rem;
 }
 
+
+
 #payment-form .form-control,
 #card-element {
     color: #000;
     border: 2px solid #2b1d0e;
     border-radius: 5px;
 
+}
+
+#payment-form .form-control:focus,
+#payment-form .form-control:active {
+    border: 2px solid gold;
+    outline: none;
+    box-shadow: 0 0 5px gold;
 }
 
 select,

@@ -557,6 +557,9 @@ input[name='q']::placeholder {
 }
 
 .modal-dialog {
+    border-color: gold;
+    border-radius: 10px;
+    outline: 1px solid gold;
     max-width: 95%;
     width: auto;
 
@@ -668,6 +671,7 @@ input[name='q']::placeholder {
 .select-btn {
     background-color: gold;
     color: #2b1d0e;
+    outline: 2px solid #2b1d0e;
     transition: transform .5s ease-in-out;
 
 }
@@ -755,11 +759,11 @@ footer {
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
+/* @media (min-width: 1200px) 
+    /* .container {
         max-width: 80%;
     }
-}
+} */
 
 @media only screen and (max-width: 1024px) {
     body {
@@ -1050,8 +1054,8 @@ footer {
 }
 
 .allauth-form-inner-content a {
-    color: brown;
-    /* text-info */
+    color: #2b1d0e;
+
 }
 
 .password_reset input[type="submit"] {
