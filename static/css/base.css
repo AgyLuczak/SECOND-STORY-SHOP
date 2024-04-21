@@ -777,19 +777,7 @@ footer {
         height: calc(100vh - 164px);
     }
 
-    /* Apply medium screen layout */
-    .col-12.col-md-8.col-lg-7 {
-        display: block;
-        text-align: center;
-    }
 
-    .flip-container {
-        margin-bottom: 20px;
-    }
-
-    .shop-now-button {
-        margin-top: 20px;
-    }
 }
 
 
