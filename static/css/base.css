@@ -533,9 +533,9 @@ input[name='q']::placeholder {
 
 /* Image modal*/
 
-.modal-content {
+/* .modal-content {
     border-radius: 10px;
-}
+} */
 
 .modal-header {
     background-color: #2b1d0e;
@@ -558,7 +558,6 @@ input[name='q']::placeholder {
 
 .modal-dialog {
     border-color: gold;
-    border-radius: 10px;
     outline: 1px solid gold;
     max-width: 95%;
     width: auto;
@@ -645,10 +644,11 @@ input[name='q']::placeholder {
 
 .card {
     transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 0 2px #2b1d0e;
 }
 
 .card:hover {
-    box-shadow: 0 0 0 2px #2b1d0e;
+    box-shadow: 0 0 0 2px gold;
 
 }
 
@@ -776,7 +776,18 @@ footer {
         background-size: cover;
         height: calc(100vh - 164px);
     }
+
+    .container-content {
+        padding-top: 50px;
+
+    }
+
+    .shop-now-button {
+        margin-top: 20px;
+
+    }
 }
+
 
 /* fixed top navbar only on medium and up */
 
