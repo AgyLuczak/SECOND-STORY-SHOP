@@ -763,12 +763,14 @@ footer {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-/* @media (min-width: 1200px) 
-    /* .container {
+/*Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
         max-width: 80%;
     }
-} */
+}
+
+
 
 @media only screen and (max-width: 1024px) {
     body {
@@ -777,6 +779,12 @@ footer {
         height: calc(100vh - 164px);
     }
 
+
+
+    .container-content {
+        margin-left: 100px;
+        margin-top: 50px;
+    }
 
 }
 
@@ -904,7 +912,7 @@ footer {
     }
 
     .btn-lg {
-        width: 100%;
+        /* width: 100%; */
         margin-right: 0;
         margin-bottom: 10px;
 
