@@ -78,13 +78,13 @@
                         <!-- Wishlist and Add to Bag Buttons -->
                         <div>
                             {% if user.is_authenticated %}
-                            <a href="{% url 'toggle_wishlist' product.id %}" class="btn btn-wish btn-sm"
+                            <a href="{% url 'toggle_wishlist' product.id %}" class="btn btn-wish btn-sm mr-1"
                                 title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}">
                                 <i class="fas fa-heart {% if product.in_wishlist %}text-danger{% endif %}"></i>
                             </a>
                             {% else %}
                             <a href="{% url 'account_login' %}?next={% url 'product_detail' product.id %}"
-                                class="btn btn-wish btn-sm" title="Log in to Add to Wishlist">
+                                class="btn btn-wish btn-sm mr-1" title="Log in to Add to Wishlist">
                                 <i class="fas fa-heart"></i>
                             </a>
                             {% endif %}
@@ -102,9 +102,9 @@
 </div>
 </div>
 </div>
-<div class="btt-button shadow-sm border border-black">
+<div class="btt-button shadow-sm">
     <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        <i class="fas fa-arrow-up mx-auto my-auto"></i>
     </a>
 </div>
 {% endblock %}

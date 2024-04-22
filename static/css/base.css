@@ -454,12 +454,16 @@ a.category-badge>span.badge:hover {
 }
 
 .btt-button {
+    color: #2b1d0e;
+    border: 1px solid #2b1d0e;
+    border-radius: 5px;
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
 }
+
 
 .btt-link,
 .remove-link {
@@ -763,8 +767,8 @@ footer {
 
 /* -------------------------------- Media Queries */
 
-/*Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+/*Slightly larger container on very large screens */
+@media (min-width: 1500px) {
     .container {
         max-width: 80%;
     }
