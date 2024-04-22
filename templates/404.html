@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <div class="col-12 d-flex flex-column align-items-center">
+            <div class="error-content mt-5">
+                <img src="{% static 'images/second_story_logo.png' %}" alt="Shop Logo" class="img-fluid mb-4">
+                <h1 class="mb-3">Oops!</h1>
+                <p class="mb-4">The page you are looking for could not be found.</p>
+                <a href="{% url 'home' %}" class="btn btn-lg light-btn py-3">Go Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
