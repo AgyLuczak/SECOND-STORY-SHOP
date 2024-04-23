@@ -3,6 +3,12 @@ from django.urls import reverse
 from django.contrib.messages import get_messages
 from products.models import Product
 
+class MyTestCase(TestCase):
+    def setUp(self):
+        # Ensure the test database is used
+        settings.DATABASES['default'] = dj_database_url.parse(os.getenv('TEST_DATABASE_URL'))
+        super().setUp()
+
 
 class BagViewsTestCase(TestCase):
     def setUp(self):

@@ -26,8 +26,15 @@ body {
     flex: 1;
 }
 
-.content-wrap {
+.wrapper {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
     flex: 1 0 auto;
+
 }
 
 

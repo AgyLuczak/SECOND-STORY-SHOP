@@ -47,131 +47,133 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="main-logo-link">
-                    <h1 class="logo my-0">SECOND STORY STYLE</h1>
-                    <p id="logo-sub"><em>Stylish Vintage Clothing</em></p>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control focus-highlight" id="search-box" type="text" name="q"
-                            placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn search-btn border focus-highlight" type="submit">
-                                <span id="search icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+    <div class="wrapper">
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="main-logo-link">
+                        <h1 class="logo my-0">SECOND STORY STYLE</h1>
+                        <p id="logo-sub"><em>Stylish Vintage Clothing</em></p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control focus-highlight" id="search-box" type="text" name="q"
+                                placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn search-btn border focus-highlight" type="submit">
+                                    <span id="search icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <!-- Wishlist link -->
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="{% url 'view_wishlist' %}" aria-label="View Wishlist">
-                            <div class="text-center">
-                                <div><i class="fas fa-heart fa-lg"></i></div>
-                                <p class="my-0">Wish List</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <!-- Wishlist link -->
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="{% url 'view_wishlist' %}" aria-label="View Wishlist">
+                                <div class="text-center">
+                                    <div><i class="fas fa-heart fa-lg"></i></div>
+                                    <p class="my-0">Wish List</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link"
+                                href="{% url 'view_bag' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
-        </div>
-        <div class="row">
-            <nav class="navbar navbar-expand-lg  w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile_top_header.html' %}
-                {% include 'includes/main_nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col banner-heading">
-                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+            <div class="row">
+                <nav class="navbar navbar-expand-lg  w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile_top_header.html' %}
+                    {% include 'includes/main_nav.html' %}
+                </nav>
             </div>
-        </div>
-    </header>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col banner-heading">
+                    <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+                </div>
+            </div>
+        </header>
 
-    {% if messages or request.session.wishlist_action %}
-    <div class="message-container">
-        {% if request.session.wishlist_action %}
-        {% include 'includes/toasts/toast_wishlist.html' %}
+        {% if messages or request.session.wishlist_action %}
+        <div class="message-container">
+            {% if request.session.wishlist_action %}
+            {% include 'includes/toasts/toast_wishlist.html' %}
+            {% endif %}
+
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
         {% endif %}
 
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
+        <div class="content">
+            <div class="flex-grow container mt-5 pt-3">
+                {% block page_header %}
+                {% endblock %}
 
-    <div class="content-wrap">
-        <div class="flex-grow container mt-5 pt-3">
-            {% block page_header %}
-            {% endblock %}
-
-            {% block content %}
-            {% endblock %}
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
-    </div>
 
-    {% include 'includes/footer.html' %}
+        {% include 'includes/footer.html' %}
+    </div>
     {% block postloadjs %}
 
     <script type="text/javascript">
