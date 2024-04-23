@@ -1,3 +1,6 @@
+Go back to the [README.md](README.md) file
+
+
 ## User Stories
 
 ### Viewing and Navigation
@@ -103,6 +106,17 @@ The app has been tested on the following browsers:
 | **Occasions Dropdown** | Dropdown should list occasion-specific categories like weddings, ball gowns | Clicked on "Occasions" to view dropdown menu | Dropdown displayed with options: Wedding, Ball Gowns | PASS |
 | **Occasions - Wedding** | Redirect to page displaying wedding-appropriate items | Selected "Wedding" from dropdown | Redirected to wedding category page | PASS |
 | **Occasions - Ball Gowns** | Redirect to page displaying ball gowns | Selected "Ball Gowns" from dropdown | Redirected to ball gowns category page | PASS |
+| `Home Page` |
+| **Page Load** | The homepage should load without any errors and display all content correctly. | Accessed the website's homepage. | Homepage loaded successfully with all content displayed as expected. | PASS |
+| **Responsive Layout** | The homepage should be responsive, adjusting layout for various screen sizes (xs to lg). | Resized the browser window and accessed on different devices. | Layout adjusts appropriately for each screen size, maintaining usability and aesthetics. | PASS |
+| **Navigation Bar** | The navigation bar should function correctly, providing access to all linked pages. | Clicked on each link in the navigation bar. | Each link directed to the correct page. | PASS |
+| **Page Heading and Subheading on Small Screens** | Heading and subheading should be visible only on xs to md screens. | Viewed the page on small screens to check visibility. | Heading and subheading are properly displayed only on xs to md screens. | PASS |
+| **Shop Now Button** | Clicking the 'Shop Now' button should redirect the user to the products page. | Clicked the 'Shop Now' button. | Redirected to the products page correctly. | PASS |
+| **Logo and Button Layout on Large Screens** | On large screens, the logo and the button should be next to each other. | Viewed the homepage on a large screen. | Logo and button are correctly displayed next to each other. | PASS |
+| **Interactive Logo Flip on Click** | The logo should flip to reveal text on the back when clicked. | Clicked the logo to activate the flip effect. | Logo flipped correctly, revealing the text on the back. | PASS |
+| **Accessibility of Flip Container** | The flip container should be easily clickable and should toggle its state on each click. | Repeatedly clicked the flip container. | Flip action worked correctly with each click. | PASS |
+| **Vertical Stacking on Smaller Screens** | On smaller screens, the logo and 'Shop Now' button should stack vertically. | Checked the layout on smaller devices. | Elements are stacking vertically as expected. | PASS |
+| **Text Visibility in Flip Container** | Text in the flip container should be clear and legible. | Observed the text in both front and back states of the flip container. | Text is clear and legible in both states. | PASS |
 
 
 

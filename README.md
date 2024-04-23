@@ -47,3 +47,12 @@
 | Add a product - add new items to my store. |
 | Edit/update a product - change product prices, descriptions, images, and other product criteria. |
 | Delete a product - remove items that are no longer for sale. |
+
+
+
+
+
+
+# Testing
+
+Please go to [TESTING.md](TESTING.md) file to see the testing section.
