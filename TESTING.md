@@ -50,6 +50,61 @@
 | Edit/update a product - change product prices, descriptions, images, and other product criteria. | Editable product listings within the admin dashboard. | Store administrators keep the product listings up-to-date with minimal effort. |
 | Delete a product - remove items that are no longer for sale. | Option to delete products directly in the admin interface. | Store administrators manage and store's products effectively. |
 
+### Full Manual Testing
+
+I have performed full manual testing on these devices:
+
+- DELL Inspiron 16 laptop
+- DELL Optiplex 2
+- Iphone 11
+- Samsung Galaxy A52 S
+
+The app has been tested on the following browsers:
+
+- Google Chrome 
+- Microsoft Edge
+- Safari
+- Mozilla Firefox 
+
+
+
+| **FEATURE** | **EXPECTED OUTCOME** | **TESTING PERFORMED** | **RESULT** | **PASS/FAIL** |
+| --- | --- | --- | --- | --- |
+| `Navbar` |
+| **Navigation Bar Responsiveness** | Navbar should collapse into a hamburger menu on small screens and expand on larger screens | Resize the browser window to various widths to test responsive behavior | Navbar collapses and expands appropriately at breakpoints | PASS |
+| **Home Link in Navbar** | Clicking on the logo redirects to the home page | Clicked on the main logo link | Redirected to the home page | PASS |
+| **Search Functionality** | Typing and submitting in the search box should lead to a product search results page | Typed a query into the search box and pressed enter | Redirected to the product results page with relevant product listings | PASS |
+| **My Account Dropdown Accessibility** | Dropdown should be accessible and show options based on user authentication status | Checked dropdown both as a guest and as a logged-in user | Correct options displayed under different authentication states | PASS |
+| **Register/Login Links** | Clicking on these links should redirect to the respective authentication pages | Clicked on both links | Successfully redirected to the register and login pages | PASS |
+| **Logout Functionality** | Clicking 'Logout' should log the user out and redirect them to a page indicating they are logged out | Clicked logout | Logged out and saw a confirmation message | PASS |
+| **Wishlist Access** | Clicking the 'Wish List' link should direct to the user's wishlist page | Clicked on 'Wish List' | Redirected to the wishlist page | PASS |
+| **Shopping Bag Access** | Clicking on the shopping bag icon should direct to the shopping cart | Clicked on the shopping bag icon | Redirected to the shopping cart page | PASS |
+| **Responsive Main Nav** | All products and categories dropdowns should work correctly across devices | Tested dropdown functionality on multiple devices | Dropdowns operate correctly in all tested scenarios | PASS |
+| **Delivery Banner** | Banner displaying free delivery threshold should be visible on all pages | Navigated through various pages | Delivery banner consistently visible | PASS |
+| **Message Toasts Functionality** | Toast messages should appear for user actions like add to wishlist or sign out | Performed actions that trigger toasts | Toast messages appeared appropriately | PASS |
+| `Navbar Dropdowns` |
+| **All Products Dropdown** | Dropdown should display options for sorting and viewing all products | Clicked on "All Products" to view dropdown menu | Dropdown displayed with options: By Price, By Brand, By Size, By Category, All Products | PASS |
+| **All Products - By Price** | Redirect to products sorted by price in ascending order | Selected "By Price" from dropdown | Redirected to product page sorted by price ascending | PASS |
+| **All Products - By Brand** | Redirect to products sorted by brand in ascending order | Selected "By Brand" from dropdown | Redirected to product page sorted by brand ascending | PASS |
+| **All Products - By Size** | Redirect to products sorted by size in ascending order | Selected "By Size" from dropdown | Redirected to product page sorted by size ascending | PASS |
+| **All Products - By Category** | Redirect to products sorted by category in ascending order | Selected "By Category" from dropdown | Redirected to product page sorted by category ascending | PASS |
+| **All Products - View All** | Redirect to page displaying all products | Selected "All Products" from dropdown | Redirected to page displaying all products | PASS |
+| **Clothing Dropdown** | Dropdown should list specific clothing categories and an option to view all clothing | Clicked on "Clothing" to view dropdown menu | Dropdown displayed with options: Dresses, Tops, Trousers, Coats, All Clothing | PASS |
+| **Clothing - Dresses** | Redirect to page displaying dresses | Selected "Dresses" from dropdown | Redirected to dresses category page | PASS |
+| **Clothing - Tops** | Redirect to page displaying tops | Selected "Tops" from dropdown | Redirected to tops category page | PASS |
+| **Clothing - Trousers** | Redirect to page displaying trousers | Selected "Trousers" from dropdown | Redirected to trousers category page | PASS |
+| **Clothing - Coats** | Redirect to page displaying coats | Selected "Coats" from dropdown | Redirected to coats category page | PASS |
+| **Clothing - View All Clothing** | Redirect to page displaying all clothing items | Selected "All Clothing" from dropdown | Redirected to page showing all clothing items | PASS |
+| **Shoes & Accessories Dropdown** | Dropdown should list specific accessory categories and options to view each | Clicked on "Shoes & Accessories" to view dropdown menu | Dropdown displayed with options: Shoes, Jewellery, Bags, Hats | PASS |
+| **Shoes & Accessories - Shoes** | Redirect to page displaying shoes | Selected "Shoes" from dropdown | Redirected to shoes category page | PASS |
+| **Shoes & Accessories - Jewellery** | Redirect to page displaying jewellery | Selected "Jewellery" from dropdown | Redirected to jewellery category page | PASS |
+| **Shoes & Accessories - Bags** | Redirect to page displaying bags | Selected "Bags" from dropdown | Redirected to bags category page | PASS |
+| **Shoes & Accessories - Hats** | Redirect to page displaying hats | Selected "Hats" from dropdown | Redirected to hats category page | PASS |
+| **Occasions Dropdown** | Dropdown should list occasion-specific categories like weddings, ball gowns | Clicked on "Occasions" to view dropdown menu | Dropdown displayed with options: Wedding, Ball Gowns | PASS |
+| **Occasions - Wedding** | Redirect to page displaying wedding-appropriate items | Selected "Wedding" from dropdown | Redirected to wedding category page | PASS |
+| **Occasions - Ball Gowns** | Redirect to page displaying ball gowns | Selected "Ball Gowns" from dropdown | Redirected to ball gowns category page | PASS |
+
+
 
 
 
