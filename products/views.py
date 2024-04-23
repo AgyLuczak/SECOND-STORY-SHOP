@@ -19,17 +19,15 @@ def all_products(request):
     sortkey = request.GET.get('sort', None)
     direction = request.GET.get('direction', 'asc')
 
+    # Initialize all sorting flags at the beginning
+    is_sorting_default = True
+    is_price_asc = is_price_desc = is_name_asc = is_name_desc = is_category_asc = is_category_desc = is_size_asc = is_size_desc = False
+
     if request.user.is_authenticated:
-        # Annotate products with 'in_wishlist' boolean for authenticated users
         wishlist_products = WishlistItem.objects.filter(user=request.user, product=OuterRef('pk'))
         products = products.annotate(in_wishlist=Exists(wishlist_products))
     else:
-        # For unauthenticated users, 'in_wishlist' can default to False
         products = products.annotate(in_wishlist=Value(False, output_field=BooleanField()))
-
-    # Initialize flags
-    is_sorting_default = True
-    is_price_asc = is_price_desc = is_name_asc = is_name_desc = is_category_asc = is_category_desc = False
 
     if sortkey and direction:
         if sortkey == 'name':
@@ -37,21 +35,28 @@ def all_products(request):
             products = products.annotate(lower_name=Lower('name'))
         elif sortkey == 'category':
             sortkey = 'category__name'
+        elif sortkey == 'size':  # Ensure this condition is handled
+            if direction == 'desc':
+                sortkey = '-size'
+                is_size_desc = True
+            else:
+                sortkey = 'size'
+                is_size_asc = True
 
-        # Apply sorting
-        if direction == 'desc':
+        if direction == 'desc' and sortkey != '-size':
             sortkey = f'-{sortkey}'
         products = products.order_by(sortkey)
 
         # Update flags based on current_sorting
-        current_sorting = f'{sortkey}_{direction}'
         is_sorting_default = False
-        is_price_asc = current_sorting == 'price_asc'
-        is_price_desc = current_sorting == 'price_desc'
-        is_name_asc = current_sorting == 'name_asc'
-        is_name_desc = current_sorting == 'name_desc'
-        is_category_asc = current_sorting == 'category__name_asc'
-        is_category_desc = current_sorting == 'category__name_desc'
+        is_price_asc = sortkey == 'price' and direction == 'asc'
+        is_price_desc = sortkey == '-price'
+        is_name_asc = sortkey == 'lower_name' and direction == 'asc'
+        is_name_desc = sortkey == '-lower_name'
+        is_category_asc = sortkey == 'category__name' and direction == 'asc'
+        is_category_desc = sortkey == '-category__name'
+        is_size_asc = sortkey == 'size' and direction == 'asc'
+        is_size_desc = sortkey == '-size'
 
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')
@@ -78,6 +83,8 @@ def all_products(request):
         'is_name_desc': is_name_desc,
         'is_category_asc': is_category_asc,
         'is_category_desc': is_category_desc,
+        'is_size_asc': is_size_asc,
+        'is_size_desc': is_size_desc,
         'border_class': 'info' if is_sorting_default else 'black',
     }
 
