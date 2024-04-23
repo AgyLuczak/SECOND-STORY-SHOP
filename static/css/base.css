@@ -911,6 +911,19 @@ footer {
 
 }
 
+@media (max-width: 1024px) and (min-height: 600px) {
+    .footer {
+        position: absolute;
+        bottom: 0;
+
+    }
+
+    .wrapper {
+        position: relative;
+
+    }
+}
+
 
 
 /* fixed top navbar only on medium and up */
@@ -1092,8 +1105,8 @@ footer {
 
 @media only screen and (max-width:400px) {
 
-    .wrapper {
-        min-height: 0vh;
+    .footer {
+        padding: 60px;
     }
 
 
