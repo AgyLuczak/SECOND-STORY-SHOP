@@ -5,13 +5,14 @@ html,
 body {
     height: 100%;
     margin: 0;
+    padding: 0;
 
 }
 
 body {
     background: url('/static/images/girl_hero_img.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px); */
     color: #2b1d0e;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -27,14 +28,15 @@ body {
 }
 
 .wrapper {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .content {
     flex: 1 0 auto;
-
+    width: 100%
 }
 
 
