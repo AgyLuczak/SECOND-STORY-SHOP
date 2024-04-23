@@ -117,6 +117,12 @@ The app has been tested on the following browsers:
 | **Accessibility of Flip Container** | The flip container should be easily clickable and should toggle its state on each click. | Repeatedly clicked the flip container. | Flip action worked correctly with each click. | PASS |
 | **Vertical Stacking on Smaller Screens** | On smaller screens, the logo and 'Shop Now' button should stack vertically. | Checked the layout on smaller devices. | Elements are stacking vertically as expected. | PASS |
 | **Text Visibility in Flip Container** | Text in the flip container should be clear and legible. | Observed the text in both front and back states of the flip container. | Text is clear and legible in both states. | PASS |
+| `Footer` |
+| **Footer Visibility** | The footer should always be visible at the bottom of every page. | Scrolled to the bottom on various pages to check visibility. | Footer was consistently visible across all pages. | PASS |
+| **Social Media Links** | Links should correctly redirect to the respective social media pages. | Clicked each social link to ensure it opens the correct page. | All links redirected correctly to the specified social media platforms. | PASS |
+| **Link Targeting** | Social media links should open in a new tab. | Clicked on social media links to check `target="_blank"`. | Each link opened in a new tab as expected. | PASS |
+| **Conditional Styling** | Icons should switch styles between light and dark based on the current path. | Checked icons on the homepage and other pages. | Icons correctly displayed light style on the homepage and dark style on other pages. | PASS
+| **Responsiveness** | Footer should adjust layout gracefully on different screen sizes. | Resized browser and tested on mobile devices. | Footer content adjusted properly and remained functional across various screen sizes. | PASS |
 
 
 
