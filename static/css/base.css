@@ -982,6 +982,11 @@ footer {
 
 @media only screen and (max-width:400px) {
 
+    .wrapper {
+        max-height: 0vh;
+    }
+
+
     .flip-container {
         width: 280px;
         height: 280px;
