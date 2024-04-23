@@ -286,5 +286,6 @@ else:
 SOCIAL_LINKS = {
     'facebook': 'https://facebook.com',
     'twitter': 'https://twitter.com',
+    'pinterest': 'http://pinterest.com',
     'instagram': 'https://instagram.com',
 }
