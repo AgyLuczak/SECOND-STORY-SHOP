@@ -165,6 +165,7 @@ The app has been tested on the following browsers:
 |`Wishlist Page`|
 | **Page Load** | The Wishlist page should load without any errors and display all items currently in the wishlist. | Loaded the Wishlist page to check for load issues and correct display of items. | Page loaded successfully with all wishlist items displayed. | PASS |
 | **Item Display** | Each item in the wishlist should have an image, name, price, and a remove option. | Checked each item listed in the wishlist for required information and functionality. | All items displayed with correct details and functional remove buttons. | PASS |
+| **Image Modal Functionality**      | Product images should trigger a modal for a larger view if clicked.| Clicked on product images to test modal functionality. | Modal opened with a larger view of the product images correctly.| PASS   |
 | **Remove Item** | Clicking the 'Remove' button should immediately remove the item from the wishlist without reloading the page. | Clicked the 'Remove' button for multiple items. | Items were removed instantly and the page updated without a full reload. | PASS |
 | **Empty Wishlist Message** | If the wishlist is empty, a message should display indicating that there are no items and provide a link back to the products page. | Emptied the wishlist and checked the message display. | The empty wishlist message displayed correctly with a functional link to keep shopping. | PASS |
 | **Add to Wishlist** | Items added to the wishlist from product pages should appear on the wishlist page. | Added items from various product detail pages. | Items appeared in the wishlist as expected. | PASS |
@@ -197,6 +198,31 @@ The app has been tested on the following browsers:
 | **View Other Products Link** A link or button should encourage users to continue shopping, directing them to the products page.| Clicked the 'View other products' button.| The link redirected correctly to the products page.| PASS |
 | **Image Modal Functionality**      | Product images should trigger a modal for a larger view if clicked.| Clicked on product images to test modal functionality. | Modal opened with a larger view of the product images correctly.| PASS          |
 | **Accuracy of Billing Information**| Billing details displayed should correctly reflect the user’s input from the checkout process.| Verified billing information against what was entered during checkout. | Billing information correctly reflected the user's input.| PASS |
+|`Sign In Page`|
+| **Page Load**| The page should load without any errors and display the sign-in options clearly.| Accessed the "Sign In" page to check for load issues. | Page loaded successfully with all elements displayed correctly.| PASS          |
+| **Form Display**| The sign-in form should be visible with fields for username and password.| Inspected the form for visibility and completeness. | Form displayed correctly with all required fields.| PASS |
+| **Form Submission** | Submitting the form with correct credentials should grant access to the user’s account.| Filled in the form with valid credentials and submitted. | Successfully signed in and redirected to the user dashboard or specified page.| PASS          |
+| **Form Validation** | Incorrect entries or empty fields should trigger appropriate error messages.| Submitted the form with incorrect and empty fields. | Form validation worked as expected; errors were displayed for incorrect or missing inputs.   | PASS          |
+| **Password Recovery** | The "Forgot Password?" link should redirect to a password recovery page.| Clicked the "Forgot Password?" link.| Redirected to the password recovery page correctly.| PASS          |
+| **Sign Up Redirection**| The sign-up link should redirect new users to the registration page.                         | Clicked the "sign up" link for new account creation. | Redirected to the sign-up page as expected.                                                  | PASS          |
+| **Redirect After Sign-In**| After signing in, users should be redirected to a page specified by the "next" parameter or to a default page. | Signed in with and without the "next" parameter.| Redirected appropriately according to the presence or absence of the "next" parameter.| PASS          |
+|`Sign Out Page`|
+| **Page Load**| The page should load without errors and display the sign-out confirmation message.| Accessed the "Sign Out" page to check for load issues. | Page loaded successfully with all elements displayed correctly, including the confirmation message. | PASS          |
+| **Confirmation Message Display**| A clear message asking if the user is sure they want to sign out should be displayed.| Checked for the presence and clarity of the confirmation message. | The confirmation message was displayed clearly and appropriately.| PASS          |
+| **Sign Out Functionality** | Clicking the 'Sign Out' button should securely log the user out.| Clicked the 'Sign Out' button.| Successfully signed out, session ended, and redirected to a specified page or home page.| PASS          |
+| **Cancel Button Functionality**       | The cancel button should redirect users back to the home page without logging them out.| Clicked the 'Cancel' button.       | Redirected to the home page without signing out.                                                 | PASS          |
+| **Form Submission Security**| The sign-out process should handle CSRF tokens correctly to secure the form submission.| Inspected the form for CSRF token implementation. | CSRF token was present and correctly implemented in the form.                                   | PASS          |
+| **Redirect Functionality**| After signing out, users should be redirected to the home page.| Signed out and observed the redirect behavior. | Redirected appropriately to the home page.| PASS          |
+| **Responsive Design**| The page should be responsive and display correctly on various devices.| Tested the page on multiple screen sizes and devices. | The layout adjusted correctly and remained functional across all devices.| PASS          |
+|`Sign Up Page`|
+| **Page Load**                      | The page should load without errors and display the sign-up form.| Accessed the "Sign Up" page to check for load issues. | Page loaded successfully with all elements displayed correctly.                                | PASS          |
+| **Form Fields Display**            | All necessary fields for registration should be visible and clearly labeled. | Inspected the form for visibility and completeness. | Form displayed correctly with all required fields. | PASS          |
+| **Form Submission**  | Submitting the form with valid data should create a new user account.| Filled in the form with valid data and submitted. | Successfully created a new account and redirected to a welcome page or dashboard.| PASS          |
+| **Form Validation** | Form should validate data correctly (e.g., password strength, required fields).| Submitted the form with invalid data.| Form validation worked as expected; errors were displayed for incorrect or missing inputs.| PASS          |
+| **Link to Sign In** | The link to the sign-in page should be functional for users who already have an account.| Clicked the "sign in" link.                       | Redirected to the sign-in page as expected.                                                    | PASS          |
+| **Security - CSRF Protection**     | The form submission should include CSRF token to protect against CSRF attacks.| Inspected the form for CSRF token presence.        | CSRF token was present and correctly implemented in the form.| PASS          |
+| **Back to Login Button**           | Clicking 'Back to Login' should redirect users back to the login page.| Clicked the 'Back to Login' button.                | Redirected to the login page without issue.| PASS  |
+
 
 
 
