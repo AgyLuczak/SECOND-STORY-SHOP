@@ -140,6 +140,25 @@ The app has been tested on the following browsers:
 | **Keep Shopping Button** | Clicking this button should take users back to the products page. | Clicked the "Keep Shopping" button. | Redirected to the products page. | PASS |
 | **Add to Wishlist** | Authenticated users should be able to add the product to their wishlist directly. Unauthenticated users should be redirected to log in. | Tested with both authenticated and unauthenticated users. | Authenticated users successfully added the item whereas unauthenticated were redirected to log in. | PASS |
 | **Add to Bag** | Users should be able to add the product to their shopping bag. | Submitted the form to add the product to the bag. | Product was added to the shopping bag without issues. | PASS |
+| `Add Product Page - superuser access only` |
+| **Page Load** | The page should load without any errors and display the form for adding a product. | Accessed the "Add Product" page to check for load issues. | Page loaded successfully with all form elements visible. | PASS |
+| **Form Fields Visibility** | All form fields should be visible and labeled correctly. | Inspected each field for visibility and proper labeling. | All fields were visible and correctly labeled. | PASS |
+| **Form Submission** | Submitting the form with correct data should successfully add a product. | Filled in the form with valid data and submitted. | Product was added successfully and appeared in the product list. | PASS |
+| **Field Validation** | Each field should correctly validate data (e.g., required fields, format constraints). | Submitted the form with missing and incorrect data to test validation. | Form validation worked as expected; errors were displayed for incorrect inputs. | PASS |
+| **Image Upload** | An image upload field should accept image files and show a preview or filename. | Uploaded an image and checked if the filename or preview was shown. | Image filename was displayed correctly after upload. | PASS |
+| **Cancel Button** | The cancel button should redirect users back to the product list without adding a product. | Clicked the "Cancel" button. | Redirected to the product list page without adding a new product. | PASS |
+| **JavaScript Functionality** | JavaScript should enhance the usability of the form, like displaying image file names. | Tested JavaScript functionality by changing the image file. | JavaScript updated the display with the new image file name correctly. | PASS |
+| **Server-side Processing** | After form submission, the server should process the data correctly and store the new product. | Checked the database or admin panel to confirm the product was added. | New product was correctly added to the database and visible in the admin panel. | PASS |
+| `Edit Product Page - superuser access only` |
+| **Page Load** | The page should load without any errors and display the edit form pre-filled with the product’s existing details. | Accessed the "Edit Product" page to check for load issues and correct data prefill. | Page loaded successfully with all form elements displaying the current product data. | PASS |
+| **Form Fields Visibility** | All form fields should be visible, correctly labeled, and pre-filled with the existing product data. | Inspected each field for visibility, proper labeling, and correct pre-fill. | All fields were visible, correctly labeled, and pre-filled with existing product data. | PASS |
+| **Form Submission** | Submitting the form with correct data should successfully update the product. | Modified several fields, submitted the form, and verified updates on the product detail page. | Product updates were saved successfully and reflected on the product detail page. | PASS |
+| **Field Validation** | Each field should correctly validate data (e.g., format constraints, required fields). | Submitted the form with missing and incorrect data to test validation. | Form validation worked as expected; errors were displayed for incorrect inputs. | PASS |
+| **Image Upload** | The image upload field should accept image files and show a preview or filename after upload. | Uploaded a new image and checked if the filename or preview was shown. | Image filename was displayed correctly after upload. | PASS |
+| **Cancel Button** | The cancel button should redirect users back to the product list without making any changes. | Clicked the "Cancel" button after making changes to the form fields. | Redirected to the product list page without any changes being saved. | PASS |
+| **JavaScript Functionality** | JavaScript should enhance the usability of the form, such as displaying the image file name after upload. | Tested JavaScript functionality by changing the image file. | JavaScript updated the display with the new image file name correctly. | PASS |
+| **Server-side Processing** | After form submission, the server should process the data correctly and update the product in the database. | Checked the database or admin panel to confirm the product was updated correctly. | The product was correctly updated in the database and visible in the admin panel. | PASS |
+
 
 
 
