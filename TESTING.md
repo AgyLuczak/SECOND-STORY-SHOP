@@ -158,6 +158,13 @@ The app has been tested on the following browsers:
 | **Cancel Button** | The cancel button should redirect users back to the product list without making any changes. | Clicked the "Cancel" button after making changes to the form fields. | Redirected to the product list page without any changes being saved. | PASS |
 | **JavaScript Functionality** | JavaScript should enhance the usability of the form, such as displaying the image file name after upload. | Tested JavaScript functionality by changing the image file. | JavaScript updated the display with the new image file name correctly. | PASS |
 | **Server-side Processing** | After form submission, the server should process the data correctly and update the product in the database. | Checked the database or admin panel to confirm the product was updated correctly. | The product was correctly updated in the database and visible in the admin panel. | PASS |
+`Wishlist Page`
+| **Page Load** | The Wishlist page should load without any errors and display all items currently in the wishlist. | Loaded the Wishlist page to check for load issues and correct display of items. | Page loaded successfully with all wishlist items displayed. | PASS |
+| **Item Display** | Each item in the wishlist should have an image, name, price, and a remove option. | Checked each item listed in the wishlist for required information and functionality. | All items displayed with correct details and functional remove buttons. | PASS |
+| **Remove Item** | Clicking the 'Remove' button should immediately remove the item from the wishlist without reloading the page. | Clicked the 'Remove' button for multiple items. | Items were removed instantly and the page updated without a full reload. | PASS |
+| **Empty Wishlist Message** | If the wishlist is empty, a message should display indicating that there are no items and provide a link back to the products page. | Emptied the wishlist and checked the message display. | The empty wishlist message displayed correctly with a functional link to keep shopping. | PASS |
+| **Add to Wishlist** | Items added to the wishlist from product pages should appear on the wishlist page. | Added items from various product detail pages. | Items appeared in the wishlist as expected. | PASS |
+| **Back to Top Button** | Clicking the 'Back to Top' button should smoothly scroll the page to the top. | Tested the 'Back to Top' button after scrolling down. | The button scrolled the page back to the top effectively. | PASS |
 
 
 
