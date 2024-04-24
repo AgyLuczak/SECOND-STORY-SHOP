@@ -138,46 +138,61 @@ WSGI_APPLICATION = 'second_story.wsgi.application'
 
 TESTING = os.getenv('TESTING') == 'True'
 
+TESTING = os.getenv('TESTING') == 'True'
+
 if TESTING:
-    # Use the test database configuration
-    test_db_url = os.getenv('TEST_DATABASE_URL')
-    if test_db_url:
-        DATABASES = {
-            'default': dj_database_url.parse(test_db_url)
-        }
-    else:
-        raise ValueError("TEST_DATABASE_URL must be set for testing environments.")
-else:
-    # Check for the standard DATABASE_URL for production or development environments
-    database_url = os.getenv('DATABASE_URL')
-    if database_url:
-        DATABASES = {
-            'default': dj_database_url.parse(database_url)
-        }
-    else:
-        # Fall back to SQLite if no DATABASE_URL is provided
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-        }
-
-        print("Testing Environment: ", os.getenv('TESTING'))
-        print("Database URL: ", os.getenv('DATABASE_URL'))
-        print("Test Database URL: ", os.getenv('TEST_DATABASE_URL'))
-
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'NAME': os.path.join(BASE_DIR, 'test_db.sqlite3'),
         }
     }
+else:
+    # Production or development environment
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+
+# if TESTING:
+#     # Use the test database configuration
+#     test_db_url = os.getenv('TEST_DATABASE_URL')
+#     if test_db_url:
+#         DATABASES = {
+#             'default': dj_database_url.parse(test_db_url)
+#         }
+#     else:
+#         raise ValueError("TEST_DATABASE_URL must be set for testing environments.")
+# else:
+#     # Check for the standard DATABASE_URL for production or development environments
+#     database_url = os.getenv('DATABASE_URL')
+#     if database_url:
+#         DATABASES = {
+#             'default': dj_database_url.parse(database_url)
+#         }
+#     else:
+#         # Fall back to SQLite if no DATABASE_URL is provided
+#         DATABASES = {
+#             'default': {
+#                 'ENGINE': 'django.db.backends.sqlite3',
+#                 'NAME': BASE_DIR / 'db.sqlite3',
+#             }
+#         }
+
+#         print("Testing Environment: ", os.getenv('TESTING'))
+#         print("Database URL: ", os.getenv('DATABASE_URL'))
+#         print("Test Database URL: ", os.getenv('TEST_DATABASE_URL'))
+
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 
 # Password validation
