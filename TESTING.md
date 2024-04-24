@@ -108,7 +108,6 @@ The app has been tested on the following browsers:
 | **Occasions - Ball Gowns** | Redirect to page displaying ball gowns | Selected "Ball Gowns" from dropdown | Redirected to ball gowns category page | PASS |
 | `Home Page` |
 | **Page Load** | The homepage should load without any errors and display all content correctly. | Accessed the website's homepage. | Homepage loaded successfully with all content displayed as expected. | PASS |
-| **Responsive Layout** | The homepage should be responsive, adjusting layout for various screen sizes (xs to lg). | Resized the browser window and accessed on different devices. | Layout adjusts appropriately for each screen size, maintaining usability and aesthetics. | PASS |
 | **Navigation Bar** | The navigation bar should function correctly, providing access to all linked pages. | Clicked on each link in the navigation bar. | Each link directed to the correct page. | PASS |
 | **Page Heading and Subheading on Small Screens** | Heading and subheading should be visible only on xs to md screens. | Viewed the page on small screens to check visibility. | Heading and subheading are properly displayed only on xs to md screens. | PASS |
 | **Shop Now Button** | Clicking the 'Shop Now' button should redirect the user to the products page. | Clicked the 'Shop Now' button. | Redirected to the products page correctly. | PASS |
@@ -122,7 +121,17 @@ The app has been tested on the following browsers:
 | **Social Media Links** | Links should correctly redirect to the respective social media pages. | Clicked each social link to ensure it opens the correct page. | All links redirected correctly to the specified social media platforms. | PASS |
 | **Link Targeting** | Social media links should open in a new tab. | Clicked on social media links to check `target="_blank"`. | Each link opened in a new tab as expected. | PASS |
 | **Conditional Styling** | Icons should switch styles between light and dark based on the current path. | Checked icons on the homepage and other pages. | Icons correctly displayed light style on the homepage and dark style on other pages. | PASS
-| **Responsiveness** | Footer should adjust layout gracefully on different screen sizes. | Resized browser and tested on mobile devices. | Footer content adjusted properly and remained functional across various screen sizes. | PASS |
+| `Products Page` |
+| **Page Load** | The page should load without errors and display products, sorting options, and category links. | Loaded the page and observed for any errors or misloads. | Page loaded successfully with all elements displayed correctly. | PASS |
+| **Product Display** | Each product should display an image, name, price, and available actions (wishlist, add to bag). | Checked several product cards for necessary information. | All products correctly displayed their respective details. | PASS |
+| **Sorting Functionality** | Changing the sorting options should reorder products based on the selected criteria. | Selected each sorting option from the dropdown and observed the reordering of product listings. | Products were reordered correctly for each selected sorting option. | PASS |
+| **Category Links** | Clicking on a category badge should filter the products according to that category. | Clicked on each category badge and checked if only relevant products are shown. | Products were filtered correctly according to selected categories. | PASS |
+| **Product Details Link** | Clicking on a product image or name should redirect to the product's detail page. | Clicked on product images and names. | Correctly redirected to the detailed product page for each selected product. | PASS |
+| **Add to Wishlist** | Clicking the wishlist button should add the item to the user’s wishlist. Requires login for unauthenticated users. | Clicked the wishlist button as both authenticated and unauthenticated user. | Functioned correctly: redirected to login when not authenticated, and added to wishlist when logged in. | PASS |
+| **Add to Bag** | Clicking the add to bag button should add the item to the shopping bag. | Clicked on the add to bag button for multiple products. | Items were successfully added to the shopping bag. | PASS |
+| **Back to Top Button** | Clicking the "Back to Top" button should scroll the page back to the top. | Clicked the button after scrolling down on the page. | Page scrolled back to the top smoothly. | PASS |
+
+
 
 
 
