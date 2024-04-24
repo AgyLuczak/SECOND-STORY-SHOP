@@ -220,8 +220,15 @@ The app has been tested on the following browsers:
 | **Form Submission**  | Submitting the form with valid data should create a new user account.| Filled in the form with valid data and submitted. | Successfully created a new account and redirected to a welcome page or dashboard.| PASS          |
 | **Form Validation** | Form should validate data correctly (e.g., password strength, required fields).| Submitted the form with invalid data.| Form validation worked as expected; errors were displayed for incorrect or missing inputs.| PASS          |
 | **Link to Sign In** | The link to the sign-in page should be functional for users who already have an account.| Clicked the "sign in" link.                       | Redirected to the sign-in page as expected.                                                    | PASS          |
-| **Security - CSRF Protection**     | The form submission should include CSRF token to protect against CSRF attacks.| Inspected the form for CSRF token presence.        | CSRF token was present and correctly implemented in the form.| PASS          |
-| **Back to Login Button**           | Clicking 'Back to Login' should redirect users back to the login page.| Clicked the 'Back to Login' button.                | Redirected to the login page without issue.| PASS  |
+| **Security - CSRF Protection**     | The form submission should include CSRF token to protect against CSRF attacks.| Inspected the form for CSRF token presence.   | CSRF token was present and correctly implemented in the form.| PASS          |
+| **Back to Login Button** | Clicking 'Back to Login' should redirect users back to the login page.| Clicked the 'Back to Login' button.                | Redirected to the login page without issue.| PASS  |
+|`Profile Page`|
+| **Page Load** | The page should load without errors and display the profile details and order history.| Accessed the "My Profile" page to check for load issues. | Page loaded successfully with all elements displayed correctly. | PASS          |
+| **Profile Update Form**| The form should display all current user information and allow updates.| Reviewed the form for accuracy and editability.   | Form displayed correct information and updates were saved successfully. | PASS|
+| **Form Submission** | Submitting updated information should correctly update user details in the database.| Updated various fields in the form and submitted. | Changes were correctly reflected in the user's profile and in the database.| PASS          |
+| **Order History Display**| Past orders should be listed with details such as order number, date, items, and total cost. | Checked the display of order history.| Order history displayed correctly with all relevant details. | PASS          |
+| **Navigation to Order Details**| Clicking an order number should redirect to a detailed view of that order.| Clicked on order numbers in the history table.    | Successfully redirected to the detailed order history page for each clicked order.| PASS |
+| **JavaScript Functionality**| JavaScript used for dynamic elements (e.g., country field updates) should function correctly. | Tested JavaScript-dependent features on the form. | JavaScript features such as dynamic dropdowns worked without errors.| PASS          |
 
 
 
