@@ -130,6 +130,17 @@ The app has been tested on the following browsers:
 | **Add to Wishlist** | Clicking the wishlist button should add the item to the user’s wishlist. Requires login for unauthenticated users. | Clicked the wishlist button as both authenticated and unauthenticated user. | Functioned correctly: redirected to login when not authenticated, and added to wishlist when logged in. | PASS |
 | **Add to Bag** | Clicking the add to bag button should add the item to the shopping bag. | Clicked on the add to bag button for multiple products. | Items were successfully added to the shopping bag. | PASS |
 | **Back to Top Button** | Clicking the "Back to Top" button should scroll the page back to the top. | Clicked the button after scrolling down on the page. | Page scrolled back to the top smoothly. | PASS |
+| `Product Detail Page` |
+| **Page Load** | The page should load without any errors, displaying detailed information about a specific product. | Accessed the product detail page for several products. | All product details loaded correctly without errors. | PASS |
+| **Product Image Display** | The product image should be displayed prominently. If clicked, a modal with a larger image should appear. | Clicked on the product image to trigger the modal. | The modal displayed the image correctly and closed without issues. | PASS |
+| **Product Information Display** | Product name, brand, description, price, and category should be displayed accurately. | Reviewed the displayed information for accuracy against expected values. | All information was correct and well-formatted. | PASS |
+| **Category Link** | Clicking the category link should filter the products page by the selected category. | Clicked on the category link. | Redirected to the filtered products page showing only products from that category. | PASS |
+| **Size Display** | If a product has a size, it should be displayed. If not, the size information should be omitted. | Checked products both with and without size information. | Size displayed correctly where applicable; omitted where not applicable. | PASS |
+| **Superuser Actions** | Superusers should see "Edit" and "Delete" buttons. Clicking these should lead to respective actions. | Tested with a superuser account. | "Edit" and "Delete" buttons worked as expected. | PASS |
+| **Keep Shopping Button** | Clicking this button should take users back to the products page. | Clicked the "Keep Shopping" button. | Redirected to the products page. | PASS |
+| **Add to Wishlist** | Authenticated users should be able to add the product to their wishlist directly. Unauthenticated users should be redirected to log in. | Tested with both authenticated and unauthenticated users. | Authenticated users successfully added the item whereas unauthenticated were redirected to log in. | PASS |
+| **Add to Bag** | Users should be able to add the product to their shopping bag. | Submitted the form to add the product to the bag. | Product was added to the shopping bag without issues. | PASS |
+
 
 
 
