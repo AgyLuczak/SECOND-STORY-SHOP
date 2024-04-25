@@ -89,8 +89,14 @@
                                     title="{% if product.in_wishlist %}Remove from wishlist{% else %}Add to wishlist{% endif %}">
                                     <i class="fas fa-heart {% if product.in_wishlist %}text-danger{% endif %}"></i>
                                 </button>
+                                {% else %}
+                                <!-- Link for users to log in to add to wishlist with icon -->
+                                <a href="{% url 'account_login' %}?next={{ request.path }}"
+                                    class="btn btn-wish btn-sm mr-1" title="Log in to Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </a>
                             </form>
-
+                            {% endif %}
                             <!-- Form for adding to shopping bag with icon -->
                             <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
                                 {% csrf_token %}
@@ -99,17 +105,8 @@
                                     <i class="fas fa-shopping-bag"></i>
                                 </button>
                             </form>
-                            {% else %}
-                            <!-- Link for users to log in to add to wishlist with icon -->
-                            <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn btn-wish btn-sm mr-1"
-                                title="Log in to Add to Wishlist">
-                                <i class="fas fa-heart"></i>
-                            </a>
-                            {% endif %}
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
