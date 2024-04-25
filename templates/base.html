@@ -139,12 +139,30 @@
             </div>
         </header>
 
-        {% if messages or request.session.wishlist_action %}
+        <!-- {% if messages or request.session.wishlist_action %}
         <div class="message-container">
             {% if request.session.wishlist_action %}
             {% include 'includes/toasts/toast_wishlist.html' %}
             {% endif %}
 
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+        {% endif %} -->
+
+        {% if messages %}
+        <div class="message-container">
             {% for message in messages %}
             {% with message.level as level %}
             {% if level == 40 %}
