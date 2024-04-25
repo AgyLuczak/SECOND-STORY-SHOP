@@ -118,7 +118,8 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            # return redirect(reverse('product_detail', args=[product.id]))
+            redirect_url = request.POST.get('redirect_url', request.GET.get('redirect_url', reverse('product_detail', args=[product_id])))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -129,7 +130,9 @@ def add_product(request):
         'form': form,
     }
 
-    return render(request, template, context)
+    # return render(request, template, context)
+    return redirect(redirect_url)
+
 
 
 @login_required

@@ -25,6 +25,7 @@ def add_to_wishlist(request, product_id):
 @login_required
 def toggle_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
+    redirect_url = request.POST.get('redirect_url', request.GET.get('redirect_url', reverse('product_detail', args=[product_id])))
     wishlist_item, created = WishlistItem.objects.get_or_create(user=request.user, product=product)
 
     if created:
@@ -37,7 +38,8 @@ def toggle_wishlist(request, product_id):
 
     messages.success(request, message)
     request.session.modified = True  
-    return redirect(reverse('view_wishlist')) 
+    # return redirect(reverse('view_wishlist')) 
+    return redirect(redirect_url)
 
 @login_required
 def view_wishlist(request):
