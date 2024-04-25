@@ -23,20 +23,23 @@ def add_to_bag(request, item_id):
         if item_id in bag:
             messages.error(request, f'{product.name} is already in your bag.')
         else:
-            bag[item_id] = 1  # Indicate the product is present in the bag
+            bag[item_id] = 1 
             messages.success(request, f'Added {product.name} to your bag.')
 
-        # Clear wishlist_action before saving the bag session, if it exists
+        
         request.session.pop('wishlist_action', None)
 
         request.session['bag'] = bag
-        # Provide a default URL name as a fallback for the redirect
-        return redirect(request.POST.get('redirect_url', 'view_bag'))
+        
+        # return redirect(request.POST.get('redirect_url', 'view_bag'))
     except Product.DoesNotExist:
         messages.error(request, "Product not found.")
-        return redirect('view_bag')
-
+        # return redirect('view_bag')
         
+
+    # Redirect to 'next' URL or to a default bag view
+    next_page = request.GET.get('next', reverse('view_bag'))
+    return redirect(next_page)
 
 def remove_from_bag(request, item_id):
     """Remove the specified product from the shopping bag."""
