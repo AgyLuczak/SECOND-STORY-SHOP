@@ -1,6 +1,17 @@
 Go back to the [README.md](README.md) file
 
 
+## Code Validation
+
+### HTML
+
+- [W3C Markup Validator](https://validator.w3.org/)
+
+I used W3C Validator to test all HTML pages. Initially, the validator showed two stray tags on a home page.The remaining errors are a result of using a Jinja template.
+
+Screenshots of the results can be found within the documentation folder. [html validation screenshots](docs/html_validation)
+
+
 ## User Stories
 
 ### Viewing and Navigation
