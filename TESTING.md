@@ -12,6 +12,19 @@ I used W3C Validator to test all HTML pages. Initially, the validator showed two
 Screenshots of the results can be found within the documentation folder. [html validation screenshots](docs/html_validation)
 
 
+### CSS
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+I used W3C CSS Validator for the CSS. No errors were shown.
+
+Screenshots of the results can be found within the documentation folder. [css validation screenshots](docs/css_validation)
+
+
+
+
+
+
 ## User Stories
 
 ### Viewing and Navigation
