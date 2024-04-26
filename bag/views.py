@@ -25,8 +25,8 @@ def add_to_bag(request, item_id):
         else:
             bag[item_id] = 1 
             messages.success(request, f'Added {product.name} to your bag.')
-
-        
+           
+           
         request.session.pop('wishlist_action', None)
 
         request.session['bag'] = bag
