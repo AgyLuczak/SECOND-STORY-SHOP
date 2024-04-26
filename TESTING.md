@@ -21,6 +21,17 @@ I used W3C CSS Validator for the CSS. No errors were shown.
 Screenshots of the results can be found within the documentation folder. [css validation screenshots](docs/css_validation)
 
 
+### Java Script
+
+- [JS hint Validator](https://https://jshint.com/)
+
+I have used the JS Hint validator for the Java Script syntax. 
+
+|  File |Result   | Screenshot  |
+|---|---|---|
+| stripe_element.js  | two undefined variables - stripe   | ![stripe.js](docs/js_validation/stripe_element.js_validation.png)   |
+| countryfields.js  | no errors  | ![stripe.js](docs/js_validation/country_fields.js_validation.png)  |
+
 
 
 
