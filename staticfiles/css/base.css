@@ -713,7 +713,7 @@ footer {
     }
 
     .form-check-input {
-        margin-left: -85px;
+        margin-left: -85px !important;
     }
 }
 
@@ -725,7 +725,7 @@ footer {
     }
 
     .form-check-input {
-        margin-left: -30px;
+        margin-left: -30px !important;
     }
 }
 
@@ -786,7 +786,7 @@ footer {
         font-size: .7rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
+    /* .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
     }
@@ -800,7 +800,7 @@ footer {
     .increment-qty,
     .decrement-qty {
         padding: .25rem .5rem !important;
-    }
+    } */
 
 }
 
@@ -830,7 +830,6 @@ footer {
     .card-footer form,
     .card-footer a {
         width: 100%;
-        display: block;
         margin-right: 0;
 
     }
@@ -863,6 +862,10 @@ footer {
         margin-bottom: 10px !important;
     }
 
+    .sign-up-btn {
+        width: 100%;
+    }
+
 
 
     .submit-button {
@@ -882,6 +885,34 @@ footer {
     .allauth-form-inner-content input[type='submit'][value='Reset My Password'] {
         width: 100% !important;
     }
+
+    .add-to-bag {
+        order: 1;
+        /* Make the add to bag button first */
+    }
+
+    .add-to-wishlist {
+        order: 2;
+        /* Make the add to wishlist second */
+    }
+
+    .keep-shopping {
+        order: 3;
+        /* Make the keep shopping last */
+    }
+
+    .sign-up {
+        order: 1;
+        /*Make the sign-up button first*/
+    }
+
+    .back-to-login {
+        order: 2;
+        /*make the back-to-login btn second*/
+    }
+
+
+
 }
 
 
@@ -927,7 +958,7 @@ footer {
     }
 
     .form-check-input {
-        margin-left: -15px;
+        margin-left: -15px !important;
     }
 
 }

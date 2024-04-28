@@ -55,7 +55,7 @@
                 <!-- Card Footer for Other Actions -->
                 <div class="card-footer card-footer-details bg-white d-flex flex-wrap justify-content-between border-0">
                     <!-- Keep Shopping stays on the left -->
-                    <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn mb-2">
+                    <a href="{% url 'products' %}" class="btn keep-shopping-btn keep-shopping light-btn mb-2">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -65,17 +65,18 @@
                     <!-- Grouped actions to the right -->
                     <div class="detail-action-buttons">
                         {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                        <form class="d-inline add-to-wishlist" action="{% url 'add_to_wishlist' product.id %}"
+                            method="POST">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-wish text-uppercase mr-3 mb-2">Add to Wish
                                 List</button>
                         </form>
                         {% else %}
                         <a href="{% url 'account_login' %}?next={{ request.path }}"
-                            class="btn btn-wish text-uppercase mr-3 mb-2">Log in
+                            class="btn btn-wish text-uppercase mr-3 mb-2 add-to-wishlist">Log in
                             to Add to Wish List</a>
                         {% endif %}
-                        <form class="d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
+                        <form class="d-inline add-to-bag" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             <button type="submit" class="btn btn-bag dark-btn text-uppercase mb-2">Add to Bag</button>
