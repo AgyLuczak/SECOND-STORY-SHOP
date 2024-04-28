@@ -711,6 +711,10 @@ footer {
     .container {
         max-width: 80%;
     }
+
+    .form-check-input {
+        margin-left: -85px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -718,6 +722,10 @@ footer {
         background: url('/static/images/background_img.png') no-repeat center center fixed;
         background-size: cover;
         height: calc(100vh - 164px);
+    }
+
+    .form-check-input {
+        margin-left: -30px;
     }
 }
 
@@ -916,6 +924,10 @@ footer {
 
     .navbar {
         font-size: 10px;
+    }
+
+    .form-check-input {
+        margin-left: -15px;
     }
 
 }
