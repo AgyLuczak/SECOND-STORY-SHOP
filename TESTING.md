@@ -18,7 +18,7 @@ Screenshots of the results can be found within the documentation folder. [html v
 
 I used W3C CSS Validator for the CSS. No errors were shown.
 
-Screenshots of the results can be found within the documentation folder. [css validation screenshots](docs/css_validation)
+Screenshots of the results can be found in the documentation folder. [css validation screenshots](docs/css_validation)
 
 
 ### Java Script
@@ -31,6 +31,16 @@ I have used the JS Hint validator for the Java Script syntax.
 |---|---|---|
 | stripe_element.js  | two undefined variables - stripe   | ![stripe.js](docs/js_validation/stripe_element.js_validation.png)   |
 | countryfields.js  | no errors  | ![stripe.js](docs/js_validation/country_fields.js_validation.png)  |
+
+
+### Python and Jinja Syntax
+
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
+
+Screenshots of the results can be found in the documentation folder. [python validation screenshots](docs/python_validation)
+
 
 
 
