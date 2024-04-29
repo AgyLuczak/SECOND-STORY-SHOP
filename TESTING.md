@@ -317,6 +317,16 @@ The app has been tested on the following browsers:
 | **JavaScript Functionality**| JavaScript used for dynamic elements (e.g., country field updates) should function correctly. | Tested JavaScript-dependent features on the form. | JavaScript features such as dynamic dropdowns worked without errors.| PASS          |
 
 
+## Stripe Webhooks
+
+To test the functionality of Stripe webhooks after initiating payments from my website, I adopted a following approach. After configuring the webhook endpoints through the Stripe Dashboard to listen for crucial events like payment_intent.succeeded and payment_intent.failed, I proceeded to simulate actual payment scenarios directly from my website.
+
+Using my site’s checkout interface, I processed payments using Stripe’s test card numbers to trigger transaction attempts. This approach allowed me to observe how well my application integrated with Stripe in a live environment, mirroring actual user interactions.
+
+Following each test payment, I visited the Webhooks section of the Stripe Dashboard. This area provides detailed logs of all webhook events, including timestamps, event types, and whether the webhook call was successful or not. By reviewing these logs, I was able to verify that the Stripe server was correctly notifying my endpoint upon each payment event.
+
+![lighthouse home desktop](docs/stripe/stripe_success.png) 
+
 
 
 
