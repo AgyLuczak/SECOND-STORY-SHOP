@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+<div class="modal fade" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -10,24 +10,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <img src="" class="img-thumbnail" data-toggle="modal" data-target="#productImageModal">
-
+                <!-- Image with descriptive aria-label to be set dynamically -->
+                <img src="" class="img-thumbnail" alt="Product image" aria-label="Close-up view of {{ product.name }}">
             </div>
         </div>
     </div>
 </div>
-
-
-<!-- <script>
-    $(document).ready(function () {
-        $('#productImageModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var recipient = button.attr('src'); // Extract info from data attributes
-            var modal = $(this);
-            modal.find('.modal-body img').attr('src', recipient);
-        });
-    });
-</script> -->
 
 <script>
     $(document).ready(function () {
@@ -35,8 +23,10 @@
             var button = $(event.relatedTarget); // Element that triggered the modal
             var imageUrl = button.attr('src'); // Extract image URL from the src attribute
             var modal = $(this);
+            var productName = button.data('product-name'); // Assuming you pass product name as data attribute
 
             modal.find('.modal-body img').attr('src', imageUrl);
+            modal.find('.modal-body img').attr('aria-label', 'Close-up view of ' + productName);
 
             var img = modal.find('.modal-body img');
             var windowHeight = $(window).height();

@@ -10,8 +10,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
+<div class="overlay" aria-hidden="true"></div>
+<div class="container" aria-label="Product Details">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
             <div class="card my-5">
@@ -20,12 +20,14 @@
                         <!-- Column for Product Image -->
                         <div class="col-12 col-md-6">
                             {% if product.image %}
-                            <!-- Updated part to trigger the modal instead of opening in a new tab -->
+                            <!-- Product image with modal trigger -->
                             <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}"
-                                style="cursor:pointer" data-toggle="modal" data-target="#productImageModal">
+                                style="cursor:pointer" data-toggle="modal" data-target="#productImageModal"
+                                aria-label="View larger image">
                             {% include 'includes/product_image_modal.html' %}
                             {% else %}
-                            <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid" alt="{{ product.name }}">
+                            <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid"
+                                alt="No image available for {{ product.name }}">
                             {% endif %}
                         </div>
 
@@ -36,7 +38,8 @@
                             <p class="card-text">{{ product.description }}</p>
                             <p class="lead font-weight-bold">£{{ product.price }}</p>
                             {% if product.category %}
-                            <a href="{% url 'products' %}?category={{ product.category.name }}" class="card-link">
+                            <a href="{% url 'products' %}?category={{ product.category.name }}" class="card-link"
+                                aria-label="Filter by category {{ product.category.friendly_name }}">
                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                             </a>
                             {% endif %}
@@ -45,17 +48,21 @@
                             {% endif %}
                             {% if request.user.is_superuser %}
                             <div class="mt-4">
-                                <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="{% url 'delete_product' product.id %}" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-primary"
+                                    aria-label="Edit product">Edit</a>
+                                <a href="{% url 'delete_product' product.id %}" class="btn btn-sm btn-danger"
+                                    aria-label="Delete product">Delete</a>
                             </div>
                             {% endif %}
                         </div>
                     </div>
                 </div>
                 <!-- Card Footer for Other Actions -->
-                <div class="card-footer card-footer-details bg-white d-flex flex-wrap justify-content-between border-0">
+                <div class="card-footer bg-white d-flex flex-wrap justify-content-between border-0"
+                    aria-label="Product navigation buttons">
                     <!-- Keep Shopping stays on the left -->
-                    <a href="{% url 'products' %}" class="btn keep-shopping-btn keep-shopping light-btn mb-2">
+                    <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn mb-2"
+                        aria-label="Keep shopping">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -66,17 +73,18 @@
                     <div class="detail-action-buttons">
                         {% if user.is_authenticated %}
                         <form class="d-inline add-to-wishlist" action="{% url 'add_to_wishlist' product.id %}"
-                            method="POST">
+                            method="POST" aria-label="Add to wishlist">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-wish text-uppercase mr-3 mb-2">Add to Wish
                                 List</button>
                         </form>
                         {% else %}
                         <a href="{% url 'account_login' %}?next={{ request.path }}"
-                            class="btn btn-wish text-uppercase mr-3 mb-2 add-to-wishlist">Log in
-                            to Add to Wish List</a>
+                            class="btn btn-wish text-uppercase mr-3 mb-2 add-to-wishlist"
+                            aria-label="Log in to add to wishlist">Log in to Add to Wish List</a>
                         {% endif %}
-                        <form class="d-inline add-to-bag" action="{% url 'add_to_bag' product.id %}" method="POST">
+                        <form class="d-inline add-to-bag" action="{% url 'add_to_bag' product.id %}" method="POST"
+                            aria-label="Add to bag">
                             {% csrf_token %}
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             <button type="submit" class="btn btn-bag dark-btn text-uppercase mb-2">Add to Bag</button>
@@ -87,5 +95,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

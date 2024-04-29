@@ -4,14 +4,13 @@
 <html lang="en">
 
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="description"
+        content="Discover unique and sustainable vintage clothing at Second Story Style. Browse our collection of second-hand vintage outfits and accessories for timeless fashion.">
     {% endblock %}
-
 
     {% block extra_meta %}
     <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
@@ -23,7 +22,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     {% endblock %}
 
     {% block extra_css %}
@@ -52,7 +50,7 @@
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="{% url 'home' %}" class="main-logo-link">
+                    <a href="{% url 'home' %}" class="main-logo-link" aria-label="Home Page">
                         <h1 class="logo my-0">SECOND STORY STYLE</h1>
                         <p id="logo-sub"><em>Stylish Vintage Clothing</em></p>
                     </a>
@@ -61,10 +59,11 @@
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control focus-highlight" id="search-box" type="text" name="q"
-                                placeholder="Search our site">
+                                placeholder="Search our site" aria-label="Search field for products">
                             <div class="input-group-append">
-                                <button class="form-control btn search-btn border focus-highlight" type="submit">
-                                    <span id="search icon">
+                                <button class="form-control btn search-btn border focus-highlight" type="submit"
+                                    aria-label="Search button">
+                                    <span id="search-icon">
                                         <i class="fas fa-search"></i>
                                     </span>
                                 </button>
@@ -76,7 +75,7 @@
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                                aria-expanded="false" aria-label="User account options">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
@@ -85,19 +84,24 @@
                             <div class="dropdown-menu" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item"
+                                    aria-label="Product management page">Product Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Profile page">My
+                                    Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item"
+                                    aria-label="Logout">Logout</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item"
+                                    aria-label="Sign up page">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item"
+                                    aria-label="Login page">Login</a>
                                 {% endif %}
                             </div>
                         </li>
                         <!-- Wishlist link -->
                         <li class="list-inline-item">
-                            <a class="nav-link" href="{% url 'view_wishlist' %}" aria-label="View Wishlist">
+                            <a class="nav-link" href="{% url 'view_wishlist' %}" aria-label="View your wishlist">
                                 <div class="text-center">
                                     <div><i class="fas fa-heart fa-lg"></i></div>
                                     <p class="my-0">Wish List</p>
@@ -106,7 +110,7 @@
                         </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link"
-                                href="{% url 'view_bag' %}">
+                                href="{% url 'view_bag' %}" aria-label="View shopping bag">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
@@ -121,7 +125,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
             </div>
             <div class="row">
                 <nav class="navbar navbar-expand-lg  w-100">

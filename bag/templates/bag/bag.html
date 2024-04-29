@@ -24,13 +24,12 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
-            <div class="table-responsive rounded">
+            <div class="table-responsive rounded" aria-label="Items in your shopping bag">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
                             <th scope="col">Product Info</th>
                             <th scope="col">Price</th>
-                            <!-- <th scope="col">Qty</th> -->
                             <th scope="col">Subtotal</th>
                             <th scope="col">Action</th> <!-- Added for Remove button -->
                         </tr>
@@ -43,73 +42,77 @@
                                 <!-- Updated part to trigger the modal instead of opening in a new tab -->
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}"
                                     alt="{{ item.product.name }}" style="cursor:pointer" data-toggle="modal"
-                                    data-target="#productImageModal">
+                                    data-target="#productImageModal" aria-label="View image">
                                 {% include 'includes/product_image_modal.html' %}
                                 {% else %}
                                 <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded"
                                     alt="{{ item.product.name }}">
                                 {% endif %}
+                                <p><strong>{{ item.product.name }}</strong></p>
+                                <p>Size: {{ item.product.size }}</p>
+                                <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <td>£{{ item.product.price }}</td>
+                            <td>£{{ item.subtotal }}</td>
+                            <td>
+                                <!-- Removal link -->
+                                <a class="remove-item remove-link text-danger" id="remove_{{ item.item_id }}"
+                                    aria-label="Remove this item from your bag">REMOVE</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 text-danger">
+                                    You could get free delivery by spending just <strong>
+                                        £{{free_delivery_delta}}</strong> more!
+                                </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg mr-3"
+                                    aria-label="Continue shopping">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn checkout-btn dark-btn btn-lg mr-3"
+                                    aria-label="Proceed to secure checkout">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-
-            <p><strong>{{ item.product.name }}</strong></p>
-            <p>Size: {{ item.product.size }}</p>
-            <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
-            </td>
-            <td>£{{ item.product.price }}</td>
-            <td>£{{ item.subtotal }}</td>
-
-            <td>
-                <!-- Removal link -->
-                <a class="remove-item remove-link text-danger" id="remove_{{ item.item_id }}">REMOVE</a>
-            </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-            <tr>
-                <td colspan="5" class="pt-5 text-right">
-                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                    {% if free_delivery_delta > 0 %}
-                    <p class="mb-1 text-danger">
-                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
-                        more!
-                    </p>
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td colspan="5" class="text-right">
-                    <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg mr-3">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                    <a href="{% url 'checkout' %}" class="btn checkout-btn dark-btn btn-lg mr-3">
-                        <span class="text-uppercase">Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </a>
-                </td>
-            </tr>
-            </table>
+            {% else %}
+            <p class="lead mb-5">Your bag is empty.</p>
+            <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg"
+                aria-label="Return to product list">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
         </div>
-        {% else %}
-        <p class="lead mb-5">Your bag is empty.</p>
-        <a href="{% url 'products' %}" class="btn keep-shopping-btn light-btn btn-lg">
-            <span class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Keep Shopping</span>
-        </a>
-        {% endif %}
     </div>
 </div>
-</div>
-<div class="btt-button shadow-sm">
-    <a class="btt-link d-flex h-100">
+
+<div class="btt-button shadow-sm" aria-label="Back to top button">
+    <a class="btt-link d-flex h-100" href="#" onclick="event.preventDefault(); window.scrollTo(0, 0);">
         <i class="fas fa-arrow-up mx-auto my-auto"></i>
     </a>
 </div>
@@ -118,14 +121,7 @@
 {% block postloadjs %}
 {{ block.super }}
 
-
-
 <script type="text/javascript">
-
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";

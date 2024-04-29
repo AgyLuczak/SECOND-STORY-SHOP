@@ -10,12 +10,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
+<div class="overlay" aria-hidden="true"></div>
+<div class="container" aria-label="Product Management">
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font page-heading mb-4">Product Management</h2>
+            <h2 class="logo-font page-heading mb-4" aria-label="Product Management Heading">Product Management</h2>
             <h5 class="text-muted">Add a Product</h5>
             <hr>
         </div>
@@ -23,18 +23,24 @@
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data"
+                aria-label="Add Product Form">
                 {% csrf_token %}
                 {% for field in form %}
-                {% if field.name != 'image' %}
-                {{ field | as_crispy_field }}
-                {% else %}
-                {{ field }}
-                {% endif %}
+                <div role="group" aria-labelledby="{% if field.label %}label_{{ field.id_for_label }}{% endif %}">
+                    {% if field.name != 'image' %}
+                    {{ field | as_crispy_field }}
+                    {% else %}
+                    <label id="label_{{ field.id_for_label }}" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% endif %}
+                </div>
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn cancel-btn light-btn mr-3" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn add-btn dark-btn" type="submit">Add Product</button>
+                    <a class="btn cancel-btn light-btn mr-3" href="{% url 'products' %}"
+                        aria-label="Cancel and return to product list">Cancel</a>
+                    <button class="btn add-btn dark-btn" type="submit" aria-label="Add Product Button">Add
+                        Product</button>
                 </div>
             </form>
         </div>
