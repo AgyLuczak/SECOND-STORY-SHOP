@@ -36,7 +36,9 @@ def toggle_wishlist(request, product_id):
         message = f'{product.name} removed from your wishlist.'
     messages.success(request, message)
     request.session.modified = True  
-    # return redirect(reverse('view_wishlist')) 
+ 
+
+
     
 
     # Redirect the user to the URL specified in the 'next' parameter or to a default view
