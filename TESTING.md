@@ -41,6 +41,47 @@ I have used the PEP8 CI Python Linter application to test my Python and Jinja sy
 
 Screenshots of the results can be found in the documentation folder. [python validation screenshots](docs/python_validation)
 
+<br>
+
+### Lighthouse
+
+I used Lighthouse to test website's performance. I used incognito mode for testing to ensure that browser extensions, cached data, and personalized settings did not interfere with the results.
+
+
+| PAGE            | DESKTOP         | MOBILE                                      |
+|------------------|----------------|---------------------------------------------|
+| HOME PAGE        | ![lighthouse home desktop](docs/lighthouse/home_desktop.png)  | ![lighthouse home mobile](docs/lighthouse/home_mobile.png)      |
+| PRODUCTS         | ![lighthouse products desktop](docs/lighthouse/products_desktop.png) | ![lighthouse products mobile](docs/lighthouse/products_mobile.png) |
+| PRODUCT DETAIL   | ![lighthouse product detail desktop](docs/lighthouse/product_detail_desktop.png) | ![lighthouse product detail mobile](docs/lighthouse/product_detail_mobile.png) |
+| ADD PRODUCT      | ![lighthouse add product desktop](docs/lighthouse/add_product_desktop.png) | ![lighthouse add product mobile](docs/lighthouse/add_product_mobile.png) |
+| EDIT PRODUCT     | ![Edit Product Desktop](docs/lighthouse/edit_product_desktop.png) | ![Edit Product Mobile](docs/lighthouse/edit_product_mobile.png) |
+| BAG              | ![Bag Desktop](docs/lighthouse/bag_desktop.png)               | ![Bag Mobile](docs/lighthouse/bag_mobile.png)                   |
+| WISHLIST         | ![Wishlist Desktop](docs/lighthouse/wishlist_desktop.png)     | ![Wishlist Mobile](docs/lighthouse/wishlist_mobile.png)         |
+| PROFILE          | ![Profile Desktop](docs/lighthouse/profile_desktop.png)       | ![Profile Mobile](docs/lighthouse/profile_mobile.png)           |
+| CHECKOUT         | ![Checkout Desktop](docs/lighthouse/checkout_desktop.png)     | ![Checkout Mobile](docs/lighthouse/checkout_mobile.png)         |
+| CHECKOUT SUCCESS | ![Checkout Success Desktop](docs/lighthouse/checkout_success_desktop.png) | ![Checkout Success Mobile](docs/lighthouse/checkout_success_mobile.png) |
+
+After Lighthouse diagnostics, several key areas require attention:
+
+**Performance Optimizations:**
+
+- Eliminate Render-Blocking Resources: Minimize or defer the loading of JavaScript and CSS that blocks rendering to decrease initial load times.
+- Enable Text Compression: Implement compression methods like Gzip or Brotli on your server to reduce the size of transmitted data.
+- Reduce Unused Code: Trim down unused JavaScript and CSS to lighten the load and speed up parsing, compiling, and execution times.
+- Serve Images in Next-Gen Formats: Convert images to formats like WebP or AVIF to reduce their size without compromising quality.
+- Efficient Cache Policy: Ensure static assets are cached properly to reduce load times on subsequent visits.
+- Minimize Main-Thread Work: Optimize the code to reduce the time the main thread is busy, which can help improve responsiveness to user inputs.
+**Accessibility Improvements:**
+
+- Contrast Ratios: Adjust the color schemes to ensure sufficient contrast between background and foreground colors to enhance text readability.
+- Form Element Labels: Add descriptive labels to form elements to improve navigation and interaction for screen reader users.
+- Proper Heading Order: Ensure headings are in a sequentially-descending order to provide a logical structure, aiding navigation for assistive technologies.
+
+**Layout and Stability:**
+
+- Avoid Large Layout Shifts: Optimize the loading sequence or use placeholders for dynamic content to prevent unexpected layout shifts during page load.
+- Reduce DOM Size: Simplify the DOM structure to improve performance and make the site easier to maintain.
+
 
 
 
