@@ -39,15 +39,6 @@
                         {% for item in bag_items %}
                         <tr>
                             <td class="w-25">
-                                <!-- <a href="{% url 'product_detail' item.product.id %}">
-                                    {% if item.product.image %}
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}"
-                                        alt="{{ item.product.name }}">
-                                    {% else %}
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}"
-                                        alt="{{ item.product.name }}">
-                                    {% endif %}
-                                </a> -->
                                 {% if item.product.image %}
                                 <!-- Updated part to trigger the modal instead of opening in a new tab -->
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}"
