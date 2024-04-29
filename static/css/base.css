@@ -357,8 +357,7 @@ icon:hover {
     top: 0;
     left: 0;
     position: fixed;
-    /* background: bisque; */
-    background: pink;
+    background: bisque;
     background-size: cover;
     z-index: -1;
 }
@@ -919,7 +918,7 @@ footer {
     .card-footer form,
     .card-footer a {
         width: 100%;
-        display: block;
+        /* display: block; */
         margin-right: 0;
 
     }
@@ -946,11 +945,11 @@ footer {
 
     }
 
-    .back-login-btn {
+    /* .back-login-btn {
         width: 100%;
         margin-right: 0 !important;
         margin-bottom: 10px !important;
-    }
+    } */
 
 
 
@@ -971,6 +970,8 @@ footer {
     .allauth-form-inner-content input[type='submit'][value='Reset My Password'] {
         width: 100% !important;
     }
+
+
 }
 
 
