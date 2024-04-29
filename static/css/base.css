@@ -388,6 +388,10 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
+.btt-link {
+    color: #2b1d0e;
+
+}
 
 .btt-link,
 .remove-link {
