@@ -171,6 +171,7 @@ The app has been tested on the following browsers:
 | **Responsive Main Nav** | All products and categories dropdowns should work correctly across devices | Tested dropdown functionality on multiple devices | Dropdowns operate correctly in all tested scenarios | PASS |
 | **Delivery Banner** | Banner displaying free delivery threshold should be visible on all pages | Navigated through various pages | Delivery banner consistently visible | PASS |
 | **Message Toasts Functionality** | Toast messages should appear for user actions like add to wishlist or sign out | Performed actions that trigger toasts | Toast messages appeared appropriately | PASS |
+|**Superuser Navbar Options**|Superusers should see additional options for product management in the navbar dropdown |Logged in as a superuser and accessed the dropdown | Product management link was visible and functional | PASS |
 | `Navbar Dropdowns` |
 | **All Products Dropdown** | Dropdown should display options for sorting and viewing all products | Clicked on "All Products" to view dropdown menu | Dropdown displayed with options: By Price, By Brand, By Size, By Category, All Products | PASS |
 | **All Products - By Price** | Redirect to products sorted by price in ascending order | Selected "By Price" from dropdown | Redirected to product page sorted by price ascending | PASS |
