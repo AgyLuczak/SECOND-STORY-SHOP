@@ -48,6 +48,52 @@
 | Edit/update a product - change product prices, descriptions, images, and other product criteria. |
 | Delete a product - remove items that are no longer for sale. |
 
+<br>
+
+## **Surface Plane**
+
+<br>
+
+**Colour Scheme**
+
+![colours](docs/colors_used.png)
+
+The colour palette  was chosen to echo the unique, timeless appeal of vintage fashion while ensuring an inviting and user-friendly website experience. Each colour in the palette supports the brand’s vintage aesthetic and enhances the overall visual harmony of the website.
+
+Deep Coffee Brown serves as the foundational color, providing a sophisticated and robust backdrop that resonates with the rich history of vintage garments. This colour is ideal for creating a feeling of depth and elegance, often used in text and footer backgrounds to ground the lighter shades.
+
+Almond Cream is used to soften the intensity of the darker brown, offering a creamy contrast that makes the site feel warm and welcoming. Its usage in backgrounds and hover states ensures a smooth visual flow and readability, essential for engaging users.
+
+Metallic Gold and Pale Gold are colors are used to highlight call-to-action buttons and interactive elements, making them stand out and capturing the user's attention.
+
+Bronze introduces a mid-tone that bridges the lighter and darker shades in the palette. It’s strategically employed in headings and widgets to draw focus and guide the user's journey through the website, enhancing navigational cues and emphasizing important content.
+
+Peach Puff and Bisque provide background variations that are both soothing and neutral, creating spaces on the website that are easy on the eyes and conducive to reading. 
+
+Whitesmoke and gold are strategically utilized for the "Keep Shopping" and "Cancel" buttons to ensure clarity and provide a contrast with other buttons that feature gold and brown tones. This color choice enhances the visibility of these buttons, making them easily distinguishable from other interactive elements on the site.
+
+<br>
+
+**Typography**
+
+I used two fonts:
+
+Oleo Script for logo and flipper back text
+
+![font 1](docs/oleo_script.png)
+
+and Poppins for the remaining content of the website
+
+![font 2](docs/poppins.png)
+
+Oleo Script, with its flowing, curvaceous style, is used for the logo and decorative elements. This font effectively captures the charm and character of past eras, making it ideal for highlighting the unique identity of a vintage shop.
+
+Poppins, on the other hand, is utilized for the main content of the website due to its clean and modern appearance. This sans-serif font offers excellent readability and a contemporary feel, providing a pleasant visual contrast to the more ornate Oleo Script. 
+
+
+
+
+
 
 
 ## **Feautures**

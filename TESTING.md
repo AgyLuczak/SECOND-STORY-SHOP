@@ -328,6 +328,8 @@ Following each test payment, I visited the Webhooks section of the Stripe Dashbo
 
 ![lighthouse home desktop](docs/stripe/stripe_success.png) 
 
+For more information on stripe testing click this link [Stripe Testing Documentation](https://docs.stripe.com/testing)
+
 
 
 
