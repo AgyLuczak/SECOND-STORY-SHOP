@@ -174,7 +174,7 @@ icon:hover {
 
 .shop-name {
     font-size: 35px;
-    color: gold;
+    color: #c6831b;
     -webkit-text-stroke: 1px #2b1d0e;
     font-weight: bold;
 
@@ -390,6 +390,11 @@ a.category-badge>span.badge:hover {
 
 .btt-link {
     color: #2b1d0e;
+
+}
+
+.btt-link:hover {
+    color: #c6831b;
 
 }
 
