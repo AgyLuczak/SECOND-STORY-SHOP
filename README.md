@@ -1,6 +1,6 @@
 ![desktop view](./docs/desktop_view.png) 
 
-[Visit the website here]https://second-story-style-f8b69cba54dc.herokuapp.com/
+[Visit the website here](https://second-story-style-f8b69cba54dc.herokuapp.com/)
 
 
 ## User Stories
@@ -101,7 +101,7 @@ Poppins, on the other hand, is utilized for the main content of the website due 
 
 
 
-## **Feautures**
+## **Features**
 
 - **Navigation Bar**
 
@@ -215,6 +215,9 @@ This section is designed for users to update and save their default delivery inf
 
 The Order History section provides a detailed look at the user's past purchases. Each order is listed with a clickable order number, date, list of items purchased, and the total cost of the order. This not only allows users to track their spending and review past items but also offers a way to quickly access specific order details through a link to a more detailed order history page. 
 
+- **Toasts**
+
+The toasts feature provides users with a quick and visually distinct method of displaying important notifications. Toasts serve as a non-intrusive way to communicate success messages, alerts, and prompts. These notifications allow users to stay informed about actions like adding products to their bag or successfully placing an order. 
 
 - **Atulah: User Account Management Feature**
 
@@ -224,6 +227,10 @@ Atulah is an advanced user account management system integrated into the website
 - **Admin Page**
 
 The admin page in Django is exclusively accessible to superusers, who possess elevated privileges to manage the application’s data. Superusers have the capability to create, edit, and delete categories and products, ensuring they maintain precise control over the product catalog. Additionally, they can efficiently create, update, and delete orders, providing comprehensive management of the shop's transactions
+
+- **Error Pages**
+
+The error pages feature in the Second Story Style Shop provides users with a clear and user-friendly experience during unexpected scenarios, such as encountering a 404 (Page Not Found) or a 500 (Internal Server Error). These error pages are designed to align with the shop's branding, featuring the shop's logo and a customized message that clearly informs users of the issue, helping to minimize frustration. For 404 errors, the page communicates that the requested page could not be found, while for 500 errors, users are reassured that server issues are being addressed. Each error page includes a prominent call-to-action button directing users back to the homepage, encouraging them to continue exploring the site instead of leaving. This thoughtful design approach ensures that even when things go wrong, users remain engaged and have a positive experience navigating the shop.
 
 - **Emails**
 
