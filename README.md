@@ -1,4 +1,4 @@
-![desktop view](./docs/desktop_view.png) 
+![desktop view](./docs/second_story_style.png) 
 
 [Visit the website here](https://second-story-style-f8b69cba54dc.herokuapp.com/)
 
