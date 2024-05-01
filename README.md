@@ -221,7 +221,34 @@ The Order History section provides a detailed look at the user's past purchases.
 Atulah is an advanced user account management system integrated into the website to provide comprehensive control and seamless user experiences. This feature is crucial for websites requiring user registration and personalization, enabling efficient handling of user data, security, and account-specific functionalities.
 
 
+## **Databese Schema**
 
+I used a relational database as it's suitable for managing the interconnected data structures found in an online shop. 
+I have used  [Lucidchart](https://www.lucidchart.com/) to design my site Entity Relationship Diagram (ERD). 
+
+![database](docs/database.png)
+
+Here's a breakdown of the relationships and purposes of the tables defined:
+
+*Category Table*
+
+The Category table is designed to classify products into various categories such as Painting, Sculpture, etc. Each category is identified by a unique category key, which is linked to the Products table through a foreign key. This relationship ensures that each product is associated with one specific category, helping to organize the inventory in a meaningful way.
+
+*Products Table*
+
+The Products table stores detailed information about individual products. Each product is linked to its respective category via the foreign key category. Additional fields like sku, name, brand, description, price, size, and image provide comprehensive data for each product, enabling effective management and display of the product catalog.
+
+*Wish List Table*
+
+The Wish List table maps products that individual users have marked for future purchase. The user field has a one-to-one relationship with the users, ensuring that each user has a unique wish list that stores references to desired products via the product field.
+
+*User Profile Table*
+
+The User Profile table captures detailed information about users, such as phone number, address, town, county, and country. Each profile is linked to the Wish List table via the user foreign key, ensuring each user's profile contains unique personal data.
+
+*Order Table*
+
+The Order table manages information about user orders. Each order references the User Profile through a foreign key, user_profile, ensuring that orders are linked to the correct user. The table includes fields like order_number, full_name, email, phone_number, and country to store user details, along with date, delivery_cost, order_total, grand_total, original_bag, and stripe_pid for order-specific information.
 
 # Testing
 
