@@ -95,11 +95,9 @@ Oleo Script, with its flowing, curvaceous style, is used for the logo and decora
 
 Poppins, on the other hand, is utilized for the main content of the website due to its clean and modern appearance. This sans-serif font offers excellent readability and a contemporary feel, providing a pleasant visual contrast to the more ornate Oleo Script. 
 
+**Imagery**
 
-
-
-
-
+The background photo showcases a stylishly dressed woman wearing a hat, which sets the tone for the shop's collection. The shop's logo, presented in warm brown vintage hues, features images of vintage-style dresses that signify the shop's dedication to offering timeless and unique pieces. In line with the shop's aesthetic, all product images are framed with a brown border that transitions to gold when hovered over, harmonizing with the website's color scheme. Image modals are displayed against a brown background framed with a golden border, evoking the charm of vintage photography.
 
 ## **Features**
 
