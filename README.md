@@ -221,6 +221,14 @@ The Order History section provides a detailed look at the user's past purchases.
 Atulah is an advanced user account management system integrated into the website to provide comprehensive control and seamless user experiences. This feature is crucial for websites requiring user registration and personalization, enabling efficient handling of user data, security, and account-specific functionalities.
 
 
+- **Admin Page**
+
+The admin page in Django is exclusively accessible to superusers, who possess elevated privileges to manage the application’s data. Superusers have the capability to create, edit, and delete categories and products, ensuring they maintain precise control over the product catalog. Additionally, they can efficiently create, update, and delete orders, providing comprehensive management of the shop's transactions
+
+- **Emails**
+
+The email feature in the Second Story Style Shop plays a crucial role in enhancing user experience by automating key communication processes, particularly in the areas of email confirmation, account confirmation, and password reset. Upon registration, new users receive an account confirmation email that contains a unique verification link, ensuring that the email address provided is valid and linked to the correct account, thereby enhancing security. For customers who complete a purchase, an order confirmation email is sent immediately after the transaction, summarizing the order details. Additionally, if a user forgets their password or needs to update their credentials, the password reset feature sends a secure link to their registered email, allowing them to reset their password safely. 
+
 ## **Databese Schema**
 
 I used a relational database as it's suitable for managing the interconnected data structures found in an online shop. 
