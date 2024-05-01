@@ -41,6 +41,8 @@ ALLOWED_HOSTS = ALLOWED_HOSTS = [
     "8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu110.gitpod.io",
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 
 # Application definition
 

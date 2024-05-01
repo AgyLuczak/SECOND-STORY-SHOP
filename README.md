@@ -109,7 +109,7 @@ The background photo showcases a stylishly dressed woman wearing a hat, which se
 
 <br>
 
-![navbar mobile](docs/features/navbar_mobile.pngpng)
+![navbar mobile](docs/features/navbar_mobile.png)
 
 The Second Story Style shop features a comprehensive and intuitive navigation bar designed to enhance the user experience on both desktop and mobile devices. Anchored at the top of every page, the navigation bar remains fixed for easy access throughout the user's journey on the site. It incorporates the shop's name "SECOND STORY STYLE" on the left, serving as a home link for quick returns to the main page. Central to the navigation bar is search functionality, enabling customers to effortlessly find vintage clothing and accessories by inputting keywords into the search box. 
 
