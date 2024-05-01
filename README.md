@@ -1,7 +1,6 @@
-![desktop view](./docs/desktop_view.png) ![ipad view](./docs/ipad_view.png) ![ipad view](./docs/mobile_view.png)
+![desktop view](./docs/desktop_view.png) 
 
-
-[Visit the website here](https://mums-to-do-list-64ef2a4f0d01.herokuapp.com/)
+[Visit the website here]https://second-story-style-f8b69cba54dc.herokuapp.com/
 
 
 ## User Stories
