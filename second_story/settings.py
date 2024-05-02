@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ALLOWED_HOSTS = [
     "second-story-style-f8b69cba54dc.herokuapp.com",
     "localhost",
     "127.0.0.1",
-    "8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu110.gitpod.io",
+    "8000-agyluczak-secondstorysh-nip8vejnk30.ws-eu112.gitpod.io",
 ]
 
 X_FRAME_OPTIONS = 'ALLOWALL'

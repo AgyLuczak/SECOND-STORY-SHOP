@@ -41,6 +41,8 @@ def add_to_bag(request, item_id):
     next_page = request.GET.get('next', reverse('view_bag'))
     return redirect(next_page)
 
+
+
 def remove_from_bag(request, item_id):
     """Remove the specified product from the shopping bag."""
     try:
@@ -61,3 +63,5 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, "Error removing item from the bag.")
         return HttpResponse(status=500)
+
+
