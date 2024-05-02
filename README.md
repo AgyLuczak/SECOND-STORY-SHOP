@@ -327,11 +327,11 @@ The toasts feature provides users with a quick and visually distinct method of d
 
 <br>
 
-- **Atulah: User Account Management Feature**
+- **Allauth: User Account Management Feature**
 
 <br>
 
-Atulah is an advanced user account management system integrated into the website to provide comprehensive control and seamless user experiences. This feature is crucial for websites requiring user registration and personalization, enabling efficient handling of user data, security, and account-specific functionalities.
+Allauth is an advanced user account management system integrated into the website to provide comprehensive control and seamless user experiences. This feature is crucial for websites requiring user registration and personalization, enabling efficient handling of user data, security, and account-specific functionalities.
 
 <br>
 

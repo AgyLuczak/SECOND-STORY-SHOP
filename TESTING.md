@@ -88,23 +88,23 @@ After Lighthouse diagnostics, several key areas require attention:
 
 **Bag Views**
 
-| Test Suite     | Test Name | Purpose    | Expected Result        | Actual Result |
-|----------------|-----------|------------|------------------------|---------------|
-| BagViewsTests  | `test_view_bag`        | Verify that the `view_bag` view renders correctly.| Status code `200`, renders `bag/bag.html` template                 | Passed        |
-|                | `test_add_to_bag`             | Ensure a product can be added to the shopping bag.                     | Product added successfully, and redirected to the `view_bag` view  | Passed        |
-|                | `test_add_existing_to_bag`    | Check that adding an existing product to the bag returns an error.     | Error message ("Test Product is already in your bag.") displayed   | Passed        |
-|                | `test_remove_from_bag`        | Ensure a product can be removed from the shopping bag.                 | Product removed successfully from the shopping bag                 | Passed        |
+| Test Name | Purpose    | Expected Result        | Actual Result |
+|-----------|------------|------------------------|---------------|
+ | `test_view_bag`        | Verify that the `view_bag` view renders correctly.| Status code `200`, renders `bag/bag.html` template                 | PASS       |
+| `test_add_to_bag`             | Ensure a product can be added to the shopping bag.| Product added successfully, and redirected to the `view_bag` view  | PASS       |
+| `test_add_existing_to_bag`    | Check that adding an existing product to the bag returns an error. | Error message ("Test Product is already in your bag.") displayed   | Passed        |
+| `test_remove_from_bag`        | Ensure a product can be removed from the shopping bag. | Product removed successfully from the shopping bag     | PASS      |
 
 
 
 
 ### Test Report: Checkout Views
 
-| Test Name                   | Purpose                                                     | Expected Result                                                | Actual Result |
-|-----------------------------|-------------------------------------------------------------|----------------------------------------------------------------|---------------|
-| `test_checkout_view_get`    | Verify checkout view redirects to product page when bag is empty | `302` status code, redirect to products page                   | Passed        |
-|                    | `test_checkout_view_post`   | Check if valid checkout submission creates order and redirects | Redirect to checkout success page with created order           | Passed        |
-|                    | `test_checkout_success_view` | Verify checkout success page renders correctly              | `200` status code, displays order number                       | Passed        |
+| Test Name                   | Purpose               | Expected Result     | Actual Result |
+|-----------------------------|---------------------  |---------------------|---------------|
+| `test_checkout_view_get`    | Verify checkout view redirects to product page when bag is empty | `302` status code, redirect to products page    | PASS    |
+| `test_checkout_view_post`   | Check if valid checkout submission creates order and redirects | Redirect to checkout success page with created order           | PASS      |
+| `test_checkout_success_view` | Verify checkout success page renders correctly | `200` status code, displays order number | PASS      |
 
 
 
@@ -112,20 +112,35 @@ After Lighthouse diagnostics, several key areas require attention:
 
 | Test Name      | Purpose         | Expected Result              | Actual Result |
 |------------   |------------------|------------------------------|---------------|
-| `test_index_page_loads_correctly` | Verify that the `index` view renders the homepage with the correct template | `200` status code, renders `home/index.html` template          | Passed        |
+| `test_index_page_loads_correctly` | Verify that the `index` view renders the homepage with the correct template | `200` status code, renders `home/index.html` template          | PASS       |
 
 ### Products Views Test
+
+| Test Name                      | Purpose          | Expected Result         | Actual Result |
+|--------------------------------|-------------------------------------------------------|-----------------------------------------------------|---------------|
+| `test_all_products_view`       | Ensure that all products view loads correctly         | Status code `200` and products loaded successfully | PASS      |
+| `test_product_detail_view`     | Verify that the product detail view renders correctly | Status code `200` and product detail loaded        | PASS       |
+| `test_add_product_view_superuser` | Verify that a superuser can add a new product      | Product count should increase by one                | PASS       |
+| `test_delete_product_view_superuser` | Ensure that a superuser can delete a product   | Product count should decrease by one                | PASS   |
+
 
 
 **Profiles Views**
 
 | Test Name        | Purpose        | Expected Result     | Actual Result |
 |------------------|----------------|---------------------|---------------|
-| `test_redirect_to_login_if_no_profile` | Verify that unauthenticated users are redirected to login page | `302` status code with redirect URL containing `/accounts/login/` | Passed        |
-|                           | `test_logged_in_user_can_access_profile`| Check that authenticated users can access their profile page   | `200` status code indicating successful access                | Passed        |
+| `test_redirect_to_login_if_no_profile` | Verify that unauthenticated users are redirected to login page | `302` status code with redirect URL containing `/accounts/login/` | PASS      |
+|                           | `test_logged_in_user_can_access_profile`| Check that authenticated users can access their profile page   | `200` status code indicating successful access                | PASS        |
 
 
 **Wishlist Views**
+
+| Test Name               | Purpose         | Expected Result     | Actual Result |
+|-------------------------|-----------------|---------------------|---------------|
+| `test_add_to_wishlist`  | Test that a product is correctly added to wishlist| A new `WishlistItem` is created and user is redirected | PASS        |
+| `test_view_wishlist`    | Test that the wishlist view displays correctly   | Wishlist page returns status 200 and shows the product | PASS      |
+| `test_remove_from_wishlist` | Test that a product is correctly removed from the wishlist | The `WishlistItem` is deleted and user is redirected to the wishlist view | PASS |
+
 
 
 
