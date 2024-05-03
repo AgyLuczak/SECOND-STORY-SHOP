@@ -99,6 +99,22 @@ Poppins, on the other hand, is utilized for the main content of the website due 
 
 The background photo showcases a stylishly dressed woman wearing a hat, which sets the tone for the shop's collection. The shop's logo, presented in warm brown vintage hues, features images of vintage-style dresses that signify the shop's dedication to offering timeless and unique pieces. In line with the shop's aesthetic, all product images are framed with a brown border that transitions to gold when hovered over, harmonizing with the website's color scheme. Image modals are displayed against a brown background framed with a golden border, evoking the charm of vintage photography.
 
+
+## **Skeleton Plane**
+
+</br>
+
+To follow best practices, wireframes were developed for mobile, tablet, and desktop sizes. The site wireframes were designed using[Balsamiq](https://balsamiq.com/wireframes). Images of all wireframes can be found in the documentation folder. [Wireframes](docs/wireframes).
+
+The final design of the home page differs from my original vision. It now features a background image with a fashionably dressed woman. The shop's flippable logo is on the left side of the screen, and the "Shop" button is prominently centered.
+
+For medium and small screens, the background image is replaced with a blank one, the logo is centered, and the "Shop" button is placed vertically below the logo.
+
+
+
+</br>
+
+
 ## **Features**
 
 - **Navigation Bar**
