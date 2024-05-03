@@ -3,6 +3,41 @@
 [Visit the website here](https://second-story-style-f8b69cba54dc.herokuapp.com/)
 
 
+## **UX-User Experience Design**
+
+<br>
+
+## **Strategy Plane**
+
+<br>
+
+**The business goals for the website:**
+
+**Increase Sales and Revenue:** 
+   - Facilitate seamless purchasing by offering intuitive navigation, search, and sorting features.
+   - Implement a user-friendly checkout process to minimize cart abandonment.
+
+**Enhance Customer Engagement:**
+   - Provide a personalized user experience by leveraging features like a wishlists and user profiles.
+   - Implement registration and account management features to build customer loyalty and engagement.
+
+**Expand Market Reach:**
+   - Design for mobile, tablet, and desktop screens to reach a wider audience across devices.
+   
+
+**Optimize Product Management:**
+   - Enable easy management of products through adding, editing, and deleting functionalities.
+   - Allow categorization and filtering for effective product browsing.
+
+**Improve Operational Efficiency:**
+   - Provide admin tools for managing users, reviewing sales , and tracking inventory.
+
+**Boost Customer Trust and Security:**
+   - Implement secure payment gateways to ensure customer data protection.
+  
+
+
+
 ## User Stories
 
 ### Viewing and Navigation
@@ -55,6 +90,40 @@
 
 <br>
 
+## Scope Plane
+
+In order to achieve the strategy goals, the following features are included on the website:
+
+**User Authentication and Profile Management:**
+   - Register, log in, and manage a user profile.
+   - Ability to reset passwords and update personal information.
+   - View order history and manage wishlists.
+
+**Product Management:**
+   - Admin features to add, edit, or delete products.
+   - Categorize products and apply filters for easier browsing.
+   - Product details include images, descriptions, pricing, and inventory status.
+
+**Shopping Experience:**
+   - Search and filter products based on various attributes.
+   - View a running total of items in the shopping bag throughout the session.
+   - Adjust items in the shopping bag before checkout.
+   - View and update a wishlist.
+
+**Checkout and Payments:**
+   - Streamlined checkout process with secure payment gateways.
+   - Order confirmation page to verify order details.
+   - Email confirmation for orders.
+
+**Error Handling and User Support:**
+   - Custom 404 and 500 error pages redirect users to the Home Page for broken links or server issues.
+   - FAQ and contact pages to assist users with common questions or issues.
+
+**Responsive Design:**
+   - Ensure the website is accessible and functional across mobile, tablet, and desktop devices.
+   
+<br>
+
 ## **Structure Plane** 
 
 <br>
@@ -64,12 +133,6 @@ The structure plane of "The Second Story Style Shop" ensures seamless navigation
 Shopping is streamlined through the **Shopping Bag Page** and **Wishlist Page**, while the **Checkout Page** and **Checkout Success** pages guide customers through the purchasing process. The **My Profile Page** provides a personalized account management experience. In case of navigation issues, the **404** and **500** Error Pages redirect users to the Home Page, ensuring smooth navigation despite broken links or errors.
 
 <br>
-
-
-
-
-
-
 
 
 ## **Surface Plane**
