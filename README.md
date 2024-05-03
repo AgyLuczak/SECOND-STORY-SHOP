@@ -55,6 +55,23 @@
 
 <br>
 
+## **Structure Plane** 
+
+<br>
+
+The structure plane of "The Second Story Style Shop" ensures seamless navigation and user experience by organizing key pages effectively. the **Home Page** serves as the gateway to the site, with the **Products Page** offering an overview of available items. Users can explore detailed information on **Product Detail Page**. For user management, the Sign Up Page and Sign In Page cater to new and existing customers, while administrative features like the **Add New Product Page** and **Edit Product Page** support catalog management.
+
+Shopping is streamlined through the **Shopping Bag Page** and **Wishlist Page**, while the **Checkout Page** and **Checkout Success** pages guide customers through the purchasing process. The **My Profile Page** provides a personalized account management experience. In case of navigation issues, the **404** and **500** Error Pages redirect users to the Home Page, ensuring smooth navigation despite broken links or errors.
+
+<br>
+
+
+
+
+
+
+
+
 ## **Surface Plane**
 
 <br>
@@ -99,12 +116,13 @@ Poppins, on the other hand, is utilized for the main content of the website due 
 
 The background photo showcases a stylishly dressed woman wearing a hat, which sets the tone for the shop's collection. The shop's logo, presented in warm brown vintage hues, features images of vintage-style dresses that signify the shop's dedication to offering timeless and unique pieces. In line with the shop's aesthetic, all product images are framed with a brown border that transitions to gold when hovered over, harmonizing with the website's color scheme. Image modals are displayed against a brown background framed with a golden border, evoking the charm of vintage photography.
 
+<br>
 
 ## **Skeleton Plane**
 
 </br>
 
-To follow best practices, wireframes were developed for mobile, tablet, and desktop sizes. The site wireframes were designed using[Balsamiq](https://balsamiq.com/wireframes). Images of all wireframes can be found in the documentation folder. [Wireframes](docs/wireframes).
+To follow best practices, wireframes were developed for mobile, tablet, and desktop sizes. The site wireframes were designed using [Balsamiq](https://balsamiq.com/wireframes). Images of all wireframes can be found in the documentation folder: [Wireframes](docs/wireframes).
 
 The final design of the home page differs from my original vision. It now features a background image with a fashionably dressed woman. The shop's flippable logo is on the left side of the screen, and the "Shop" button is prominently centered.
 
