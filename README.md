@@ -461,6 +461,38 @@ The email feature in the Second Story Style Shop plays a crucial role in enhanci
 
 <br>
 
+
+## Tools & Technologies Used
+
+* [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content
+* [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) used for user interaction on the site
+* [Python](https://www.python.org) used as the back-end programming language
+* [Django](https://djangoproject.com) used as the Python framework for the site
+* [Git](https://git-scm.com) used for version control (`git add`, `git commit`, `git push`)
+* [GitHub](https://github.com) used for secure online code storage
+* [Heroku](https://heroku.com) used for hosting the deployed back-end site
+* [Gitpod](https://gitpod.io) used as a cloud-based IDE for the development
+* [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask
+* [Bootstrap 4](https://materializecss.com/) used as the front-end framework for responsiveness and pre-built components
+* [Font Awesome](https://fontawesome.com/) used to obtain the icons
+* [Google Fonts](https://fonts.google.com/) used to obtain the fonts used in the project
+* [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) used as a primary method of finding bugs, and testing responsiveness across the project
+* [Grammarly](https://www.grammarly.com/) used to check spelling and grammar errors across the project
+* [W3C Markup Validation Service](https://validator.w3.org/) used to validate all HTML code written and used on this webpage
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) used to validate all CSS code written and used on this webpage
+* [JSHint](https://jshint.com/) used to validate all JS code written and used on this webpage
+* [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) used to validate all of my Python files
+* [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images of the website
+* [Balsamiq](https://balsamiq.com/wireframes) used to design the wireframes
+* [Chat GPT4](https://https://chat.openai.com/) used to generate the image for the landing page and the colour palette. Also used along StackOverflow to look for possible causes of issues I came across while doing the project
+* [Readme.so](https://readme.so) - Used to edit the readme file.
+* [Tables generator](https://www.tablesgenerator.com/) - Used to create a table in a readme file.
+* [Befunky Photo Editor](https://befunky.com) - Used to resize and crop the images.
+* [Favicon generator](https://www.favicon-generator.org/) - Used to generate the website's favicon.
+
+<br>                
+
 ## **Database Schema**
 
 <br>
