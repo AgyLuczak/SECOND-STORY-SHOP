@@ -703,6 +703,115 @@ footer {
     text-decoration: none;
 }
 
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+
+.allauth-form-inner-content input {
+    border: 2px solid #2b1d0e;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.allauth-form-inner-content input:hover {
+    border-color: gold;
+
+    /* Change border color to gold on hover */
+}
+
+.allauth-form-inner-content input:focus {
+    border-color: gold;
+    outline: none;
+    box-shadow: 0 0 5px gold;
+
+}
+
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+
+
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    display: inline-block;
+    font-weight: 400;
+    background-color: #2b1d0e;
+    color: #f4e4bc;
+    outline: 2px solid #f4e4bc;
+    transition: transform .5s ease-in-out, color .5s ease-in-out, outline-color .5s ease-in-out;
+    /* Ensure all transitions are listed */
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    outline-color: gold !important;
+    /* Test with important */
+    color: gold !important;
+    transform: scale(1.1);
+}
+
+.allauth-form-inner-content input[type='submit'][value='Reset My Password'] {
+    width: 200px;
+}
+
+.allauth-form-inner-content a {
+    color: brown;
+    /* text-info */
+}
+
+.password_reset input[type="submit"] {
+    border-radius: 5px;
+}
+
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -885,20 +994,7 @@ footer {
         width: 100% !important;
     }
 
-    .add-to-bag {
-        order: 1;
-        /* Make the add to bag button first */
-    }
 
-    .add-to-wishlist {
-        order: 2;
-        /* Make the add to wishlist second */
-    }
-
-    .keep-shopping {
-        order: 3;
-        /* Make the keep shopping last */
-    }
 
     .sign-up {
         order: 1;
@@ -913,7 +1009,6 @@ footer {
 
 
 }
-
 
 @media only screen and (max-width: 600px) {
 
@@ -932,6 +1027,10 @@ footer {
         font-size: .700rem;
         max-width: 200px;
 
+    }
+
+    .allauth-form-check-label {
+        margin-left: 5px;
     }
 }
 
@@ -971,112 +1070,4 @@ footer {
     .nav-link {
         padding: 0rem;
     }
-}
-
-/* Allauth form formatting */
-
-.allauth-form-inner-content p {
-    margin-top: 1.5rem;
-    color: #6c757d;
-}
-
-
-.allauth-form-inner-content input {
-    border: 2px solid #2b1d0e;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.allauth-form-inner-content input:hover {
-    border-color: gold;
-
-    /* Change border color to gold on hover */
-}
-
-.allauth-form-inner-content input:focus {
-    border-color: gold;
-    outline: none;
-    box-shadow: 0 0 5px gold;
-
-}
-
-
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-}
-
-.allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
-}
-
-
-
-
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-    display: inline-block;
-    font-weight: 400;
-    background-color: #2b1d0e;
-    color: #f4e4bc;
-    outline: 2px solid #f4e4bc;
-    transition: transform .5s ease-in-out, color .5s ease-in-out, outline-color .5s ease-in-out;
-    /* Ensure all transitions are listed */
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {
-    outline-color: gold !important;
-    /* Test with important */
-    color: gold !important;
-    transform: scale(1.1);
-}
-
-.allauth-form-inner-content input[type='submit'][value='Reset My Password'] {
-    width: 200px;
-}
-
-.allauth-form-inner-content a {
-    color: brown;
-    /* text-info */
-}
-
-.password_reset input[type="submit"] {
-    border-radius: 5px;
-}
-
-
-/* Product Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-
 }
