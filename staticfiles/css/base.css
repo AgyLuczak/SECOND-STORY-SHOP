@@ -326,7 +326,6 @@ icon:hover {
 .cancel-btn {
     background-color: whitesmoke;
     color: #2b1d0e !important;
-    /* Force color if needed */
     outline: 2px solid #2b1d0e;
     transition: transform 0.5s ease-in-out, outline-color 0.5s ease-in-out;
 }
@@ -957,9 +956,9 @@ footer {
         font-size: 10px;
     }
 
-    .form-check-input {
+    /* .form-check-input {
         margin-left: -15px !important;
-    }
+    } */
 
 }
 

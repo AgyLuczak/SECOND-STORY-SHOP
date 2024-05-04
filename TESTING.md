@@ -263,8 +263,8 @@ The app has been tested on the following browsers:
 | **Page Heading and Subheading on Small Screens** | Heading and subheading should be visible only on xs to md screens. | Viewed the page on small screens to check visibility. | Heading and subheading are properly displayed only on xs to md screens. | PASS |
 | **Shop Now Button** | Clicking the 'Shop Now' button should redirect the user to the products page. | Clicked the 'Shop Now' button. | Redirected to the products page correctly. | PASS |
 | **Logo and Button Layout on Large Screens** | On large screens, the logo and the button should be next to each other. | Viewed the homepage on a large screen. | Logo and button are correctly displayed next to each other. | PASS |
-| **Interactive Logo Flip on Click** | The logo should flip to reveal text on the back when clicked. | Clicked the logo to activate the flip effect. | Logo flipped correctly, revealing the text on the back. | PASS |
-| **Accessibility of Flip Container** | The flip container should be easily clickable and should toggle its state on each click. | Repeatedly clicked the flip container. | Flip action worked correctly with each click. | PASS |
+| **Interactive Logo Flip on Hover** | The logo should flip to reveal text on the back when hovered on. | Hovered on the logo to activate the flip effect. | Logo flipped correctly, revealing the text on the back. | PASS |
+| **Accessibility of Flip Container** | The flip container should be easily hoverable and should toggle its state on each hover. | Hovered over the flip container repeatedly. | Flip action worked correctly with each hover. | PASS |
 | **Vertical Stacking on Smaller Screens** | On smaller screens, the logo and 'Shop Now' button should stack vertically. | Checked the layout on smaller devices. | Elements are stacking vertically as expected. | PASS |
 | **Text Visibility in Flip Container** | Text in the flip container should be clear and legible. | Observed the text in both front and back states of the flip container. | Text is clear and legible in both states. | PASS |
 | `Footer` |
