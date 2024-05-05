@@ -14,7 +14,7 @@ def all_products(request):
     products = Product.objects.all()
     current_categories = Category.objects.all()
     query = None
-    sortkey = request.GET.get("sort", None)  # Sort key provided by the user
+    sortkey = request.GET.get("sort", "name")  # Sort key provided by the user
     direction = request.GET.get("direction", "asc")  # Sorting direction (asc or desc)
     is_sorting_default = True
 
@@ -53,7 +53,8 @@ def all_products(request):
             if direction == 'desc':
                 sortkey = f'-{sortkey}'
         # Apply sorting
-        products = products.order_by(sortkey)
+        if sortkey:
+            products = products.order_by(sortkey)
 
 # Display only products with sizes if sorting by size
     if sort == 'size':
