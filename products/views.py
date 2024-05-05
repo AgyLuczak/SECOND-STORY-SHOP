@@ -7,6 +7,7 @@ from .models import Product, Category
 from wishlist.models import WishlistItem
 from .forms import ProductForm
 
+
 def all_products(request):
     """ View to display all products """
     # Retrieve all products and categories from the database
@@ -31,36 +32,33 @@ def all_products(request):
         )
 
     # Apply sorting to the products based on the sort key and direction
-    # if sortkey:
-    #     if sortkey == "name":
-    #         sortkey = "lower_name"
-    #         products = products.annotate(lower_name=Lower("name"))
-    #     elif sortkey == "category":
-    #         sortkey = "category__name"
-    #     elif sortkey == "size":
-    #         sortkey = f'{"-" if direction == "desc" else ""}size'
-
-    #     products = products.order_by(
-    #         f'{"-" if direction == "desc" and sortkey != "size" else ""}{sortkey}'
-    #     )
-    #     is_sorting_default = False
-
-
+   
+    # Initialize the sort variable to None
+    sort = None     
+    # Initialize the sort variable to None
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
-            
+        if sortkey == 'name':
+            sortkey = 'lower_name'
+            products = products.annotate(lower_name=Lower('name'))
+        elif sortkey == 'category':
+            sortkey = 'category__name'
+        elif sortkey == 'size':
+            # Filter out products without sizes
+            products = products.exclude(size__isnull=True)
+        if 'direction' in request.GET:
+            direction = request.GET['direction']
+            if direction == 'desc':
+                sortkey = f'-{sortkey}'
+        # Apply sorting
+        products = products.order_by(sortkey)
+
+# Display only products with sizes if sorting by size
+    if sort == 'size':
+        products = products.filter(size__isnull=False)
+
 
 
 
