@@ -31,19 +31,39 @@ def all_products(request):
         )
 
     # Apply sorting to the products based on the sort key and direction
-    if sortkey:
-        if sortkey == "name":
-            sortkey = "lower_name"
-            products = products.annotate(lower_name=Lower("name"))
-        elif sortkey == "category":
-            sortkey = "category__name"
-        elif sortkey == "size":
-            sortkey = f'{"-" if direction == "desc" else ""}size'
+    # if sortkey:
+    #     if sortkey == "name":
+    #         sortkey = "lower_name"
+    #         products = products.annotate(lower_name=Lower("name"))
+    #     elif sortkey == "category":
+    #         sortkey = "category__name"
+    #     elif sortkey == "size":
+    #         sortkey = f'{"-" if direction == "desc" else ""}size'
 
-        products = products.order_by(
-            f'{"-" if direction == "desc" and sortkey != "size" else ""}{sortkey}'
-        )
-        is_sorting_default = False
+    #     products = products.order_by(
+    #         f'{"-" if direction == "desc" and sortkey != "size" else ""}{sortkey}'
+    #     )
+    #     is_sorting_default = False
+
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+            
+
+
+
 
     # Filter products by categories provided in the request
     if "category" in request.GET:
