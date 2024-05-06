@@ -84,7 +84,15 @@ After Lighthouse diagnostics, several key areas require attention:
 
 <br>
 
-## Automated Testing Report
+## Automated Testing
+
+Django automated testing is a critical aspect of web application development that helps ensure your application's functionality is working as intended. Through the use of automated tests, you can simulate user interactions with various parts of your application and verify that the expected outcomes occur consistently. Testing helps identify potential issues early in development, reduces the likelihood of bugs in production, and provides confidence when making changes to your code.
+
+In my journey with Django, I have recently begun exploring automated testing. To start, I have focused on testing the fundamental features of my application (testing was carried out with [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)). Testing the basic functions has helped me understand how automated testing works in Django. By verifying the essential views and actions, such as adding and removing products from the bag, processing checkouts, and managing profiles and wishlists, I am gradually gaining confidence in the stability of my application.
+
+While there's much more to learn about comprehensive testing strategies, beginning with these foundational tests has provided a strong starting point. It has also highlighted areas where further testing will be beneficial as I continue to develop my skills in automated testing.
+
+### Automated Testing Report
 
 **Bag Views**
 
