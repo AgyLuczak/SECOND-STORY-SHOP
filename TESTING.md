@@ -390,7 +390,15 @@ Using my site’s checkout interface, I processed payments using Stripe’s test
 
 Following each test payment, I visited the Webhooks section of the Stripe Dashboard. This area provides detailed logs of all webhook events, including timestamps, event types, and whether the webhook call was successful or not. By reviewing these logs, I was able to verify that the Stripe server was correctly notifying my endpoint upon each payment event.
 
-![lighthouse home desktop](docs/stripe/stripe_success.png) 
+| Type                 | Card No       | Expiry      | CVC         | ZIP         | Result Screenshot                             |
+|----------------------|---------------|-------------|-------------|-------------|-----------------------------------------------|
+| Success              | 4242 4242 4242 4242 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe success](docs/stripe/stripe_success.png) |
+| Require authorisation| 4000 0027 6000 3184 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe authorisation required](docs/stripe/authorisation.png) |
+| Declined             | 4000 0000 0000 0002 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe declined](docs/stripe/declined.png) |
+
+
+
+
 
 For more information on stripe testing click this link [Stripe Testing Documentation](https://docs.stripe.com/testing)
 
