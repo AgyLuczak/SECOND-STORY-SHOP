@@ -1,5 +1,60 @@
 Go back to the [README.md](README.md) file
 
+# Testing
+
+I used various testing methods to ensure the web application's quality and reliability. Code validation tools checked HTML, CSS, JavaScript, Python, and Jinja syntax to ensure compliance with industry standards. Responsiveness testing, conducted using Chrome Developer Tools, verified that the website functions well on different devices. Lighthouse assessed performance, accessibility, and layout stability, leading to targeted improvements. Automated testing in Django confirmed that key features, like product management, user profiles, and checkouts, worked as intended. While automated testing focused on fundamental features, advanced scenarios remain unexplored. Manual testing covered user stories to ensure a seamless user experience, while Stripe webhooks were verified to ensure accurate payment processing.
+
+
+## Testing Table of Contents
+
+- [Code Validation](#code-validation)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#java-script)
+  - [Python and Jinja Syntax](#python-and-jinja-syntax)
+- [Responsiveness](#responsiveness)
+- [Lighthouse](#lighthouse)
+  - [Performance Optimizations](#performance-optimizations)
+  - [Accessibility Improvements](#accessibility-improvements)
+  - [Layout and Stability](#layout-and-stability)
+- [Automated Testing](#automated-testing)
+  - [Automated Testing Report](#automated-testing-report)
+    - [Bag Views](#bag-views)
+    - [Checkout Views](#checkout-views)
+    - [Home Views](#home-views)
+    - [Products Views](#products-views)
+    - [Profiles Views](#profiles-views)
+    - [Wishlist Views](#wishlist-views)
+- [Manual Testing](#manual-testing)
+  - [User Stories](#user-stories)
+    - [Viewing and Navigation](#viewing-and-navigation)
+    - [Registration and User Accounts](#registration-and-user-accounts)
+    - [Sorting and Searching](#sorting-and-searching)
+    - [Purchasing and Checkout](#purchasing-and-checkout)
+    - [Admin and Store Management](#admin-and-store-management)
+  - [Full Manual Testing](#full-manual-testing)
+    - [Navbar](#navbar)
+    - [Navbar Dropdowns](#navbar-dropdowns)
+    - [Home Page](#home-page)
+    - [Footer](#footer)
+    - [Products Page](#products-page)
+    - [Product Detail Page](#product-detail-page)
+    - [Add Product Page](#add-product-page)
+    - [Edit Product Page](#edit-product-page)
+    - [Wishlist Page](#wishlist-page)
+    - [Shopping Bag Page](#shopping-bag-page)
+    - [Checkout Page](#checkout-page)
+    - [Checkout Success Page](#checkout-success-page)
+    - [Sign In Page](#sign-in-page)
+    - [Sign Out Page](#sign-out-page)
+    - [Sign Up Page](#sign-up-page)
+    - [Profile Page](#profile-page)
+- [Stripe Webhooks](#stripe-webhooks)
+- [Bugs and Issues](#bugs-and-issues)
+
+
+
+
 
 ## Code Validation
 
@@ -42,6 +97,26 @@ I have used the PEP8 CI Python Linter application to test my Python and Jinja sy
 Screenshots of the results can be found in the documentation folder. [python validation screenshots](docs/python_validation)
 
 <br>
+
+### Responsiveness
+
+**I used Chrome Developer tools to simulate the following devices:**
+- iphone SE
+- iphone XR
+- iphone 12 Pro
+- Pixel 5
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- iPad Air 
+- iPad Mini
+- Surface Pro7
+- Galaxy Fold 
+- Samsung Galaxy A51/71
+- Nest Hub 
+- Nest Hub Max
+
+The website was responsive on all these devices.
+
 
 ### Lighthouse
 
@@ -106,7 +181,7 @@ While there's much more to learn about comprehensive testing strategies, beginni
 
 
 
-### Test Report: Checkout Views
+**Checkout Views**
 
 | Test Name                   | Purpose               | Expected Result     | Actual Result |
 |-----------------------------|---------------------  |---------------------|---------------|
@@ -116,13 +191,13 @@ While there's much more to learn about comprehensive testing strategies, beginni
 
 
 
-### Test Report: Home Views
+**Home Views**
 
 | Test Name      | Purpose         | Expected Result              | Actual Result |
 |------------   |------------------|------------------------------|---------------|
 | `test_index_page_loads_correctly` | Verify that the `index` view renders the homepage with the correct template | `200` status code, renders `home/index.html` template          | PASS       |
 
-### Products Views Test
+**Products Views**
 
 | Test Name                      | Purpose          | Expected Result         | Actual Result |
 |--------------------------------|-------------------------------------------------------|-----------------------------------------------------|---------------|
@@ -149,15 +224,9 @@ While there's much more to learn about comprehensive testing strategies, beginni
 | `test_view_wishlist`    | Test that the wishlist view displays correctly   | Wishlist page returns status 200 and shows the product | PASS      |
 | `test_remove_from_wishlist` | Test that a product is correctly removed from the wishlist | The `WishlistItem` is deleted and user is redirected to the wishlist view | PASS |
 
+<br>
 
-
-
-
-
-
-
-
-
+## Manual Testing
 
 ## User Stories
 
@@ -403,9 +472,6 @@ Following each test payment, I visited the Webhooks section of the Stripe Dashbo
 | Success              | 4242 4242 4242 4242 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe success](docs/stripe/stripe_success.png) |
 | Require authorisation| 4000 0027 6000 3184 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe authorisation required](docs/stripe/authorisation.png) |
 | Declined             | 4000 0000 0000 0002 | A date in the future  | Any 3 digits | Any 5 digits | ![stripe declined](docs/stripe/declined.png) |
-
-
-
 
 
 For more information on stripe testing click this link [Stripe Testing Documentation](https://docs.stripe.com/testing)
