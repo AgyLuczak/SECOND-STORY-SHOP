@@ -537,10 +537,10 @@ Please go to [TESTING.md](TESTING.md) file to see the testing section.
 
 **Creating the Live Database**
 
-We have been using the sqlite3 database in development, however this is only available for use in development so we will need to create a new external database which can be accessed by Heroku.
+SQLite3 has been used as the database during development. However, since SQLite3 is intended only for development use, we will need to set up a new external database that can be accessed by Heroku for production deployment.
 
 1. Go to the [ElephantSQL](https://www.elephantsql.com/) dashboard and click the create new instance button on the top right.
-2. Name the plan (your project name is a good choice), select tiny turtle plan (this is the free plan) and choose the region that is closest to you then click the review button.
+2. Name the plan (e.g. your project name), select tiny turtle plan (this is the free plan) and choose the region that is closest to you then click the review button.
 3. Check the details are all correct and then click create instance in the bottom right.
 4. Go to the dashboard and select the database just created.
 5. Copy the URL (you can click the clipboard icon to copy)
