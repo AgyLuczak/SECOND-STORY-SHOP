@@ -2,16 +2,21 @@
 {% load static %}
 
 {% block content %}
-<div class="container text-center" aria-label="Error Page">
-    <div class="row">
-        <div class="col-12 d-flex flex-column align-items-center">
-            <div class="error-content mt-5">
-                <img src="{% static 'images/second_story_logo.png' %}" alt="Shop Logo" class="img-fluid mb-4">
-                <h1 class="mb-3">Oops!</h1>
-                <p class="mb-4">The page you are looking for could not be found.</p>
-                <a href="{% url 'home' %}" class="btn btn-lg light-btn py-3" aria-label="Go to Home Page">Go Home</a>
+<div class="container text-center mt-5" aria-label="Error Page">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card error-message">
+                <div class="card-body">
+                    <div class="error-content">
+                        <h1 class="mb-3 logo">Oops!</h1>
+                        <h2 class="mb-4 logo">The page you are looking for could not be found.</h2>
+                        <a href="{% url 'home' %}" class="btn btn-lg light-btn btn-lg py-3 mt-3"
+                            aria-label="Go to Home Page">Go Home</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

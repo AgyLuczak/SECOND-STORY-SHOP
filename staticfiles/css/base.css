@@ -656,6 +656,12 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
+.error-message {
+    margin-top: 200px;
+    background-color: #2b1d0e;
+    border-radius: 5px;
+}
+
 /* Footer */
 
 footer {

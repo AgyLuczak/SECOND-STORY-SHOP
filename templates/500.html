@@ -2,18 +2,22 @@
 {% load static %}
 
 {% block content %}
-<div class="container text-center" aria-label="Server Error Page">
-    <div class="row">
-        <div class="col-12 d-flex flex-column align-items-center">
-            <!-- Content specifically for a server error -->
-            <div class="error-content mt-5">
-                <img src="{% static 'images/second_story_logo.png' %}" alt="Shop Logo" class="img-fluid mb-4">
-                <h1 class="mb-3">Sorry!</h1>
-                <p class="mb-4">An error has occurred on the server. We are working to resolve the issue.</p>
-                <a href="{% url 'home' %}" class="btn btn-lg light-btn py-3" aria-label="Go to Home Page">Return
-                    Home</a>
+<div class="container text-center mt-5" aria-label="Server Error Page">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card error-message">
+                <div class="card-body">
+                    <div class="error-content">
+                        <h1 class="mb-3 logo">Sorry!</h1>
+                        <h2 class="mb-4 logo">An error has occurred on the server. We are working to resolve the issue.
+                        </h2>
+                        <a href="{% url 'home' %}" class="btn btn-lg light-btn btn-lg py-3 mt-3"
+                            aria-label="Go to Home Page">Return Home</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
