@@ -224,6 +224,14 @@ While there's much more to learn about comprehensive testing strategies, beginni
 | `test_view_wishlist`    | Test that the wishlist view displays correctly   | Wishlist page returns status 200 and shows the product | PASS      |
 | `test_remove_from_wishlist` | Test that a product is correctly removed from the wishlist | The `WishlistItem` is deleted and user is redirected to the wishlist view | PASS |
 
+**404 Page Test**
+
+| Test Name          | Purpose                                      | Expected Result                              | Actual Result |
+|--------------------|----------------------------------------------|----------------------------------------------|---------------|
+| `test_404_page`    | Verify that requesting a non-existent URL returns a 404 status code and renders the custom 404 template | `404` status code, renders `404.html` template | PASS          |
+
+I haven't been able to test the 500 error page because such errors often occur from unhandled exceptions within the application code. It's challenging to deliberately trigger these errors in a controlled manner during testing, as this requires introducing faulty code or conditions that may not be straightforward to simulate within the test environment.
+
 <br>
 
 ## Manual Testing
