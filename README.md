@@ -829,7 +829,7 @@ pip3 freeze > requirements.txt
 
 [ShutterStock](https://shutterstock.com/) - Source of the images for the website
 
-[ChatGPT4](https://chat.openai.com/) - used to generate the hero image for the landing page and the color palette
+[ChatGPT4](https://chat.openai.com/) - used to generate the hero image for the landing page and the colour palette
 
 
 
@@ -844,6 +844,8 @@ I would like to say a massive thank you to:
  - my course mentor Rory Patrick Sheridan and my tutor Ashley Oliver for their help and support during the project
 
  - my classmates Adam White and Laura Channing for their valuable feedback and checking on me throughout the project
+
+ - my November hackathon team mate Tomislav Dukez for showing our team how to work with django and trying to help me out with a template rendering issue 
 
  - my husband Gniewomir for his incredible support since the beginning of the course.
 
