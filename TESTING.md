@@ -56,9 +56,7 @@ The decision to omit certain testing methods, such as advanced automated testing
 - [Stripe Webhooks](#stripe-webhooks)
 - [Bugs and Issues](#bugs-and-issues)
 
-
-
-
+<br>
 
 ## Code Validation
 
@@ -364,7 +362,7 @@ The app has been tested on the following browsers:
 | `Products Page` |
 | **Page Load** | The page should load without errors and display products, sorting options, and category links. | Loaded the page and observed for any errors or misloads. | Page loaded successfully with all elements displayed correctly. | PASS |
 | **Product Display** | Each product should display an image, name, price, size (if it has one) and available actions (wishlist, add to bag). | Checked several product cards for necessary information. | All products correctly displayed their respective details. | PASS |
-| **Sorting Functionality** | Changing the sorting options should reorder products based on the selected criteria. | Selected each sorting option from the dropdown and observed the reordering of product listings. | Products were reordered correctly for each selected sorting option. | PASS |
+| **Sorting Functionality** | Changing the sorting options should reorder products based on the selected criteria. Sorting according to size should only display products with a size | Selected each sorting option from the dropdown and observed the reordering of product listings. | Products were reordered correctly for each selected sorting option. Size sorting diplayed only the products with a size | PASS |
 | **Category Links** | Clicking on a category badge should filter the products according to that category. | Clicked on each category badge and checked if only relevant products are shown. | Products were filtered correctly according to selected categories. | PASS |
 | **Product Details Link** | Clicking on a product image or name should redirect to the product's detail page. | Clicked on product images and names. | Correctly redirected to the detailed product page for each selected product. | PASS |
 | **Add to Wishlist** | Requires login for unauthenticated users. Clicking the wishlist button should add the item to the user’s wishlist and the button heart icon should change to red. Toast message 'Item added to your wishlist' should appear. Unathenticated users should be directed to the login page  | Clicked the wishlist button as both authenticated and unauthenticated user. | Functioned correctly: redirected to login when not authenticated, and added to wishlist when logged in. The right message appeared and the heart icon color changed to red. | PASS |

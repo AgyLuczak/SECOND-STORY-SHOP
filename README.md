@@ -1,6 +1,86 @@
+# SECOND STORY STYLE 
+
 ![desktop view](./docs/responsivemockup.png) 
 
+
+
+<br>
+
+## Table of Contents
+
+1. [Overview](#overview)
+
+2. [UX-User Experience Design](#ux-user-experience-design)
+   - [Strategy Plane](#strategy-plane)
+   - [User Stories](#user-stories)
+     - [Viewing and Navigation](#viewing-and-navigation)
+     - [Registration and User Accounts](#registration-and-user-accounts)
+     - [Sorting and Searching](#sorting-and-searching)
+     - [Purchasing and Checkout](#purchasing-and-checkout)
+     - [Admin and Store Management](#admin-and-store-management)
+   - [Scope Plane](#scope-plane)
+   - [Structure Plane](#structure-plane)
+   - [Surface Plane](#surface-plane)
+
+3. [Features](#features)
+   - [Navigation Bar](#navigation-bar)
+   - [Dropdown Menu](#dropdown-menu)
+   - [Footer](#footer)
+   - [Favicon](#favicon)
+   - [Home Page](#home-page)
+   - [Products Page](#products-page)
+   - [Product Detail Page](#product-detail-page)
+   - [Add Product Page](#add-product-page)
+   - [Edit Product Page](#edit-product-page)
+   - [Shopping Bag Page](#shopping-bag-page)
+   - [Wishlist Page](#wishlist-page)
+   - [Checkout Page](#checkout-page)
+   - [Checkout Success Page](#checkout-success-page)
+   - [Profile Page](#profile-page)
+   - [Toasts](#toasts)
+   - [Allauth: User Account Management Feature](#allauth-user-account-management-feature)
+   - [Admin Page](#admin-page)
+   - [Error Pages](#error-pages)
+   - [Emails](#emails)
+
+4. [Future Features](#future-features)
+   - [Product Availability and Sold Status](#product-availability-and-sold-status)
+   - [Contact Page](#contact-page)
+   - [Newsletter Subscription](#newsletter-subscription)
+   - [Style Recommendations](#style-recommendations)
+   - [Wishlist Sharing](#wishlist-sharing)
+   - [Live Chat Support](#live-chat-support)
+   - [Loyalty Program](#loyalty-program)
+
+5. [Tools & Technologies Used](#tools--technologies-used)
+
+6. [Database Schema](#database-schema)
+
+7. [Testing](#testing)
+
+8. [Deployment](#deployment)
+   - [Creating the Live Database](#creating-the-live-database)
+   - [Heroku Deployment](#heroku-deployment)
+   - [AWS S3 Bucket setup](#aws-s3-bucket-setup)
+   - [AWS IAM (Identity and Access Management) setup](#aws-iam-identity-and-access-management-setup)
+   - [Connecting Heroku to AWS S3](#connecting-heroku-to-aws-s3)
+
+9. [Credits](#credits)
+   - [Code](#code)
+   - [Content](#content)
+
+10. [Acknowledgements](#acknowledgements)
+
+<br>
+
+
+## Overview
+
+he Second Story Style is an online vintage clothing shop built using HTML, CSS, and JavaScript for a seamless and engaging shopping experience, with Python and the Django framework powering the backend. The website leverages ElephantSQL for database management and Amazon Web Services for storing static files and images. Its responsive design adapts across devices, and its features include advanced search, personalized wishlists, and secure checkout. Administrators can efficiently manage inventory and orders through comprehensive backend controls. The shop offers vintage fashion enthusiasts a blend of modern technology and classic style, and it is set to evolve with features like style recommendations, wishlist sharing, and a loyalty program for improved customer engagement.
+
 [Visit the website here](https://second-story-style-f8b69cba54dc.herokuapp.com/)
+
+<br>
 
 
 ## **UX-User Experience Design**
