@@ -460,6 +460,51 @@ The email feature in the Second Story Style Shop plays a crucial role in enhanci
 
 <br>
 
+## Future Features
+
+- **Product Availability and Sold Status**
+
+To improve the shopping experience, each product page will display real-time availability information since every product is unique and sold as a single item. Once a product is purchased, a "Sold" status will be displayed to indicate it is no longer available, helping customers quickly understand the availability of each unique item at a glance.
+
+<br>
+
+- **Contact Page**
+
+A contact page will be added to enhance customer support. This will feature a form for customers to send inquiries directly to the store team and will provide clear contact details for other communication channels.
+
+<br>
+
+
+- **Newsletter Subscription**
+
+A newsletter subscription feature will allow users to opt-in to receive updates about new products, exclusive offers, and store news. This will be available both during the registration process and through a dedicated subscription form on the website.
+
+<br>
+
+- **Style Recommendations**
+
+Use machine learning to analyze customer preferences and recommend vintage items that align with their style and purchase history.
+
+<br>
+
+- **Wishlist Sharing**
+
+Enable users to share their wishlists with friends or family members, making it easier to receive gifts or share style inspiration.
+
+<br>
+
+- **Live Chat Support**
+
+
+Offer live chat support to help customers with questions about vintage items, sizing, or general inquiries.
+
+<br>
+
+- **Loyalty Program**
+
+Implement a loyalty program where customers earn points for each purchase, which can be redeemed for discounts on future orders.
+
+<br>
 
 ## Tools & Technologies Used
 

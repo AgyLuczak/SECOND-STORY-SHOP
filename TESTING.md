@@ -4,6 +4,10 @@ Go back to the [README.md](README.md) file
 
 I used various testing methods to ensure the web application's quality and reliability. Code validation tools checked HTML, CSS, JavaScript, Python, and Jinja syntax to ensure compliance with industry standards. Responsiveness testing, conducted using Chrome Developer Tools, verified that the website functions well on different devices. Lighthouse assessed performance, accessibility, and layout stability, leading to targeted improvements. Automated testing in Django confirmed that key features, like product management, user profiles, and checkouts, worked as intended. While automated testing focused on fundamental features, advanced scenarios remain unexplored. Manual testing covered user stories to ensure a seamless user experience, while Stripe webhooks were verified to ensure accurate payment processing.
 
+Methods Not Used and Potential Consequences
+
+The decision to omit certain testing methods, such as advanced automated testing, security testing and load testing, was made considering the project's scope and resource availability. However, the absence of these testing methods could lead to potential challenges, such as missed bugs, security vulnerabilities, and performance issues under high traffic conditions.
+
 
 ## Testing Table of Contents
 
