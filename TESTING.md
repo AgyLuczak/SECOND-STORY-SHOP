@@ -485,27 +485,32 @@ Following each test payment, I visited the Webhooks section of the Stripe Dashbo
 For more information on stripe testing click this link [Stripe Testing Documentation](https://docs.stripe.com/testing)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Bugs and issues
 
-| No  |  Issue |  Solution |
-|---|---|---|
-| 1  |![product page not dispalying](./docs/products_page_access.png)  Django template loader could not find the 'products/products.html'   |  Used pathlib path instead of os.path for template DIRS and added '/'. Credit goes to my hackathon teammate Tomislav Dukanez. I remembered him mentioning lack of '/' causing problems in Django and decided to try putting it in the syntax. It worked and the explanation of the pathlib path was found on ChatGPT 4 and [Python Documentation](https://www.python.org)|
-| 2 |  Initial products sort correctly by size, but subsequent ones revert to beginning the sort order again  | Changed the size field in your Django model from CharField to IntegerField to make storing data consistent  |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+
+
+|  Issue |  Solution |
+|---|---|
+|![product page not dispalying](docs/bugs/products_page_access.png)  Django template loader could not find the 'products/products.html'   |  Used pathlib path instead of os.path for template DIRS and added '/'. Credit goes to my hackathon teammate Tomislav Dukanez. I remembered him mentioning lack of '/' causing problems in Django and decided to try putting it in the syntax. It worked and the explanation of the pathlib path was found on ChatGPT 4 and [Python Documentation](https://www.python.org)|
+|  Initial products sort correctly by size, but subsequent ones revert to beginning the sort order again  | Changed the size field in your Django model from CharField to IntegerField to make storing data consistent  |
+|Toasts not displaying   | Used the correct jquery link  |
+| Parsing problem in sorting products  |   |
+| ![parsing problem](docs/bugs/parsing_problem.png)  | Used Boolean Flags in the products template to improve clarity and structure of the sorting logic (solution found on chatGPT4) |   
+|  Footer shows in the middle of the screen | Fix unclosed divs  |   
+|  {% trans %} not rendering properly in some allauth templates ![trans problem](docs/bugs/trans_problem.png) | I've downloaded the language files (LC_MESSAGES), but the problem persisted. I removed the trans tags from the teplates were they were not rendering.   | 
+|Sorting not working in descending order| Added checking the direction query parameter and then prefixed the sort key with a hyphen (-) if the sorting direction was "desc". (solution found on ChatGPT 4)|
+
+## Remaining Issues
+
+| Issue | Attempted Solutions |
+|---|---|
+| **Wishlist toast body does not show and what is shown pops up on every page load** ![wishlist toast problem](docs/bugs/wishlist_toast_problem.png) | - Ensured that wishlist action messages in the views used the `extra_tags='wishlist'` to tag messages specifically for wishlist actions. <br> - Adjusted the template conditions to filter and display messages based on the 'wishlist' tag for targeted notifications. <br> - Verified that the JavaScript responsible for showing the toast was correctly set up and configured to trigger the notification display. <br> - As a temporary solution, removed the wishlist toast conditional logic from `base.html` so that the wishlist toast doesn't show. |
+| **Checkbox and 'Remember Me' label overlap on the iPhone 11** ![checkbox overlap problem](docs/bugs/checkbox_overlap.png) | Attempted to resolve the issue by increasing the margin-right of the checkbox and adding margin-left to the label specifically for small screens, but neither solution was effective. The problem was not visible when the project was tested in dev tools for responsiveness. |
+|
+
+
+
+
+
+
+
