@@ -29,6 +29,7 @@ The decision to omit certain testing methods, such as advanced automated testing
     - [Products Views](#products-views)
     - [Profiles Views](#profiles-views)
     - [Wishlist Views](#wishlist-views)
+    - [404 Page](#404-page)
 - [Manual Testing](#manual-testing)
   - [User Stories](#user-stories)
     - [Viewing and Navigation](#viewing-and-navigation)
@@ -66,7 +67,7 @@ The decision to omit certain testing methods, such as advanced automated testing
 
 I used W3C Validator to test all HTML pages. Initially, the validator showed two stray tags on a home page.The remaining errors are a result of using a Jinja template.
 
-Screenshots of the results can be found within the documentation folder. [html validation screenshots](docs/html_validation)
+Screenshots of the results can be found within the documentation folder: [html validation screenshots](docs/html_validation)
 
 
 ### CSS
@@ -75,7 +76,7 @@ Screenshots of the results can be found within the documentation folder. [html v
 
 I used W3C CSS Validator for the CSS. No errors were shown.
 
-Screenshots of the results can be found in the documentation folder. [css validation screenshots](docs/css_validation)
+Screenshots of the results can be found in the documentation folder: [css validation screenshots](docs/css_validation)
 
 
 ### Java Script
@@ -96,7 +97,7 @@ I have used the JS Hint validator for the Java Script syntax.
 
 I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
 
-Screenshots of the results can be found in the documentation folder. [python validation screenshots](docs/python_validation)
+Screenshots of the results can be found in the documentation folder: [python validation screenshots](docs/python_validation)
 
 <br>
 
@@ -148,6 +149,7 @@ After Lighthouse diagnostics, several key areas require attention:
 - Serve Images in Next-Gen Formats: Convert images to formats like WebP or AVIF to reduce their size without compromising quality.
 - Efficient Cache Policy: Ensure static assets are cached properly to reduce load times on subsequent visits.
 - Minimize Main-Thread Work: Optimize the code to reduce the time the main thread is busy, which can help improve responsiveness to user inputs.
+
 **Accessibility Improvements:**
 
 - Contrast Ratios: Adjust the color schemes to ensure sufficient contrast between background and foreground colors to enhance text readability.
@@ -177,7 +179,7 @@ While there's much more to learn about comprehensive testing strategies, beginni
 |-----------|------------|------------------------|---------------|
  | `test_view_bag`        | Verify that the `view_bag` view renders correctly.| Status code `200`, renders `bag/bag.html` template                 | PASS       |
 | `test_add_to_bag`             | Ensure a product can be added to the shopping bag.| Product added successfully, and redirected to the `view_bag` view  | PASS       |
-| `test_add_existing_to_bag`    | Check that adding an existing product to the bag returns an error. | Error message ("Test Product is already in your bag.") displayed   | Passed        |
+| `test_add_existing_to_bag`    | Check that adding an existing product to the bag returns an error. | Error message ("Test Product is already in your bag.") displayed   | PASS       |
 | `test_remove_from_bag`        | Ensure a product can be removed from the shopping bag. | Product removed successfully from the shopping bag     | PASS      |
 
 
@@ -215,7 +217,7 @@ While there's much more to learn about comprehensive testing strategies, beginni
 | Test Name        | Purpose        | Expected Result     | Actual Result |
 |------------------|----------------|---------------------|---------------|
 | `test_redirect_to_login_if_no_profile` | Verify that unauthenticated users are redirected to login page | `302` status code with redirect URL containing `/accounts/login/` | PASS      |
-|                           | `test_logged_in_user_can_access_profile`| Check that authenticated users can access their profile page   | `200` status code indicating successful access                | PASS        |
+| `test_logged_in_user_can_access_profile`| Check that authenticated users can access their profile page   | `200` status code indicating successful access                | PASS        |
 
 
 **Wishlist Views**
@@ -226,7 +228,7 @@ While there's much more to learn about comprehensive testing strategies, beginni
 | `test_view_wishlist`    | Test that the wishlist view displays correctly   | Wishlist page returns status 200 and shows the product | PASS      |
 | `test_remove_from_wishlist` | Test that a product is correctly removed from the wishlist | The `WishlistItem` is deleted and user is redirected to the wishlist view | PASS |
 
-**404 Page Test**
+**404 Page**
 
 | Test Name          | Purpose                                      | Expected Result                              | Actual Result |
 |--------------------|----------------------------------------------|----------------------------------------------|---------------|
@@ -245,11 +247,11 @@ I haven't been able to test the 500 error page because such errors often occur f
 | User Story | Relevant Feautures | Result |
 |------------|----------|--------|
 | Easily navigate the site and find the products that I need. | Intuitive site layout, consistent menu placements, and clearly labeled sections. | Users can quickly find what they're looking for with minimal clicks. |
-| View a category of products/filter products to find specific items I am interested in. | Filters and sorting options available on products page. | Users can refine their searches and browse relevant products efficiently. |
-| View more detail on products and read their descriptions. | Product detailpage with detailed descriptions | Users understand what they're buying and feel confident in their choices. |
-| View a close-up of a product image. | Zoom-in functionality | Users see detailed product features and quality up-close to make informed decisions. |
-| View my running total of purchases throughout my visit. | Shopping cart widget with a running total displayed on all pages. | Users keep track of spending and manage their budget during their shopping session. |
-| View the items I currently have selected for purchase and adjust the shopping bag if needed. | Editable shopping cart with options to modify or remove items. | Users tailor their final order with ease, increasing satisfaction and reducing cart abandonment. |
+| View a category of products/filter products to find specific items I am interested in. | Filters and sorting options available on Products Page. | Users can refine their searches and browse relevant products efficiently. |
+| View more detail on products and read their descriptions. | Product Detail Page with detailed descriptions | Users understand what they're buying and feel confident in their choices. |
+| View a close-up of a product image. | Image modal  | Users see detailed product features and quality up-close to make informed decisions. |
+| View my running total of purchases throughout my visit. | Shopping bag widget with a running total displayed on all pages. | Users keep track of spending and manage their budget during their shopping session. |
+| View the items I currently have selected for purchase and adjust the shopping bag if needed. | Editable shopping bag with options to modify or remove items. | Users tailor their final order with ease, increasing satisfaction and reducing cart abandonment. |
 | Add products to a wishlist. | Wishlist feature allowing users to save items for later. | Users can bookmark items of interest to revisit and purchase at a later time. |
 
 
@@ -311,7 +313,7 @@ The app has been tested on the following browsers:
 | **FEATURE** | **EXPECTED OUTCOME** | **TESTING PERFORMED** | **RESULT** | **PASS/FAIL** |
 | --- | --- | --- | --- | --- |
 | `Navbar` |
-| **Navigation Bar Responsiveness** | Navbar should collapse into a hamburger menu on small screens and expand on larger screens | Resize the browser window to various widths to test responsive behavior | Navbar collapses and expands appropriately at breakpoints | PASS |
+| **Navigation Bar Responsiveness** | Navbar should collapse into a hamburger menu on small screens and expand on larger screens | Resize the browser window to various widths to test responsive behaviour | Navbar collapses and expands appropriately at breakpoints | PASS |
 | **Home Link in Navbar** | Clicking on the logo redirects to the home page | Clicked on the main logo link | Redirected to the home page | PASS |
 | **Search Functionality** | Typing and submitting in the search box should lead to a product search results page | Typed a query into the search box and pressed enter | Redirected to the product results page with relevant product listings | PASS |
 | **My Account Dropdown Accessibility** | Dropdown should be accessible and show options based on user authentication status | Checked dropdown both as a guest and as a logged-in user | Correct options displayed under different authentication states | PASS |

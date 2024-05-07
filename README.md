@@ -76,7 +76,7 @@
 
 ## Overview
 
-he Second Story Style is an online vintage clothing shop built using HTML, CSS, and JavaScript for a seamless and engaging shopping experience, with Python and the Django framework powering the backend. The website leverages ElephantSQL for database management and Amazon Web Services for storing static files and images. Its responsive design adapts across devices, and its features include advanced search, personalized wishlists, and secure checkout. Administrators can efficiently manage inventory and orders through comprehensive backend controls. The shop offers vintage fashion enthusiasts a blend of modern technology and classic style, and it is set to evolve with features like style recommendations, wishlist sharing, and a loyalty program for improved customer engagement.
+Second Story Style is an online vintage clothing shop built using HTML, CSS, and JavaScript for a seamless and engaging shopping experience, with Python and the Django framework powering the backend. The website leverages ElephantSQL for database management and Amazon Web Services for storing static files and images. Its responsive design adapts across devices, and its features include advanced search, personalized wishlists, and secure checkout. Administrators can efficiently manage inventory and orders through comprehensive backend controls. The shop offers vintage fashion enthusiasts a blend of modern technology and classic style, and it is set to evolve with features like style recommendations, wishlist sharing, and a loyalty program for improved customer engagement.
 
 [Visit the website here](https://second-story-style-f8b69cba54dc.herokuapp.com/)
 
@@ -196,8 +196,7 @@ In order to achieve the strategy goals, the following features are included on t
 
 **Error Handling and User Support:**
    - Custom 404 and 500 error pages redirect users to the Home Page for broken links or server issues.
-   - FAQ and contact pages to assist users with common questions or issues.
-
+   
 **Responsive Design:**
    - Ensure the website is accessible and functional across mobile, tablet, and desktop devices.
    
@@ -207,7 +206,7 @@ In order to achieve the strategy goals, the following features are included on t
 
 <br>
 
-The structure plane of "The Second Story Style Shop" ensures seamless navigation and user experience by organizing key pages effectively. the **Home Page** serves as the gateway to the site, with the **Products Page** offering an overview of available items. Users can explore detailed information on **Product Detail Page**. For user management, the Sign Up Page and Sign In Page cater to new and existing customers, while administrative features like the **Add New Product Page** and **Edit Product Page** support catalog management.
+The structure plane of "The Second Story Style Shop" ensures seamless navigation and user experience by organizing key pages effectively. the **Home Page** serves as the gateway to the site, with the **Products Page** offering an overview of available items. Users can explore detailed information on **Product Detail Page**. For user management, the **Sign Up Page** and **Sign In Page** cater to new and existing customers, while administrative features like the **Add New Product Page** and **Edit Product Page** support catalog management.
 
 Shopping is streamlined through the **Shopping Bag Page** and **Wishlist Page**, while the **Checkout Page** and **Checkout Success** pages guide customers through the purchasing process. The **My Profile Page** provides a personalized account management experience. In case of navigation issues, the **404** and **500** Error Pages redirect users to the Home Page, ensuring smooth navigation despite broken links or errors.
 
@@ -230,7 +229,6 @@ Almond Cream is used to soften the intensity of the darker brown, offering a cre
 
 Metallic Gold and Pale Gold are colors are used to highlight call-to-action buttons and interactive elements, making them stand out and capturing the user's attention.
 
-Bronze introduces a mid-tone that bridges the lighter and darker shades in the palette. It’s strategically employed in headings and widgets to draw focus and guide the user's journey through the website, enhancing navigational cues and emphasizing important content.
 
 Peach Puff and Bisque provide background variations that are both soothing and neutral, creating spaces on the website that are easy on the eyes and conducive to reading. 
 
@@ -242,17 +240,19 @@ Whitesmoke and gold are strategically utilized for the "Keep Shopping" and "Canc
 
 I used two fonts:
 
-Oleo Script for logo and flipper back text
+**Oleo Script** for logo and flipper back text
 
 ![font 1](docs/oleo_script.png)
 
-and Poppins for the remaining content of the website
+and **Poppins** for the remaining content of the website
 
 ![font 2](docs/poppins.png)
 
-Oleo Script, with its flowing, curvaceous style, is used for the logo and decorative elements. This font effectively captures the charm and character of past eras, making it ideal for highlighting the unique identity of a vintage shop.
+**Oleo Script**, with its flowing, curvaceous style, is used for the logo and decorative elements. This font effectively captures the charm and character of past eras, making it ideal for highlighting the unique identity of a vintage shop.
 
-Poppins, on the other hand, is utilized for the main content of the website due to its clean and modern appearance. This sans-serif font offers excellent readability and a contemporary feel, providing a pleasant visual contrast to the more ornate Oleo Script. 
+**Poppins**, on the other hand, is utilized for the main content of the website due to its clean and modern appearance. This sans-serif font offers excellent readability and a contemporary feel, providing a pleasant visual contrast to the more ornate **Oleo Script**.
+
+<br>
 
 **Imagery**
 
@@ -340,7 +340,7 @@ The website features a distinctive favicon, which is a small but crucial element
 
 <br>
 
-The home page of the Second Story Style website features an elegant and interactive design tailored to enhance user engagement and highlight the unique branding of the vintage clothing shop. At the core of the page is a "flip-container," an interactive element where users can click to reveal more information about the store. This container is strategically placed next to a prominent "Shop Now" button on larger screens, facilitating easy navigation to the product pages. All of this is set against a captivating background photo of a fashionably dressed woman wearing a hat, which reinforces the vintage theme of the shop.
+The home page of the Second Story Style website features an elegant and interactive design tailored to enhance user engagement and highlight the unique branding of the vintage clothing shop. At the core of the page is a "flip-container," an interactive element on which users can hover to reveal more information about the store. This container is strategically placed next to a prominent "Shop Now" button on larger screens, facilitating easy navigation to the product pages. All of this is set against a captivating background photo of a fashionably dressed woman wearing a hat, which reinforces the vintage theme of the shop.
 
 ![home mobile](docs/features/home_mobile.png)
 
@@ -359,7 +359,7 @@ The Products Page features a clean and intuitive layout that effectively showcas
 ![products page 2](docs/features/products_page_2.png)
 
 
-Interactive elements on the page enhance functionality and user engagement. Authenticated users can interact with wishlist and shopping bag buttons: clicking the heart icon on a product card adds the item to their wishlist and turns the icon red, signaling that the item has been added. If a user wishes to remove an item from their wishlist, a second click on the heart icon will remove the item, and the icon will change back to its original dark brown color. This provides a clear and intuitive visual cue for the user. For those not logged in, the wishlist button prompts them to log in, ensuring a seamless experience. The shopping bag button is available to all users, allowing them to quickly add items to their cart.
+Interactive elements on the page enhance functionality and user engagement. Authenticated users can interact with wishlist and shopping bag buttons: clicking the heart icon on a product card adds the item to their wishlist and turns the icon red, signaling that the item has been added. If a user wishes to remove an item from their wishlist, a second click on the heart icon will remove the item, and the icon will change back to its original dark brown color. This provides a clear and intuitive visual cue for the user. For those not logged in, the wishlist button prompts them to log in, ensuring a seamless experience. The shopping bag button is available to all users, allowing them to quickly add items to their bag.
 
 Additionally, a discreet "Back to Top" button is included to enhance navigation, making it easy for users to return to the top of the page after extensive browsing, further smoothing the shopping experience on the Products Page.
 
@@ -432,7 +432,7 @@ Additionally, the page includes a "Back to Top" button, providing a convenient w
 
 <br>
 
-The Wishlist Page on the website provides a user-friendly and convenient way for shoppers to keep track of their favorite items. This page features a streamlined layout that displays each product in the wishlist with a clear image, product details, and current pricing. If an image is available, users can click on it to view a larger version in a modal, enhancing their ability to examine products closely.
+The Wishlist Page on the website provides a user-friendly and convenient way for shoppers to keep track of their favourite items. This page features a streamlined layout that displays each product in the wishlist with a clear image, product details, and current pricing. If an image is available, users can click on it to view a larger version in a modal, enhancing their ability to examine products closely.
 
 ![wishlist ](docs/features/wishlist.png)
 
@@ -454,7 +454,7 @@ The Checkout Page on the website is designed to streamline the process of comple
 
 The Payment Form is detailed and user-friendly, prompting users to fill in their personal details, delivery information, and payment credentials. The form supports saving delivery information for registered users, enhancing convenience for future purchases. For guests, links to sign up or log in are provided to save information, promoting user registration. The form integrates Stripe for secure card payments, ensuring that all transactions are safe and private. A clear indication of the final charge to the card is displayed prominently before submission to avoid any surprises.
 
-Additional features like the "Adjust Bag" button allow users to make last-minute changes to their cart items, while the "Complete Order" button, adorned with a lock icon, reassures users of the security measures in place. The inclusion of a loading overlay with a spinner provides feedback during the processing phase, enhancing the interactive aspect of the page.
+Additional features like the "Adjust Bag" button allow users to make last-minute changes to their bag items, while the "Complete Order" button, adorned with a lock icon, reassures users of the security measures in place. The inclusion of a loading overlay with a spinner provides feedback during the processing phase, enhancing the interactive aspect of the page.
 
 <br>
 
@@ -526,7 +526,7 @@ The admin page in Django is exclusively accessible to superusers, who possess el
 
 <br>
 
-The error pages feature in the Second Story Style Shop provides users with a clear and user-friendly experience during unexpected scenarios, such as encountering a 404 (Page Not Found) or a 500 (Internal Server Error). These error pages are designed to align with the shop's branding, featuring the shop's logo and a customized message that clearly informs users of the issue, helping to minimize frustration. For 404 errors, the page communicates that the requested page could not be found, while for 500 errors, users are reassured that server issues are being addressed. Each error page includes a prominent call-to-action button directing users back to the homepage, encouraging them to continue exploring the site instead of leaving. This thoughtful design approach ensures that even when things go wrong, users remain engaged and have a positive experience navigating the shop.
+The error pages feature in the Second Story Style Shop provides users with a clear and user-friendly experience during unexpected scenarios, such as encountering a 404 (Page Not Found) or a 500 (Internal Server Error). These error pages are designed to align with the shop's branding, featuring a customized message that clearly informs users of the issue, helping to minimize frustration. For 404 errors, the page communicates that the requested page could not be found, while for 500 errors, users are reassured that server issues are being addressed. Each error page includes a prominent call-to-action button directing users back to the homepage, encouraging them to continue exploring the site instead of leaving. This thoughtful design approach ensures that even when things go wrong, users remain engaged and have a positive experience navigating the shop.
 
 <br>
 
@@ -586,6 +586,39 @@ Implement a loyalty program where customers earn points for each purchase, which
 
 <br>
 
+## **Database Schema**
+
+<br>
+
+I used a relational database as it's suitable for managing the interconnected data structures found in an online shop. 
+I have used  [Lucidchart](https://www.lucidchart.com/) to design my site Entity Relationship Diagram (ERD). 
+
+![database](docs/database.png)
+
+Here's a breakdown of the relationships and purposes of the tables defined:
+
+*Category Table*
+
+The Category table is designed to classify products into various categories such as Dresses, Coats, etc. Each category is identified by a unique category key, which is linked to the Products table through a foreign key. This relationship ensures that each product is associated with one specific category, helping to organize the inventory in a meaningful way.
+
+*Products Table*
+
+The Products table stores detailed information about individual products. Each product is linked to its respective category via the foreign key category. Additional fields like sku, name, brand, description, price, size, and image provide comprehensive data for each product, enabling effective management and display of the product catalog.
+
+*Wish List Table*
+
+The Wish List table maps products that individual users have marked for future purchase. The user field has a one-to-one relationship with the users, ensuring that each user has a unique wish list that stores references to desired products via the product field.
+
+*User Profile Table*
+
+The User Profile table captures detailed information about users, such as phone number, address, town, county, and country. Each profile is linked to the Wish List table via the user foreign key, ensuring each user's profile contains unique personal data.
+
+*Order Table*
+
+The Order table manages information about user orders. Each order references the User Profile through a foreign key, user_profile, ensuring that orders are linked to the correct user. The table includes fields like order_number, full_name, email, phone_number, and country to store user details, along with date, delivery_cost, order_total, grand_total, original_bag, and stripe_pid for order-specific information.
+
+<br>
+
 ## Tools & Technologies Used
 
 * [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content
@@ -608,50 +641,20 @@ Implement a loyalty program where customers earn points for each purchase, which
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) used to validate all CSS code written and used on this webpage
 * [JSHint](https://jshint.com/) used to validate all JS code written and used on this webpage
 * [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) used to validate all of my Python files
+* [Code Beautify](https://codebeautify.org/) used for formatting Python code
 * [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images of the website
 * [Balsamiq](https://balsamiq.com/wireframes) used to design the wireframes
 * [Chat GPT4](https://https://chat.openai.com/) used to generate the shop's logo and the colour palette. Also used along StackOverflow to look for possible causes of issues I came across while doing the project.
 * [Readme.so](https://readme.so) used to edit the readme file.
+* [Lucidchart](https://www.lucidchart.com/) used to design my site Entity Relationship Diagram (ERD). 
 * [Tables generator](https://www.tablesgenerator.com/) used to create a table in a readme file.
-* [Canva] used to edit and add text to the logo generated by chatGPT
-* [Befunky Photo Editor](https://befunky.com) used to resize and crop the images.
+* [Canva](https://canva.com) used to edit and add text to the logo generated by chatGPT
+* [Befunky Photo Editor](https://befunky.com) used to resize and crop the images and add a vintage filter to the logo
 * [Favicon generator](https://www.favicon-generator.org/) used to generate the website's favicon.
 * [Stripe](https://stripe.com/gb) has been used in the project to implement the payment system.
 
 <br>                
 
-## **Database Schema**
-
-<br>
-
-I used a relational database as it's suitable for managing the interconnected data structures found in an online shop. 
-I have used  [Lucidchart](https://www.lucidchart.com/) to design my site Entity Relationship Diagram (ERD). 
-
-![database](docs/database.png)
-
-Here's a breakdown of the relationships and purposes of the tables defined:
-
-*Category Table*
-
-The Category table is designed to classify products into various categories such as Painting, Sculpture, etc. Each category is identified by a unique category key, which is linked to the Products table through a foreign key. This relationship ensures that each product is associated with one specific category, helping to organize the inventory in a meaningful way.
-
-*Products Table*
-
-The Products table stores detailed information about individual products. Each product is linked to its respective category via the foreign key category. Additional fields like sku, name, brand, description, price, size, and image provide comprehensive data for each product, enabling effective management and display of the product catalog.
-
-*Wish List Table*
-
-The Wish List table maps products that individual users have marked for future purchase. The user field has a one-to-one relationship with the users, ensuring that each user has a unique wish list that stores references to desired products via the product field.
-
-*User Profile Table*
-
-The User Profile table captures detailed information about users, such as phone number, address, town, county, and country. Each profile is linked to the Wish List table via the user foreign key, ensuring each user's profile contains unique personal data.
-
-*Order Table*
-
-The Order table manages information about user orders. Each order references the User Profile through a foreign key, user_profile, ensuring that orders are linked to the correct user. The table includes fields like order_number, full_name, email, phone_number, and country to store user details, along with date, delivery_cost, order_total, grand_total, original_bag, and stripe_pid for order-specific information.
-
-<br>
 
 # Testing
 
@@ -673,7 +676,7 @@ SQLite3 has been used as the database during development. However, since SQLite3
 
 **Heroku Deployment**
 
-1. Log into Heroku
+1. Log into [Heroku](https://www.heroku.com)
 2. Create a new app, choose a location closest to you
 3. Search for Heroku Postgres from the resources tab and add to your project
 4. Make sure to have `dj_database_url` and `psycopg2` installed.
