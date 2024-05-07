@@ -2,10 +2,11 @@
 {% load static %}
 
 {% block content %}
-<div class="error-container text-center" aria-label="Error Page">
-    <div class="row justify-content-center row-error">
+
+<div class="error-container h-100 text-center" aria-label="Error Page" style="margin-top: 300px;">
+    <div class="row justify-content-center row-error h-100">
         <div class="col-md-8 col-lg-6">
-            <div class="card error-message">
+            <div class="card error-message" style=" background-color: #2b1d0e;">
                 <div class="card-body">
                     <div class="error-content">
                         <h1 class="mb-3 logo">Oops!</h1>
@@ -18,5 +19,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock %}
