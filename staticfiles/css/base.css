@@ -657,10 +657,16 @@ input[name='q']::placeholder {
 }
 
 .error-message {
-    margin-top: 200px;
+
     background-color: #2b1d0e;
     border-radius: 5px;
 }
+
+.error-container {
+    margin-top: 200px;
+
+}
+
 
 /* Footer */
 
