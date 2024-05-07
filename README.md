@@ -716,3 +716,54 @@ pip3 freeze > requirements.txt
 3. Delete the `DISABLE_COLLECTSTATIC` variable from your Cvars and deploy your Heroku app
 4. With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it.
     - **PLEASE MAKE SURE `media` AND `static` FILES ARE PUBLICLY ACCESSIBLE UNDER PERMISSIONS**
+
+    <br>
+
+    ## **Credits** ##
+
+</br>
+
+**Code**
+
+- [W3Schools](https://www.w3schools.com/) - general source of reference
+
+- [Python Documentation](https://docs.python.org//) - general source of reference
+
+- [Django documentation](https://djangoproject.com) - general source of reference
+
+- 'Python Crash Course' by Eric Matthes - general source of reference
+
+- [Stackoverflow](https://stackoverflow.com/) - suggestions for solutions for various problems while doing the project
+
+- [ChatGPT4](https:https://chat.openai.com/) - used along Stackoverlow for solutions for various problems encountered while doing the project
+
+-  Code Institute for the 'Botique Ado' walktrough project which provided all the necessary steps in building this app.
+
+- My tutor Ashley Oliver and my mentor Rory Patrick Sheridan - various suggestions for improving the project
+
+
+
+</br>
+ 
+**Content**
+
+[ShutterStock](https://shutterstock.com/) - Source of the images for the website
+
+[ChatGPT4](https://chat.openai.com/) - used to generate the hero image for the landing page and the color palette
+
+
+
+</br>
+
+ ## Acknowledgements
+
+ </br>
+
+I would like to say a massive thank you to:
+ 
+ - my course mentor Rory Patrick Sheridan and my tutor Ashley Oliver for their help and support during the project
+
+ - my classmates Adam White and Laura Channing for their valuable feedback and checking on me throughout the project
+
+ - my husband Gniewomir for his incredible support since the beginning of the course.
+
