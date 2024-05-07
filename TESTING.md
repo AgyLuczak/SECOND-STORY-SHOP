@@ -503,7 +503,7 @@ For more information on stripe testing click this link [Stripe Testing Documenta
 |  Footer shows in the middle of the screen | Fix unclosed divs  |   
 |  {% trans %} not rendering properly in some allauth templates ![trans problem](docs/bugs/trans_problem.png) | I've downloaded the language files (LC_MESSAGES), but the problem persisted. I removed the trans tags from the teplates were they were not rendering.   | 
 |Sorting not working in descending order| Added checking the direction query parameter and then prefixed the sort key with a hyphen (-) if the sorting direction was "desc". (solution found on ChatGPT 4)|
-
+| CSS not applying to 404 page, resulting in navbar overlap on error message.  ![error message](docs/bugs/error_message_issue.png) | Implemented inline styling as a temporary fix to bypass issues related to external static file management, ensuring consistent styling without needing to alter infrastructure or configurations|
 ## Remaining Issues
 
 | Issue | Attempted Solutions |
