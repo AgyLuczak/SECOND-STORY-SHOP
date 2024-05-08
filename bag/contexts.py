@@ -8,7 +8,7 @@ def bag_contents(request):
     bag_items = []
     product_count = 0
     total = Decimal('0')
-    running_total = Decimal('0')  # Removed trailing whitespace here
+    running_total = Decimal('0') 
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():

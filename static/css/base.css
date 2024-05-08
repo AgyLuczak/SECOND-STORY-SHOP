@@ -52,8 +52,6 @@ body {
 }
 
 .nav-link:hover {
-
-
     color: gold;
     text-decoration: none;
     border-radius: 10px;
@@ -97,9 +95,6 @@ icon:hover {
     margin-left: 0;
     max-width: 100%;
     float: left;
-
-
-
 }
 
 /* logo flipping */
@@ -279,8 +274,8 @@ icon:hover {
 }
 
 #search-icon:hover {
-    background-color: #2b1d0e;
-    color: gold;
+    background-color: gold;
+    color: #2b1d0e;
 }
 
 .page-heading {
@@ -460,13 +455,11 @@ input[name='q']::placeholder {
 
 /* Card*/
 
-
 .card-img-top {
     width: 100%;
     height: 60vh;
     object-fit: cover;
 }
-
 
 
 .modal-header {
@@ -498,7 +491,6 @@ input[name='q']::placeholder {
 
 .close {
     color: #f4e4bc;
-
 
 }
 
@@ -852,9 +844,7 @@ footer {
         height: calc(100vh - 116px);
     }
 
-    /* .container-content {
-        margin-top: -100px;
-    } */
+
 
     .shop-now-button {
         margin-top: 40px;
@@ -882,16 +872,6 @@ footer {
         font-size: .7rem;
     }
 
-    /* .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
-
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .75rem;
-    } */
 
     .increment-qty,
     .decrement-qty {
@@ -952,12 +932,6 @@ footer {
         margin-bottom: 10px;
 
     }
-
-    /* .back-login-btn {
-        width: 100%;
-        margin-right: 0 !important;
-        margin-bottom: 10px !important;
-    } */
 
 
 
