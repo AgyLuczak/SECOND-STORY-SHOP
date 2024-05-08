@@ -519,7 +519,7 @@ For more information on stripe testing click this link [Stripe Testing Documenta
 |---|---|
 | **Wishlist toast body does not show and what is shown pops up on every page load** ![wishlist toast problem](docs/bugs/wishlist_toast_problem.png) | - Ensured that wishlist action messages in the views used the `extra_tags='wishlist'` to tag messages specifically for wishlist actions. <br> - Adjusted the template conditions to filter and display messages based on the 'wishlist' tag for targeted notifications. <br> - Verified that the JavaScript responsible for showing the toast was correctly set up and configured to trigger the notification display. <br> - As a temporary solution, removed the wishlist toast conditional logic from `base.html` so that the wishlist toast doesn't show. |
 | **Checkbox and 'Remember Me' label overlap on the iPhone 11** ![checkbox overlap problem](docs/bugs/checkbox_overlap.png) | Attempted to resolve the issue by increasing the margin-right of the checkbox and adding margin-left to the label specifically for small screens, but neither solution was effective. The problem was not visible when the project was tested in dev tools for responsiveness. |
-|
+
 
 Go back to the [README.md](README.md) file
 
