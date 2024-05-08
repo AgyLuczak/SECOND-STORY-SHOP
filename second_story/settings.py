@@ -14,8 +14,6 @@ import dj_database_url
 from pathlib import Path
 from dotenv import load_dotenv
 
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load the .env file
@@ -23,16 +21,12 @@ dotenv_path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=dotenv_path)
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = False
-# DEBUG = os.environ.get('DEVELOPMENT') == 'True'
+
+DEBUG = 'DEVELOPMENT' in os.environ
+
 
 ALLOWED_HOSTS = ALLOWED_HOSTS = [
     "second-story-style-f8b69cba54dc.herokuapp.com",
@@ -90,7 +84,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR / "templates",
+            BASE_DIR / "templates", #credit to Tomislav Dukanez
             BASE_DIR / "templates" / "allauth",
         ],
         "APP_DIRS": True,
@@ -137,23 +131,6 @@ WSGI_APPLICATION = "second_story.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-TESTING = os.getenv("TESTING") == "True"
-
-
-# if TESTING:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'test_db.sqlite3'),
-#         }
-#     }
-# else:
-#     # Production or development environment
-#     DATABASES = {
-#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#     }
-
 
 if "DATABASE_URL" in os.environ:
     DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}

@@ -8,6 +8,8 @@ Methods Not Used and Potential Consequences
 
 The decision to omit certain testing methods, such as advanced automated testing, security testing and load testing, was made considering the project's scope and resource availability. However, the absence of these testing methods could lead to potential challenges, such as missed bugs, security vulnerabilities, and performance issues under high traffic conditions.
 
+<br>
+
 
 ## Testing Table of Contents
 
@@ -171,6 +173,8 @@ In my journey with Django, I have recently begun exploring automated testing. To
 
 While there's much more to learn about comprehensive testing strategies, beginning with these foundational tests has provided a strong starting point. It has also highlighted areas where further testing will be beneficial as I continue to develop my skills in automated testing.
 
+<br>
+
 ### Automated Testing Report
 
 **Bag Views**
@@ -269,7 +273,7 @@ I haven't been able to test the 500 error page because such errors often occur f
 | User Story |Relevant Features | Result |
 |------------|----------|--------|
 | Sort the list of available products by categories, size, price, and brand. | Drop-down menus and sorting options on products page. | Users find products that meet their needs and preferences more quickly. |
-| Search for a product by name or description. | Search bar on the top of ech page | Users locate specific items efficiently using intuitive search capabilities. |
+| Search for a product by name or description. | Search bar on the top of each page | Users locate specific items efficiently using intuitive search capabilities. |
 
 
 
@@ -435,7 +439,7 @@ The app has been tested on the following browsers:
 | **Order Details Accuracy**| All displayed order details should match the purchased items, quantities, prices, and totals.| Reviewed the order details for accuracy.| All details matched the order placed including item names, quantities, prices, and totals.| PASS  |
 | **Confirmation Email Mention**| The page should inform the user that a confirmation email has been sent.| Checked for the mention of the confirmation email.| The confirmation email was correctly mentioned on the page.                                      | PASS          |
 | **Navigation from Profile** | If accessed via a user profile, a 'Back to Profile' button should be visible and functional.| Clicked on 'Back to Profile' if visible.| Button took the user back to their profile without issues.| PASS          |
-| **View Other Products Link** A link or button should encourage users to continue shopping, directing them to the products page.| Clicked the 'View other products' button.| The link redirected correctly to the products page.| PASS |
+| **View Other Products Link**| A link or button should encourage users to continue shopping, directing them to the products page.| Clicked the 'View other products' button.| The link redirected correctly to the products page.| PASS |
 | **Image Modal Functionality**      | Product images should trigger a modal for a larger view if clicked.| Clicked on product images to test modal functionality. | Modal opened with a larger view of the product images correctly.| PASS          |
 | **Accuracy of Billing Information**| Billing details displayed should correctly reflect the user’s input from the checkout process.| Verified billing information against what was entered during checkout. | Billing information correctly reflected the user's input.| PASS |
 |`Sign In Page`|
@@ -452,7 +456,7 @@ The app has been tested on the following browsers:
 | **Sign Out Functionality** | Clicking the 'Sign Out' button should securely log the user out.| Clicked the 'Sign Out' button.| Successfully signed out, session ended, and redirected to a specified page or home page.| PASS          |
 | **Cancel Button Functionality**       | The cancel button should redirect users back to the home page without logging them out.| Clicked the 'Cancel' button.       | Redirected to the home page without signing out.                                                 | PASS          |
 | **Form Submission Security**| The sign-out process should handle CSRF tokens correctly to secure the form submission.| Inspected the form for CSRF token implementation. | CSRF token was present and correctly implemented in the form.                                   | PASS          |
-| **Redirect Functionality**| After signing out, users should be redirected to the home page.| Signed out and observed the redirect behavior. | Redirected appropriately to the home page.| PASS          |
+| **Redirect Functionality**| After signing out, users should be redirected to the home page.| Signed out and observed the redirect behaviour. | Redirected appropriately to the home page.| PASS          |
 | **Responsive Design**| The page should be responsive and display correctly on various devices.| Tested the page on multiple screen sizes and devices. | The layout adjusted correctly and remained functional across all devices.| PASS          |
 |`Sign Up Page`|
 | **Page Load**                      | The page should load without errors and display the sign-up form.| Accessed the "Sign Up" page to check for load issues. | Page loaded successfully with all elements displayed correctly.                                | PASS          |
@@ -470,6 +474,7 @@ The app has been tested on the following browsers:
 | **Navigation to Order Details**| Clicking an order number should redirect to a detailed view of that order.| Clicked on order numbers in the history table.    | Successfully redirected to the detailed order history page for each clicked order.| PASS |
 | **JavaScript Functionality**| JavaScript used for dynamic elements (e.g., country field updates) should function correctly. | Tested JavaScript-dependent features on the form. | JavaScript features such as dynamic dropdowns worked without errors.| PASS          |
 
+<br>
 
 ## Stripe Webhooks
 
@@ -488,6 +493,7 @@ Following each test payment, I visited the Webhooks section of the Stripe Dashbo
 
 For more information on stripe testing click this link [Stripe Testing Documentation](https://docs.stripe.com/testing)
 
+<br>
 
 ## Bugs and issues
 
@@ -504,6 +510,9 @@ For more information on stripe testing click this link [Stripe Testing Documenta
 |  {% trans %} not rendering properly in some allauth templates ![trans problem](docs/bugs/trans_problem.png) | I've downloaded the language files (LC_MESSAGES), but the problem persisted. I removed the trans tags from the teplates were they were not rendering.   | 
 |Sorting not working in descending order| Added checking the direction query parameter and then prefixed the sort key with a hyphen (-) if the sorting direction was "desc". (solution found on ChatGPT 4)|
 | CSS not applying to 404 page, resulting in navbar overlap on error message.  ![error message](docs/bugs/error_message_issue.png) | Implemented inline styling as a temporary fix to bypass issues related to external static file management, ensuring consistent styling without needing to alter infrastructure or configurations|
+
+<br>
+
 ## Remaining Issues
 
 | Issue | Attempted Solutions |
@@ -511,6 +520,8 @@ For more information on stripe testing click this link [Stripe Testing Documenta
 | **Wishlist toast body does not show and what is shown pops up on every page load** ![wishlist toast problem](docs/bugs/wishlist_toast_problem.png) | - Ensured that wishlist action messages in the views used the `extra_tags='wishlist'` to tag messages specifically for wishlist actions. <br> - Adjusted the template conditions to filter and display messages based on the 'wishlist' tag for targeted notifications. <br> - Verified that the JavaScript responsible for showing the toast was correctly set up and configured to trigger the notification display. <br> - As a temporary solution, removed the wishlist toast conditional logic from `base.html` so that the wishlist toast doesn't show. |
 | **Checkbox and 'Remember Me' label overlap on the iPhone 11** ![checkbox overlap problem](docs/bugs/checkbox_overlap.png) | Attempted to resolve the issue by increasing the margin-right of the checkbox and adding margin-left to the label specifically for small screens, but neither solution was effective. The problem was not visible when the project was tested in dev tools for responsiveness. |
 |
+
+Go back to the [README.md](README.md) file
 
 
 

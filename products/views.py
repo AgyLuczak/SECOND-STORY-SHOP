@@ -48,7 +48,7 @@ def all_products(request):
         elif sortkey == 'size':
             # Filter out products without sizes
             products = products.exclude(size__isnull=True)
-        if 'direction' in request.GET:
+        if 'direction' in request.GET: #solution found on chatGPT4
             direction = request.GET['direction']
             if direction == 'desc':
                 sortkey = f'-{sortkey}'
@@ -56,15 +56,12 @@ def all_products(request):
         if sortkey:
             products = products.order_by(sortkey)
 
-# Display only products with sizes if sorting by size
+    # Display only products with sizes if sorting by size
     if sort == 'size':
         products = products.filter(size__isnull=False)
 
 
-
-
-
-    # Filter products by categories provided in the request
+   # Filter products by categories provided in the request
     if "category" in request.GET:
         categories = request.GET["category"].split(",")
         products = products.filter(category__name__in=categories)

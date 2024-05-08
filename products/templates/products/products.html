@@ -36,6 +36,7 @@
                 <div class="col-12 d-flex justify-content-end">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector" class="custom-select custom-select-sm" aria-label="Sort products">
+                            <!--solution found on chatGPT 4-->
                             <option value="reset" {% if is_sorting_default %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if is_price_asc %}selected{% endif %}>Price (low to high)
                             </option>
