@@ -20,3 +20,7 @@ s3transfer==0.10.1
 sqlparse==0.4.4
 stripe==8.7.0
 urllib3==1.26.9
+python-dotenv
+
+django-crispy-forms
+dj-database-url
